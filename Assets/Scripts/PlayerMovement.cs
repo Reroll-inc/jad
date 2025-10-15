@@ -1,25 +1,20 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(PlayerInput))]
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D rb;
     [SerializeField] private float moveSpeed;
+    private Rigidbody2D body;
 
-    private Vector2 moveInput;
-
-    void Start()
+    private void Start()
     {
-       rb = GetComponent<Rigidbody2D>(); 
+        body = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    public void OnMove(InputAction.CallbackContext context)
     {
-        rb.linearVelocity = moveInput * moveSpeed;
-    }
-
-    public void Move(InputAction.CallbackContext context)
-    {
-        moveInput = context.ReadValue<Vector2>();
+        body.linearVelocity = context.ReadValue<Vector2>() * moveSpeed;
     }
 }

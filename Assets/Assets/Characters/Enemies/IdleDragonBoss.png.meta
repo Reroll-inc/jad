@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 075a0bdca88f244439afb9e1e0d9c2b2
+guid: 2a37213b83e2eb4499918481473e4f88
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8172250661746432489
-    second: IdleDragonBoss-1.png_0
+      213: -6625291709274851609
+    second: IdleDragonBoss_0
+  - first:
+      213: 2734321225079639476
+    second: IdleDragonBoss_1
+  - first:
+      213: 5474788644242553460
+    second: IdleDragonBoss_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,10 +54,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +81,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IdleDragonBoss-1.png_0
+      name: IdleDragonBoss_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 64
         width: 64
-        height: 63
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e9d8dcadaaa96170800000000000000
-      internalID: 8172250661746432489
+      spriteID: 7e6f45fea4c3e04a0800000000000000
+      internalID: -6625291709274851609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleDragonBoss_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdceaacaa242f520800000000000000
+      internalID: 2734321225079639476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IdleDragonBoss_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a7b68e34b5afb40800000000000000
+      internalID: 5474788644242553460
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1818d45ccd3236745b3f5b13b8a123f1
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IdleDragonBoss-1.png_0: 8172250661746432489
+      IdleDragonBoss_0: -6625291709274851609
+      IdleDragonBoss_1: 2734321225079639476
+      IdleDragonBoss_2: 5474788644242553460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

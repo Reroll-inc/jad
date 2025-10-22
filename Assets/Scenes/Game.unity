@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 295694499}
   - component: {fileID: 295694498}
   m_Layer: 0
-  m_Name: Boss
+  m_Name: Boss_Brown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 90f934cad2727844ea29038786e7f86b
+guid: 4dd8b6c6461ae344796d7d9473694dca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5967404422930407580
-    second: life-bar-3_0
+      213: 6241810437248240280
+    second: life-bar-5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: life-bar-3_0
+      name: life-bar-5_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 234
-        height: 226
+        height: 339
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46f53244b458f2da0800000000000000
-      internalID: -5967404422930407580
+      spriteID: 89ac18ba58d5f9650800000000000000
+      internalID: 6241810437248240280
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      life-bar-3_0: -5967404422930407580
+      life-bar-5_0: 6241810437248240280
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

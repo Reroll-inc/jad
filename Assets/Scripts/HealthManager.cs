@@ -2,6 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum HealthOperation { Inc, Dec }
+
 public class HealthManager : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 3;
@@ -31,14 +33,14 @@ public class HealthManager : MonoBehaviour
         OnHealthChange.Invoke();
     }
 
-    public void UpdateCurrentHealth(string type)
+    public void UpdateCurrentHealth(HealthOperation type)
     {
         switch (type)
         {
-            case "inc":
+            case HealthOperation.Inc:
                 currentHealth = Math.Min(currentHealth + 1, maxHealth);
                 break;
-            case "dec":
+            case HealthOperation.Dec:
                 currentHealth = Math.Max(currentHealth - 1, 0);
                 break;
         }

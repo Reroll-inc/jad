@@ -49,6 +49,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        Vector2 velocity = playerInput.normalized * moveSpeed * (playerInput == Vector2.zero ? 0f : 1f);
+        body.linearVelocity = velocity;
+    }
+
     public void OnMove(InputAction.CallbackContext context)
     {
         animator.SetBool(running, true);

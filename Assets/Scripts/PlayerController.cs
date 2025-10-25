@@ -4,15 +4,23 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerInput))]
+[RequireComponent(typeof(HealthManager))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Attributes")]
     [SerializeField] private float moveSpeed = 5.0f;
     [SerializeField] private float shotSpeed = 10.0f;
     [SerializeField] private float shotCooldown = 0.5f;
+
+    [Header("Bullet")]
     [SerializeField] private GameObject bulletPrefab;
+
+    [Header("Animation States")]
     [SerializeField] private string running = "Running";
     [SerializeField] private string facing = "CurrentInput";
     [SerializeField] private string lastFaced = "LastInput";
+
+    private HealthManager healthManager;
     private Rigidbody2D body;
     private Animator animator;
     private Vector2 playerInput;
@@ -20,10 +28,25 @@ public class PlayerController : MonoBehaviour
     private bool shooting = false;
     private float lastShotTime = -Mathf.Infinity;
 
-    private void Start()
+    void Start()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
+        healthManager = GetComponent<HealthManager>();
+    }
+
+    void Update()
+    {
+        if (Time.time >= lastShotTime + shotCooldown && shooting)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, body.position, Quaternion.identity);
+            Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
+            if (rbBullet != null)
+            {
+                rbBullet.linearVelocity = shootInput * shotSpeed;
+            }
+            lastShotTime = Time.time;
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -53,20 +76,6 @@ public class PlayerController : MonoBehaviour
         if (context.canceled)
         {
             shooting = false;
-        }
-    }
-
-    public void Update()
-    {
-        if (Time.time >= lastShotTime + shotCooldown && shooting)
-        {
-            GameObject bullet = Instantiate(bulletPrefab, body.position, Quaternion.identity);
-            Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
-            if (rbBullet != null)
-            {
-                rbBullet.linearVelocity = shootInput * shotSpeed;
-            }
-            lastShotTime = Time.time;
         }
     }
 }

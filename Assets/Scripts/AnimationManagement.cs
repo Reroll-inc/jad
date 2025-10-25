@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class AnimationManagement : MonoBehaviour
 {
     [SerializeField] private string isHit = "Is Hit";

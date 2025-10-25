@@ -1,15 +1,15 @@
 using Pathfinding;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float lifetime = 2.0f;
     [SerializeField] private string enemyTag = "Enemy";
     [SerializeField] private string terrainTag = "Wall";
-    private Rigidbody2D bullet;
+
     void Start()
     {
-        bullet = GetComponent<Rigidbody2D>();
         Destroy(gameObject, lifetime);
     }
 

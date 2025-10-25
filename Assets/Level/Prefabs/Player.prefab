@@ -98,9 +98,10 @@ GameObject:
   - component: {fileID: 974389954510104223}
   - component: {fileID: 7673251534320708188}
   - component: {fileID: 547703622778484665}
+  - component: {fileID: 5730321158233589212}
   - component: {fileID: 719259470343418628}
   - component: {fileID: 2799839180882671547}
-  - component: {fileID: 5730321158233589212}
+  - component: {fileID: 6084560973914695364}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -189,39 +190,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.1}
   m_Size: {x: 0.7, y: 1}
   m_Direction: 0
---- !u!114 &719259470343418628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5047799067560922029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f469a0c2c51cbca4a8d3452110d56059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  shotSpeed: 8
-  shotCooldown: 0.3
-  bulletPrefab: {fileID: 168772508720003752, guid: c5e16bddbb32d084e88b189d23233fec, type: 3}
-  running: Running
-  facing: CurrentInput
-  lastFaced: LastInput
---- !u!114 &2799839180882671547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5047799067560922029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50b4f3eb135cf5c4798da25cb5b73560, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isImmune: Is Immune
-  isHit: Is Hit
 --- !u!114 &5730321158233589212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,6 +292,55 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &719259470343418628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047799067560922029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f469a0c2c51cbca4a8d3452110d56059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  shotSpeed: 8
+  shotCooldown: 0.3
+  bulletPrefab: {fileID: 168772508720003752, guid: c5e16bddbb32d084e88b189d23233fec, type: 3}
+  running: Running
+  facing: CurrentInput
+  lastFaced: LastInput
+--- !u!114 &2799839180882671547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047799067560922029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b4f3eb135cf5c4798da25cb5b73560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isImmune: Is Immune
+  isHit: Is Hit
+--- !u!114 &6084560973914695364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5047799067560922029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b418c3714c3d00e498a54ba3123543d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  OnHealthChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7204014073581173194
 GameObject:
   m_ObjectHideFlags: 0

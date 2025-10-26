@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
     public void OnShoot(InputAction.CallbackContext context)
     {
         shooting = true;
-        shootInput = context.ReadValue<Vector2>();
+        shootInput = context.ReadValue<Vector2>().normalized;
         if (Math.Abs(shootInput.y) >= Math.Abs(shootInput.x))
         {
             shootInput.x = 0;

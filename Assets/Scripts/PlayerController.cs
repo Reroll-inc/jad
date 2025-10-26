@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour
         if (Time.time >= lastShotTime + shotCooldown && shooting)
         {
             GameObject bullet = Instantiate(bulletPrefab, body.position, Quaternion.identity);
-            Rigidbody2D rbBullet = bullet.GetComponent<Rigidbody2D>();
-            if (rbBullet != null)
+
+            if (bullet.TryGetComponent<Rigidbody2D>(out var rbBullet))
             {
                 rbBullet.linearVelocity = shootInput * shotSpeed;
             }
@@ -51,23 +51,18 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 velocity = playerInput.normalized * moveSpeed * (playerInput == Vector2.zero ? 0f : 1f);
-        body.linearVelocity = velocity;
+        body.linearVelocity = moveSpeed * playerInput.normalized;
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        animator.SetBool(running, true);
+        if (context.started)
+            animator.SetBool(running, true);
+
         if (context.canceled)
-        {
             animator.SetBool(running, false);
-            if (playerInput.x != 0)
-            {
-                animator.SetFloat(lastFaced, playerInput.x);
-            }
-        }
+
         playerInput = context.ReadValue<Vector2>();
-        body.linearVelocity = playerInput * moveSpeed;
         animator.SetFloat(facing, playerInput.x);
     }
 

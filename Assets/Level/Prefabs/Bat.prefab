@@ -80,8 +80,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 962972209
-  m_SortingLayer: 3
+  m_SortingLayerID: -764531417
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -697763020151794088, guid: 317647d6fd0287241accefe94d7158f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -159,7 +159,7 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 0
   pickNextWaypointDist: 1
-  endReachedDistance: 0.2
+  endReachedDistance: 1
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 0}
+  target: {fileID: 974389954510104223, guid: 61110a55f950eab4eacb467c02192a0b, type: 3}
 --- !u!114 &1978242956605056965
 MonoBehaviour:
   m_ObjectHideFlags: 0

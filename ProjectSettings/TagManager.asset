@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Wall
   - 
   - 
   - 
@@ -58,6 +58,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3880533299
+    locked: 0
+  - name: Enemy
+    uniqueID: 3530435879
     locked: 0
   - name: Walk Behind
     uniqueID: 1076482727

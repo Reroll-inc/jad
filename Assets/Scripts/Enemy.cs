@@ -38,11 +38,15 @@ public class Enemy : MonoBehaviour
         body.linearVelocity = Vector2.zero;
         if (path != null)
             path.canMove = true;
+        else
+            Debug.Log("ENABLE AI: Path not found");
     }
 
     public void DisableAI()
     {
         if (path != null)
             path.canMove = false;
+        else
+            Debug.Log("DISABLE AI: Path not found");
     }
 }

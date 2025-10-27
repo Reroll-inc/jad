@@ -1,5 +1,64 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1934661890572608129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5432731480813489881}
+  - component: {fileID: 2960089809301516982}
+  m_Layer: 0
+  m_Name: Wand Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5432731480813489881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934661890572608129}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7990539854307755632}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &2960089809301516982
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934661890572608129}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5019099584584100159
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +70,7 @@ GameObject:
   - component: {fileID: 3487510318102914782}
   - component: {fileID: 7184048142882388769}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Wand Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,9 +132,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1076482727
-  m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingLayerID: -414433997
+  m_SortingLayer: 5
+  m_SortingOrder: -1
   m_Sprite: {fileID: 8979405933268748967, guid: e1b70e7f1a5c04a4a95249d9c521ec14, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -233,7 +292,7 @@ MonoBehaviour:
     m_ActionName: 'Player/Move[/DualSenseGamepadHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6500849963778317225}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Wand, Assembly-CSharp
         m_MethodName: OnShoot
         m_Mode: 0
@@ -305,8 +364,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  shotSpeed: 8
-  shotCooldown: 0.3
+  shotSpeed: 10
+  shotCooldown: 0.5
   bulletPrefab: {fileID: 168772508720003752, guid: c5e16bddbb32d084e88b189d23233fec, type: 3}
   running: Running
   facing: CurrentInput
@@ -354,7 +413,7 @@ GameObject:
   - component: {fileID: 2550926466392971741}
   - component: {fileID: 300877950911227515}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Player Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,7 +534,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7990539854307755632}
   - component: {fileID: 9010776709444719355}
-  - component: {fileID: 6500849963778317225}
   m_Layer: 0
   m_Name: Wand Pivot
   m_TagString: Untagged
@@ -497,6 +555,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3487510318102914782}
+  - {fileID: 5432731480813489881}
   m_Father: {fileID: 974389954510104223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &9010776709444719355
@@ -526,15 +585,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6500849963778317225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7966587466517613866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ccb982bdf5da4e448574db4da913096, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

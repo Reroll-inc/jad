@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
     private HealthManager healthManager;
     private Rigidbody2D body;
+    private Rigidbody2D wand;
+    private Rigidbody2D wandTip;
+    private SpriteRenderer wandSprite;
     private Animator animator;
     private Vector2 playerInput;
     private Vector2 shootInput;
@@ -31,6 +34,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        wand = transform.Find("Wand Pivot").GetComponentInChildren<Rigidbody2D>();
+        wandTip = transform.Find("Wand Pivot/Wand Tip").GetComponentInChildren<Rigidbody2D>();
+        wandSprite = transform.Find("Wand Pivot/Wand Sprite").GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
         healthManager = GetComponent<HealthManager>();
     }
@@ -39,7 +45,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Time.time >= lastShotTime + shotCooldown && shooting)
         {
-            GameObject bullet = Instantiate(bulletPrefab, body.position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, wandTip.position, Quaternion.identity);
 
             if (bullet.TryGetComponent<Rigidbody2D>(out var rbBullet))
             {
@@ -70,11 +76,22 @@ public class PlayerController : MonoBehaviour
     {
         shooting = true;
         shootInput = context.ReadValue<Vector2>().normalized;
+        if (shootInput.y < 0)
+            wandSprite.sortingOrder = 1;
+        else
+            wandSprite.sortingOrder = -1;
+
         if (Math.Abs(shootInput.y) >= Math.Abs(shootInput.x))
-        {
             shootInput.x = 0;
+        else if (Math.Abs(shootInput.x) > Math.Abs(shootInput.y))
+            shootInput.y = 0;
+
+        if (!context.canceled)
+        {
+            float angle = Mathf.Atan2(shootInput.y, shootInput.x) * Mathf.Rad2Deg;
+            wand.MoveRotation(-90 + angle);
         }
-        if (context.canceled)
+        else if (context.canceled)
         {
             shooting = false;
         }

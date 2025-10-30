@@ -500,13 +500,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_Brown
       objectReference: {fileID: 0}
+    - target: {fileID: 4959273459788950362, guid: fb80e4c23b834404e9950272620f2054, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959273459788950362, guid: fb80e4c23b834404e9950272620f2054, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4959273459788950362, guid: fb80e4c23b834404e9950272620f2054, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -414433997
+      objectReference: {fileID: 0}
     - target: {fileID: 8329175506847405032, guid: fb80e4c23b834404e9950272620f2054, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.03
+      value: -4.86
       objectReference: {fileID: 0}
     - target: {fileID: 8329175506847405032, guid: fb80e4c23b834404e9950272620f2054, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.61
+      value: 8.61
       objectReference: {fileID: 0}
     - target: {fileID: 8329175506847405032, guid: fb80e4c23b834404e9950272620f2054, type: 3}
       propertyPath: m_LocalPosition.z

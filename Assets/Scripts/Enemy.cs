@@ -2,19 +2,20 @@ using Pathfinding;
 using UnityEngine;
 using UnityEngine.U2D;
 
-[RequireComponent(typeof(Rigidbody2D))]
+//[RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(AIPath))]
+//[RequireComponent(typeof(AIPath))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private string isHit = "Is Hit";
+    [SerializeField] private string facing = "Facing";
     private Rigidbody2D body;
     private AIPath path;
     private Animator animator;
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
-        path = GetComponent<AIPath>();
+        body = GetComponentInParent<Rigidbody2D>();
+        path = GetComponentInParent<AIPath>();
         animator = GetComponent<Animator>();
     }
 
@@ -32,21 +33,23 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        animator.SetFloat(facing, path.desiredVelocity.x);
+    }
+
+
     public void EnableAI()
     {
         animator.SetBool(isHit, false);
         body.linearVelocity = Vector2.zero;
         if (path != null)
             path.canMove = true;
-        else
-            Debug.Log("ENABLE AI: Path not found");
     }
 
     public void DisableAI()
     {
         if (path != null)
             path.canMove = false;
-        else
-            Debug.Log("DISABLE AI: Path not found");
     }
 }

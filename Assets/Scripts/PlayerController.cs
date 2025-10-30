@@ -57,16 +57,21 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        body.linearVelocity = moveSpeed * playerInput.normalized;
+        body.linearVelocity = moveSpeed * playerInput;
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (context.started)
-            animator.SetBool(running, true);
+        animator.SetBool(running, true);
 
         if (context.canceled)
+        {
             animator.SetBool(running, false);
+            if (playerInput.x != 0)
+            {
+                animator.SetFloat(lastFaced, playerInput.x);
+            }
+        }
 
         playerInput = context.ReadValue<Vector2>();
         animator.SetFloat(facing, playerInput.x);
@@ -75,7 +80,7 @@ public class PlayerController : MonoBehaviour
     public void OnShoot(InputAction.CallbackContext context)
     {
         shooting = true;
-        shootInput = context.ReadValue<Vector2>().normalized;
+        shootInput = context.ReadValue<Vector2>();
         if (shootInput.y < 0)
             wandSprite.sortingOrder = 1;
         else

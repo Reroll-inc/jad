@@ -1,19 +1,22 @@
 fileFormatVersion: 2
-guid: 2e0ba2d5db539a444a86894ebd89c4cb
+guid: 681eb5f3c1aae8546a0bc143fc9ed9b9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7740825695928446474
-    second: zombie_run_r_0
+      213: -7994196354356152480
+    second: mage_death_0
   - first:
-      213: -5973475658339730630
-    second: zombie_run_r_1
+      213: 5947796150429986918
+    second: mage_death_1
   - first:
-      213: -2250013249321431141
-    second: zombie_run_r_2
+      213: 4794015416579753735
+    second: mage_death_2
   - first:
-      213: 9158221152852111199
-    second: zombie_run_r_3
+      213: 5066521587548033152
+    second: mage_death_3
+  - first:
+      213: 3886618846979242113
+    second: mage_death_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,12 +112,100 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombie_run_r_0
+      name: mage_death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067f0e155c8ee0190800000000000000
+      internalID: -7994196354356152480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mage_death_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 660b0d60611da8250800000000000000
+      internalID: 5947796150429986918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mage_death_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7078bf02f93c78240800000000000000
+      internalID: 4794015416579753735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mage_death_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08016a05a86ef4640800000000000000
+      internalID: 5066521587548033152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mage_death_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -124,41 +215,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f118fdca00139490800000000000000
-      internalID: -7740825695928446474
+      spriteID: 1883987cf3b00f530800000000000000
+      internalID: 3886618846979242113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie_run_r_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3bb73e9983f91da0800000000000000
-      internalID: -5973475658339730630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombie_run_r_2
+      name: mage_death_5
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -166,21 +235,21 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b9f064eeed856c0e0800000000000000
-      internalID: -2250013249321431141
+      spriteID: 898cec75b62c75d4093d1af2a19abb92
+      internalID: -691968799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: zombie_run_r_3
+      name: mage_death_6
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 16
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -188,10 +257,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f5fe73ebd99881f70800000000000000
-      internalID: 9158221152852111199
+      spriteID: b280fc9b3a3d4654c88885ad8e136e2a
+      internalID: 541981240
       vertices: []
       indices: 
       edges: []
@@ -200,7 +269,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b3fcfee0c49d8cd4d9b30733982526ed
+    spriteID: 9724014adcf0f9947b90639d0cd1ec82
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +279,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      zombie_run_r_0: -7740825695928446474
-      zombie_run_r_1: -5973475658339730630
-      zombie_run_r_2: -2250013249321431141
-      zombie_run_r_3: 9158221152852111199
+      mage_death_0: -7994196354356152480
+      mage_death_1: 5947796150429986918
+      mage_death_2: 4794015416579753735
+      mage_death_3: 5066521587548033152
+      mage_death_4: 3886618846979242113
+      mage_death_5: -691968799
+      mage_death_6: 541981240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 2e0ba2d5db539a444a86894ebd89c4cb
+guid: 882fe70ea9e19a74eb6f10879115b3c7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7740825695928446474
-    second: zombie_run_r_0
-  - first:
-      213: -5973475658339730630
-    second: zombie_run_r_1
-  - first:
-      213: -2250013249321431141
-    second: zombie_run_r_2
-  - first:
-      213: 9158221152852111199
-    second: zombie_run_r_3
+      213: -7059116154090591493
+    second: mage_dash_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: zombie_run_r_0
+      name: mage_dash_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 68
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f118fdca00139490800000000000000
-      internalID: -7740825695928446474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombie_run_r_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a3bb73e9983f91da0800000000000000
-      internalID: -5973475658339730630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombie_run_r_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9f064eeed856c0e0800000000000000
-      internalID: -2250013249321431141
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: zombie_run_r_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f5fe73ebd99881f70800000000000000
-      internalID: 9158221152852111199
+      spriteID: bfa6537324bf80e90800000000000000
+      internalID: -7059116154090591493
       vertices: []
       indices: 
       edges: []
@@ -200,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b3fcfee0c49d8cd4d9b30733982526ed
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      zombie_run_r_0: -7740825695928446474
-      zombie_run_r_1: -5973475658339730630
-      zombie_run_r_2: -2250013249321431141
-      zombie_run_r_3: 9158221152852111199
+      mage_dash_0: -7059116154090591493
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

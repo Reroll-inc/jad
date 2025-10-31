@@ -101,4 +101,27 @@ public class PlayerController : MonoBehaviour
             shooting = false;
         }
     }
+
+    /*public void ApplyPowerUp(CardType selectedPowerUp)
+    {
+        switch (selectedPowerUp)
+        {
+            case CardType.Mage:
+                activeBullets++;
+                break;
+            
+            case CardType.Chariot:
+                moveSpeed++;
+                break;
+            
+            case CardType.Wheel:
+                dashCD--;
+                break;
+            
+            case CardType.Star:
+                bulletSize++;
+                break; 
+        }
+
+    }*/
 }

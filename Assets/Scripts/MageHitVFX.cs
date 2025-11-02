@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MageHitVFX : MonoBehaviour
 {
     [SerializeField] private string isImmune = "Is Immune";
     [SerializeField] private string isHit = "Is Hit";
     [SerializeField] private string isDeadTrigger = "Is Dead";
+    [SerializeField] private string isRunningBool = "Running";
 
     private Animator animator;
     private bool immune = false;
@@ -45,11 +47,14 @@ public class MageHitVFX : MonoBehaviour
         {
             if (!immune)
             {
-                immune = true;
-                animator.SetBool(isHit, true);
+                immune = true;       
                 animator.SetBool(isImmune, true);
 
                 healthManager.UpdateCurrentHealth(HealthOperation.Dec); //Apply player HP decrease
+                if (!isDead)
+                {
+                    animator.SetBool(isHit, true);
+                }
             }
         }
     }
@@ -64,7 +69,12 @@ public class MageHitVFX : MonoBehaviour
         isDead = true;
         immune = true;
 
+        animator.SetBool(isHit, false);
+        animator.SetBool(isImmune, false);
+        animator.SetBool(isRunningBool, false);
+
         animator.SetTrigger(isDeadTrigger);
+        GetComponent<PlayerInput>().enabled = false;
         GetComponent<PlayerController>().enabled = false;
     }
     public void EndImmunity()

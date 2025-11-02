@@ -9,7 +9,6 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private int maxHealth = 3;
     private int currentHealth = 3;
     public UnityEvent OnHealthChange;
-
     public UnityEvent OnDeath; // Triggers on player death
 
     void Start()

@@ -108,7 +108,7 @@ TextureImporter:
         width: 117
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -122,7 +122,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life-bar-3_1
+      name: life-bar-3_2
       rect:
         serializedVersion: 2
         x: 117
@@ -130,7 +130,7 @@ TextureImporter:
         width: 117
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -144,15 +144,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: life-bar-3_2
+      name: life-bar-3_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
         width: 117
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: life-bar-3_3
       rect:
         serializedVersion: 2
-        x: 117
+        x: 116
         y: 0
         width: 117
         height: 113
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -202,8 +202,8 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       life-bar-3_0: -5967404422930407580
-      life-bar-3_1: 138696874
-      life-bar-3_2: -1615638534
+      life-bar-3_1: -1615638534
+      life-bar-3_2: 138696874
       life-bar-3_3: 1761474903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

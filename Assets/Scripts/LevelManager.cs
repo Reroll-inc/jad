@@ -10,6 +10,7 @@ public class LevelManager : MonoBehaviour
     public TextMeshProUGUI enemyCounterText;
 
     [SerializeField] private GameObject screenLevelComplete;
+    [SerializeField] private GameObject screenGameOver;
 
     [Header("Player reference")]
     public PlayerController player;
@@ -33,6 +34,11 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 1f;
 
         screenLevelComplete.SetActive(false);
+
+        if (screenGameOver != null)
+        {
+            screenGameOver.SetActive(false);
+        }
 
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         UpdateHUD();
@@ -60,6 +66,18 @@ public class LevelManager : MonoBehaviour
 
         Time.timeScale = 0f;
     }
+
+    public void ActivateGameOver()
+    {
+        if (screenGameOver != null)
+        {
+            screenGameOver.SetActive(true);
+        }
+
+        Time.timeScale = 0f;
+    }
+
+
 
     /*public void CardSelect(CardType cardType)
     {

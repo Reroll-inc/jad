@@ -218,7 +218,6 @@ GameObject:
   - component: {fileID: 6210368599292465681}
   - component: {fileID: 1847191333893610656}
   - component: {fileID: 8722141263337315160}
-  - component: {fileID: 479721564538637095}
   m_Layer: 5
   m_Name: HP
   m_TagString: Untagged
@@ -283,24 +282,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &479721564538637095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5187931187746331008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc87b95bd4561a46941c2f6d8134d7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  lifeBar3: {fileID: 2800000, guid: 90f934cad2727844ea29038786e7f86b, type: 3}
-  lifeBar4: {fileID: 2800000, guid: 8b81ee0753d994741a04e8ea30a88578, type: 3}
-  lifeBar5: {fileID: 2800000, guid: 4dd8b6c6461ae344796d7d9473694dca, type: 3}
-  lifeBar6: {fileID: 2800000, guid: 661fab4744e4a8b47a06840825dd1331, type: 3}
-  lifeBar7: {fileID: 2800000, guid: fc92a0d7e41ac864eb99012b0fd8606a, type: 3}
 --- !u!1 &7875624673970612235
 GameObject:
   m_ObjectHideFlags: 0

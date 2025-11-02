@@ -354,7 +354,7 @@ namespace Pathfinding {
 		/// Deprecated: Use ABPath.Construct(start, end, null) instead.
 		/// </summary>
 		[System.Obsolete("Use ABPath.Construct(start, end, null) instead")]
-		public ABPath GetNewPath (Vector3 start, Vector3 end) {
+		public ABPath SGetNewPath (Vector3 start, Vector3 end) {
 			// Construct a path with start and end points
 			return ABPath.Construct(start, end, null);
 		}

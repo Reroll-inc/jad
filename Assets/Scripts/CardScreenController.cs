@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CardScreenController : MonoBehaviour
+/*public class CardScreenController : MonoBehaviour
 {
     public GameObject screenLevelComplete;
     void Start()
@@ -15,3 +15,4 @@ public class CardScreenController : MonoBehaviour
         }
     }
 }
+*/

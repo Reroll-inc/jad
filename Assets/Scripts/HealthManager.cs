@@ -10,6 +10,13 @@ public class HealthManager : MonoBehaviour
     private int currentHealth = 3;
     public UnityEvent OnHealthChange;
 
+    public UnityEvent OnDeath; // Triggers on player death
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+    }
+
     public int GetMaxHealth()
     {
         return maxHealth;
@@ -35,16 +42,31 @@ public class HealthManager : MonoBehaviour
 
     public void UpdateCurrentHealth(HealthOperation type)
     {
+        int previousHealth = currentHealth;
+
         switch (type)
         {
             case HealthOperation.Inc:
                 currentHealth = Math.Min(currentHealth + 1, maxHealth);
                 break;
             case HealthOperation.Dec:
-                currentHealth = Math.Max(currentHealth - 1, 0);
-                break;
+                if (currentHealth > 0)
+                {
+                    currentHealth = Math.Max(currentHealth - 1, 0);
+                }
+                    break;                
         }
 
-        OnHealthChange.Invoke();
+        if (previousHealth != currentHealth)
+        {
+            OnHealthChange.Invoke();
+        }
+
+        // Triggers OnDeath when HP <= 0
+        if (type == HealthOperation.Dec && currentHealth <= 0  && previousHealth > 0)
+        {
+            OnDeath.Invoke();
+        }        
+
     }
 }

@@ -9,47 +9,96 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private string isHit = "Is Hit";
     [SerializeField] private string facing = "Facing";
+
+    [Header("Stats")]
+    [SerializeField] private int enemyDamage;
+
+    private HpManager hpManager;
+    private bool isDying = false;
     private Rigidbody2D body;
     private AIPath path;
     private Animator animator;
     void Start()
     {
-        body = GetComponentInParent<Rigidbody2D>();
-        path = GetComponentInParent<AIPath>();
+        body = GetComponent<Rigidbody2D>();
+        path = GetComponent<AIPath>();
         animator = GetComponent<Animator>();
-    }
+        hpManager = GetComponent<HpManager>();
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Bullet"))
+        if (hpManager != null)
         {
-            Rigidbody2D bulletPhysics = collision.gameObject.GetComponent<Rigidbody2D>();
-            animator.SetBool(isHit, true);
-
-            if (bulletPhysics != null)
-            {
-                body.AddForce(bulletPhysics.linearVelocity.normalized * bulletPhysics.linearVelocity.magnitude, ForceMode2D.Impulse);
-            }
+            hpManager.onDeath.AddListener(StartDeathSequence);
+        }
+        else
+        {
+            Debug.LogError("El enemigo" + gameObject.name + "no tiene HpManager en su objeto padre!");
         }
     }
 
+    void OnDestroy()
+    {
+        if (hpManager != null)
+        {
+            hpManager.onDeath.RemoveListener(StartDeathSequence);
+        }
+    }     
+    
     private void Update()
     {
-        animator.SetFloat(facing, path.desiredVelocity.x);
+        if (path != null && path.canMove)
+        {
+            animator.SetFloat(facing, path.desiredVelocity.x);
+        }
     }
 
+    void StartDeathSequence()
+    {
+        if (isDying)
+        {
+            return;
+        }
+
+        isDying = true;
+
+        DestroyEnemy();
+    }
+
+    public bool IsDying()
+    {
+        return isDying;
+    }
 
     public void EnableAI()
     {
         animator.SetBool(isHit, false);
-        body.linearVelocity = Vector2.zero;
-        if (path != null)
-            path.canMove = true;
+
+        if (isDying)
+        {
+            return;
+        }
+
+        if (body != null)
+        {
+            body.linearVelocity = Vector2.zero;
+            if (path != null) {
+                path.canMove = true;
+            }
+        }
     }
 
     public void DisableAI()
     {
         if (path != null)
             path.canMove = false;
+    }
+
+    public void DestroyEnemy()
+    {
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.EnemyDefeated();
+        }
+
+        Destroy(gameObject);
     }
 }

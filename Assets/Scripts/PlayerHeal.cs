@@ -25,11 +25,11 @@ public class PlayerHeal : MonoBehaviour
 
         healthManager.OnHealthChange.AddListener(OnHealthChange);
 
-        sprites.Add(3, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar3)).OfType<Sprite>().Reverse().ToArray());
-        sprites.Add(4, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar4)).OfType<Sprite>().Reverse().ToArray());
-        sprites.Add(5, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar5)).OfType<Sprite>().Reverse().ToArray());
-        sprites.Add(6, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar6)).OfType<Sprite>().Reverse().ToArray());
-        sprites.Add(7, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar7)).OfType<Sprite>().Reverse().ToArray());
+        sprites.Add(3, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar3)).OfType<Sprite>().ToArray());
+        sprites.Add(4, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar4)).OfType<Sprite>().ToArray());
+        sprites.Add(5, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar5)).OfType<Sprite>().ToArray());
+        sprites.Add(6, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar6)).OfType<Sprite>().ToArray());
+        sprites.Add(7, AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(lifeBar7)).OfType<Sprite>().ToArray());
     }
 
     void OnDestroy()

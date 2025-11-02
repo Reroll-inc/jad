@@ -4,6 +4,7 @@ using UnityEngine;
 public class AnimationManagement : MonoBehaviour
 {
     [SerializeField] private string isHit = "Is Hit";
+
     private Animator animator;
 
     void Start()
@@ -18,5 +19,14 @@ public class AnimationManagement : MonoBehaviour
     public void EndHitAnimation()
     {
         animator.SetBool(isHit, false);
+    }
+
+    public void ShowGameOverScreen()
+    {
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.ActivateGameOver();
+        }
+
     }
 }

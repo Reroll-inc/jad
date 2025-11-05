@@ -12,6 +12,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject screenLevelComplete;
     [SerializeField] private GameObject screenGameOver;
 
+    [Header("Card Selection")]
+    [SerializeField] private CardScreenController cardScreenController;
+
     [Header("Player reference")]
     public PlayerController player;
 
@@ -31,7 +34,6 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f;
 
         screenLevelComplete.SetActive(false);
 
@@ -40,10 +42,24 @@ public class LevelManager : MonoBehaviour
             screenGameOver.SetActive(false);
         }
 
+        if (cardScreenController != null)
+        {
+            cardScreenController.ShowCardSelection();
+        }
+        else
+        {
+            StartLevel();
+        }      
+    }
+    
+    public void StartLevel()
+    {
+        Time.timeScale = 1f; //start level
+
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         UpdateHUD();
     }
-    
+
     public void EnemyDefeated()
     {
         remainingEnemies--;
@@ -63,8 +79,18 @@ public class LevelManager : MonoBehaviour
     void CompleteLevel()
     {
         screenLevelComplete.SetActive(true);
-
         Time.timeScale = 0f;
+        //GoToNextLevel(); // Apllies scene change
+    }
+
+    public void GoToNextLevel()
+    {
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(nextSceneIndex);
+        }
     }
 
     public void ActivateGameOver()
@@ -77,18 +103,16 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
-
-
-    /*public void CardSelect(CardType cardType)
+    public void CardSelect(CardType cardType)
     {
         if (player != null)
         {
-            player.ApllyPowerUp(cardType);
+            player.ApplyPowerUp(cardType);
         }
 
-        Time.timeScale = 1f;
+        StartLevel();
 
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(nextSceneIndex);
-    }*/
+    }
 }

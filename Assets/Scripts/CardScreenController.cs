@@ -1,18 +1,50 @@
 using UnityEngine;
+using System.Collections.Generic; //List use
+using System.Linq; //Cast() and .OrderBy()
+using TMPro;
 
-/*public class CardScreenController : MonoBehaviour
+public class CardScreenController : MonoBehaviour
 {
-    public GameObject screenLevelComplete;
-    void Start()
+    public GameObject cardScreenPanel;
+
+    public CardPowerUp cardOption1;
+    public CardPowerUp cardOption2;
+
+    public TextMeshProUGUI titleText;
+
+    public void ShowCardSelection()
     {
-        screenLevelComplete.SetActive(false);
+        Time.timeScale = 0f;
+        cardScreenPanel.SetActive(true);
+
+        List<CardType> allCards = System.Enum.GetValues(typeof(CardType))
+            .Cast<CardType>()
+            .ToList();
+
+        System.Random rng = new System.Random();
+        List<CardType> shuffledCards = allCards.OrderBy(c => rng.Next()).ToList();
+
+        if (shuffledCards.Count >= 2)
+        {
+            cardOption1.gameObject.SetActive(true);
+            cardOption1.UpdateCardDisplay(shuffledCards[0]);
+
+            cardOption2.gameObject.SetActive(true);
+            cardOption2.UpdateCardDisplay(shuffledCards[1]);
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            titleText.text = "Elige tu carta";
+        }
+        else
+        {
+            titleText.text = "Nivel completado! + \n + "Elige tu carta";
+        }        
     }
 
-    void Update()
+    public void HideCardSelection()
     {
-        if (LevelManager.CompleteLevel()){
-
-        }
+        cardScreenPanel.SetActive(false);
     }
 }
-*/

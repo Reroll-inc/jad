@@ -28,7 +28,7 @@ public class PlayerHeal1 : MonoBehaviour
     [SerializeField] private List<HealthSpriteSet> spriteSets;
 
     private Image image;
-    private HealthManager healthManager;
+    private PlayerHpManager healthManager;
 
     // El diccionario se sigue usando, pero lo llenaremos desde la lista
     private readonly Dictionary<int, Sprite[]> sprites = new();
@@ -43,7 +43,7 @@ public class PlayerHeal1 : MonoBehaviour
             Debug.LogError("Error en PlayerHeal: No se asignó el objeto 'Player' en el Inspector.");
             return;
         }
-        healthManager = player.GetComponent<HealthManager>();
+        healthManager = player.GetComponent<PlayerHpManager>();
         if (healthManager == null)
         {
             Debug.LogError("Error en PlayerHeal: El objeto 'Player' no tiene el script 'HealthManager'.");

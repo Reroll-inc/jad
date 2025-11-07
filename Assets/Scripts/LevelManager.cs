@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private CardScreenController cardScreenController;
 
     [Header("Player reference")]
-    public PlayerController player;
+    public PlayerStats playerStats;
 
     private int remainingEnemies;
 
@@ -55,7 +55,6 @@ public class LevelManager : MonoBehaviour
     public void StartLevel()
     {
         Time.timeScale = 1f; //start level
-
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         UpdateHUD();
     }
@@ -80,7 +79,7 @@ public class LevelManager : MonoBehaviour
     {
         screenLevelComplete.SetActive(true);
         Time.timeScale = 0f;
-        //GoToNextLevel(); // Apllies scene change
+        //GoToNextLevel() goes into screenLevelComplete(Unity UI)
     }
 
     public void GoToNextLevel()
@@ -99,20 +98,21 @@ public class LevelManager : MonoBehaviour
         {
             screenGameOver.SetActive(true);
         }
-
         Time.timeScale = 0f;
     }
 
     public void CardSelect(CardType cardType)
     {
-        if (player != null)
+        if (playerStats != null)
         {
-            player.ApplyPowerUp(cardType);
+            playerStats.ApplyPowerUp(cardType);
+        }
+
+        if (cardScreenController != null)
+        {
+            cardScreenController.HideCardSelection();
         }
 
         StartLevel();
-
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        SceneManager.LoadScene(nextSceneIndex);
     }
 }

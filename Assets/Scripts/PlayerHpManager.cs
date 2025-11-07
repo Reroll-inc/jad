@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public enum HealthOperation { Inc, Dec }
 
-public class HealthManager : MonoBehaviour
+public class PlayerHpManager : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 3;
     private int currentHealth = 3;

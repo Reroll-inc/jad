@@ -15,13 +15,13 @@ public class PlayerHeal : MonoBehaviour
     [SerializeField] private Texture2D lifeBar7;
 
     private Image image;
-    private HealthManager healthManager;
+    private PlayerHpManager healthManager;
     private readonly Dictionary<int, Sprite[]> sprites = new();
 
     void Start()
     {
         image = GetComponent<Image>();
-        healthManager = player.GetComponent<HealthManager>();
+        healthManager = player.GetComponent<PlayerHpManager>();
 
         healthManager.OnHealthChange.AddListener(OnHealthChange);
 

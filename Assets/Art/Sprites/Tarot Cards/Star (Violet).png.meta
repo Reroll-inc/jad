@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad6e6654d6108da4cb1cd79dcbaf1e1c
+guid: d0b60a42c804d6b46b5fe843be1bee8f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3037106028633285093
-    second: Fortune Wheel (Violet)_0
+      213: -5149379436090148106
+    second: Star (Violet)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fortune Wheel (Violet)_0
+      name: Star (Violet)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1e9d1288280ad5d0800000000000000
-      internalID: -3037106028633285093
+      spriteID: 6fa352a7faab988b0800000000000000
+      internalID: -5149379436090148106
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fortune Wheel (Violet)_0: -3037106028633285093
+      Star (Violet)_0: -5149379436090148106
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

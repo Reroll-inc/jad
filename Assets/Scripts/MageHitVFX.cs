@@ -11,13 +11,13 @@ public class MageHitVFX : MonoBehaviour
     private Animator animator;
     private bool immune = false;
 
-    private HealthManager healthManager;
+    private PlayerHpManager healthManager;
     private bool isDead = false; // Avoids multiple IsDead calls
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
 
-        healthManager = GetComponent<HealthManager>();
+        healthManager = GetComponent<PlayerHpManager>();
         if (healthManager == null)
         {
             Debug.LogError("HealthManager not found on player");

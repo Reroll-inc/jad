@@ -1,14 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(HealthManager))]
+[RequireComponent(typeof(PlayerHpManager))]
 public class HealthTest : MonoBehaviour
 {
-    private HealthManager healthManager;
+    private PlayerHpManager healthManager;
 
     void Start()
     {
-        healthManager = GetComponent<HealthManager>();
+        healthManager = GetComponent<PlayerHpManager>();
     }
 
     public void OnAttack(InputAction.CallbackContext context)

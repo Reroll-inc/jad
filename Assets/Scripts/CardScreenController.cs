@@ -27,20 +27,11 @@ public class CardScreenController : MonoBehaviour
         if (shuffledCards.Count >= 2)
         {
             cardOption1.gameObject.SetActive(true);
-            cardOption1.UpdateCardDisplay(shuffledCards[0]);
+            cardOption1.SetupCard(shuffledCards[0]);
 
             cardOption2.gameObject.SetActive(true);
-            cardOption2.UpdateCardDisplay(shuffledCards[1]);
-        }
-
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            titleText.text = "Elige tu carta";
-        }
-        else
-        {
-            titleText.text = "Nivel completado! + \n + "Elige tu carta";
-        }        
+            cardOption2.SetupCard(shuffledCards[1]);
+        }  
     }
 
     public void HideCardSelection()

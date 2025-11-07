@@ -20,7 +20,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.CompareTag(enemyTag))
         {
-            HpManager objectHP = collision.GetComponent<HpManager>();
+            EnemyHpManager objectHP = collision.GetComponent<EnemyHpManager>();
             Rigidbody2D enemyBody = objectHP.GetComponent<Rigidbody2D>();
 
             Animator enemyAnimator = collision.GetComponent<Animator>();

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HpManager : MonoBehaviour
+public class EnemyHpManager : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 3;
 
@@ -50,5 +50,11 @@ public class HpManager : MonoBehaviour
     public int GetMaxHealth()
     {
         return maxHealth;
+    }
+
+    public void SetStartingHealth(int newMaxHealth) // Used for HP scaling
+    {
+        maxHealth = newMaxHealth;
+        currentHealth = maxHealth;
     }
 }

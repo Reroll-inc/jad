@@ -2,9 +2,10 @@ using Pathfinding;
 using UnityEngine;
 using UnityEngine.U2D;
 
-//[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-//[RequireComponent(typeof(AIPath))]
+[RequireComponent(typeof(AIPath))]
+[RequireComponent(typeof(EnemyHpManager))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private string isHit = "Is Hit";
@@ -13,7 +14,7 @@ public class Enemy : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private int enemyDamage;
 
-    private HpManager hpManager;
+    private EnemyHpManager hpManager;
     private bool isDying = false;
     private Rigidbody2D body;
     private AIPath path;
@@ -23,7 +24,7 @@ public class Enemy : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         path = GetComponent<AIPath>();
         animator = GetComponent<Animator>();
-        hpManager = GetComponent<HpManager>();
+        hpManager = GetComponent<EnemyHpManager>();
 
         if (hpManager != null)
         {

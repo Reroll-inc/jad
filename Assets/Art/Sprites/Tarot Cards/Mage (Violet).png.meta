@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d0b60a42c804d6b46b5fe843be1bee8f
+guid: c7aef26a23f5043499097abf2e4c5294
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5149379436090148106
-    second: Star (Violet)_0
+      213: -3243575196241825778
+    second: Mage (Violet)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Star (Violet)_0
+      name: Mage (Violet)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fa352a7faab988b0800000000000000
-      internalID: -5149379436090148106
+      spriteID: e00fcb15b818cf2d0800000000000000
+      internalID: -3243575196241825778
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Star (Violet)_0: -5149379436090148106
+      Mage (Violet)_0: -3243575196241825778
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

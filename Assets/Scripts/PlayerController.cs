@@ -4,14 +4,10 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerInput))]
-[RequireComponent(typeof(HealthManager))]
+[RequireComponent(typeof(PlayerHpManager))]
+[RequireComponent(typeof(PlayerStats))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("Attributes")]
-    [SerializeField] private float moveSpeed = 5.0f;
-    [SerializeField] private float shotSpeed = 10.0f;
-    [SerializeField] private float shotCooldown = 0.5f;
-    [SerializeField] private float dashCooldown = 1.0f;
 
     [Header("Bullet")]
     [SerializeField] private GameObject bulletPrefab;
@@ -21,7 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private string facing = "CurrentInput";
     [SerializeField] private string lastFaced = "LastInput";
 
-    private HealthManager healthManager;
+    private PlayerHpManager healthManager;
     private Rigidbody2D body;
     private Rigidbody2D wand;
     private Rigidbody2D wandTip;
@@ -32,15 +28,7 @@ public class PlayerController : MonoBehaviour
     private bool shooting = false;
     private float lastShotTime = -Mathf.Infinity;
 
-    private float baseMoveSpeed;
-    private float baseShotCooldown;
-    private float baseDashCooldown;
-    private Vector2 baseBulletSize;
-
-    private float moveSpeedBonus = 0f;
-    private float shotCooldownBonus = 0f;
-    private float dashCooldownBonus = 0f;
-    private float bulletSizeBonus = 0f;
+    private PlayerStats playerStats;
 
     void Start()
     {
@@ -49,29 +37,22 @@ public class PlayerController : MonoBehaviour
         wandTip = transform.Find("Wand Pivot/Wand Tip").GetComponentInChildren<Rigidbody2D>();
         wandSprite = transform.Find("Wand Pivot/Wand Sprite").GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animator>();
-        healthManager = GetComponent<HealthManager>();
-
-        baseMoveSpeed = moveSpeed;
-        baseShotCooldown = shotCooldown;
-        baseDashCooldown = dashCooldown;
-
-        if (bulletPrefab != null)
-        {
-            baseBulletSize = bulletPrefab.transform.localScale;
-        }
+        healthManager = GetComponent<PlayerHpManager>();
+        playerStats = GetComponent<PlayerStats>();
+        playerStats.Initialize(bulletPrefab);      
     }
 
     void Update()
     {
-        if (Time.time >= lastShotTime + shotCooldown && shooting)
+        if (Time.time >= lastShotTime + playerStats.CurrentShotCooldown && shooting)
         {
             GameObject bullet = Instantiate(bulletPrefab, wandTip.position, Quaternion.identity);
 
-            bullet.transform.localScale = baseBulletSize + new Vector2(bulletSizeBonus, bulletSizeBonus);
+            bullet.transform.localScale = playerStats.CurrentBulletSize;
 
             if (bullet.TryGetComponent<Rigidbody2D>(out var rbBullet))
             {
-                rbBullet.linearVelocity = shootInput * shotSpeed;
+                rbBullet.linearVelocity = shootInput * playerStats.ShotSpeed;
             }
             lastShotTime = Time.time;
         }
@@ -79,7 +60,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        body.linearVelocity = moveSpeed * playerInput;
+        body.linearVelocity = playerStats.CurrentMoveSpeed * playerInput;
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -123,32 +104,4 @@ public class PlayerController : MonoBehaviour
             shooting = false;
         }
     }
-
-    /*public void ApplyPowerUp(CardType selectedPowerUp)
-    {
-        switch (selectedPowerUp)
-        {
-            case CardType.Mage:   // +10% ASPD
-                shotCooldown = baseShotCooldown / (1f + shotCooldownBonus);
-                Debug.Log("New Shot CD = " + shotCooldown);
-                break;
-            
-            case CardType.Chariot: // +10% MSPD;
-                moveSpeedBonus += 0.10f;
-                moveSpeed = baseMoveSpeed * (1f + moveSpeedBonus);
-                Debug.Log("New MSPD = " + moveSpeed);
-                break;
-            
-            case CardType.Wheel: // -5% Dash CD
-                dashCooldownBonus += 0.05f;
-                Dash.cooldown = baseDashCooldown / (1f + dashCooldownBonus);
-                Debug.Log("New Dash CD = " + dashCooldown);
-                break;
-            
-            case CardType.Star: // +1 Bullet size
-                bulletSizeBonus += 1.0f;
-                Debug.Log("New Bullet Size Bonus = " + bulletSizeBonus);
-                break; 
-        }
-    }*/
 }

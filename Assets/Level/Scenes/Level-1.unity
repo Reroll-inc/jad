@@ -131,6 +131,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
+      objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.39
@@ -197,6 +213,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
+      objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.31
@@ -258,6 +290,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
+      objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.53
@@ -318,6 +366,22 @@ PrefabInstance:
     - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_Name
       value: Zombie (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
       objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
@@ -390,6 +454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat
       objectReference: {fileID: 0}
+    - target: {fileID: 1592054603891790904, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2187670107901475607, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.05
@@ -430,6 +498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3237627563140672514, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8811747565246297647, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
       propertyPath: target
       value: 
@@ -450,6 +522,10 @@ PrefabInstance:
     - target: {fileID: 1592054603891790904, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
       propertyPath: m_Name
       value: Bat (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592054603891790904, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2187670107901475607, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -491,6 +567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3237627563140672514, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8811747565246297647, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
       propertyPath: target
       value: 
@@ -521,6 +601,22 @@ PrefabInstance:
     - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_Name
       value: Zombie (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
       objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
@@ -588,6 +684,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
+      objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.37
@@ -628,6 +740,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5049232711272892876, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9177694719106092752, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: target
       value: 
@@ -637,6 +753,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54b0430966158a142be837c22a210456, type: 3}
+--- !u!1 &1228426060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7162115743530739143, guid: a704914412491bf43ada4523b93b6cd8, type: 3}
+  m_PrefabInstance: {fileID: 3225820781205025057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1276106934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
@@ -663,6 +784,22 @@ PrefabInstance:
     - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_Name
       value: Zombie (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
       objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
@@ -725,6 +862,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bat (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1592054603891790904, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2187670107901475607, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.36
@@ -765,6 +906,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3237627563140672514, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8811747565246297647, guid: 5528636e088fd344796bb68d58e3d33e, type: 3}
       propertyPath: target
       value: 
@@ -790,6 +935,22 @@ PrefabInstance:
     - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_Name
       value: Zombie (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
       objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,6 +992,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5049232711272892876, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9177694719106092752, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: target
       value: 
@@ -856,7 +1021,7 @@ GameObject:
   - component: {fileID: 1892461342}
   m_Layer: 0
   m_Name: --EnemiesLv1--
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1071,6 +1236,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 218508955566157647, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 484372161996059772, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872512164939160884, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -764531417
+      objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.14
@@ -1109,6 +1290,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5049232711272892876, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9177694719106092752, guid: 54b0430966158a142be837c22a210456, type: 3}
@@ -2804,6 +2989,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 784046592031932957}
+    - target: {fileID: 1355737834059546006, guid: 1cdfbbcfc6fa0cf4b80750a7b6d39def, type: 3}
+      propertyPath: hudCanvas
+      value: 
+      objectReference: {fileID: 1228426060}
     - target: {fileID: 1355737834059546006, guid: 1cdfbbcfc6fa0cf4b80750a7b6d39def, type: 3}
       propertyPath: playerStats
       value: 

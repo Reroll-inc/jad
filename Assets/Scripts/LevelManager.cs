@@ -7,6 +7,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance { get; private set; }
 
     [Header("HUD reference")]
+    public GameObject hudCanvas;
     public TextMeshProUGUI enemyCounterText;
 
     [SerializeField] private GameObject screenLevelComplete;
@@ -42,6 +43,11 @@ public class LevelManager : MonoBehaviour
             screenGameOver.SetActive(false);
         }
 
+        if (hudCanvas  != null)
+        {
+            hudCanvas.SetActive(false);
+        }
+
         if (cardScreenController != null)
         {
             cardScreenController.ShowCardSelection();
@@ -54,6 +60,11 @@ public class LevelManager : MonoBehaviour
     
     public void StartLevel()
     {
+        if (hudCanvas != null)
+        {
+            hudCanvas.SetActive(true);
+        }
+
         Time.timeScale = 1f; //start level
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
         UpdateHUD();

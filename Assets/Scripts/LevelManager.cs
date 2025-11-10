@@ -64,7 +64,6 @@ public class LevelManager : MonoBehaviour
     public void StartLevel()
     {
         hudCanvas.SetActive(true);
-
         Time.timeScale = 1f;
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
@@ -84,8 +83,8 @@ public class LevelManager : MonoBehaviour
     public void ActivateGameOver()
     {
         screenGameOver.SetActive(true);
-
         Time.timeScale = 0f;
+        GameManager.Instance.playerInput.SwitchCurrentActionMap("UI");
     }
 
     public void CardSelect(CardType cardType)

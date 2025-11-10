@@ -8,7 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(AIDestinationSetter))]
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private string playerTag;
+    [SerializeField] private string playerTag = "Player";
 
     [Header("Events")]
     [SerializeField] private string isHit = "Is Hit";

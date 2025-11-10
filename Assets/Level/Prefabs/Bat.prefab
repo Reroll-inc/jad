@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f3230cf52cd4f4dba3c6f67a9df5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTag: Player
   isHit: Is Hit
   facing: Facing
   enemyDamage: 1

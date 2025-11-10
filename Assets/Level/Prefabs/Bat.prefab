@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 2187670107901475607}
   - component: {fileID: 365369390366742024}
   - component: {fileID: 3165326948611845119}
-  - component: {fileID: 7739790970087104759}
   - component: {fileID: 8737995796111459240}
   - component: {fileID: 6146210082617670919}
   - component: {fileID: 8410678312831119265}
   - component: {fileID: 2921523183711646359}
   - component: {fileID: 6279537799933020165}
   - component: {fileID: 8698525635810229804}
+  - component: {fileID: 8439530947827484974}
   m_Layer: 10
   m_Name: Bat
   m_TagString: Untagged
@@ -118,21 +118,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7739790970087104759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1592054603891790904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f3230cf52cd4f4dba3c6f67a9df5b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHit: Is Hit
-  facing: Facing
-  enemyDamage: 1
 --- !u!50 &8737995796111459240
 Rigidbody2D:
   serializedVersion: 5
@@ -297,6 +282,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &8439530947827484974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592054603891790904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f3230cf52cd4f4dba3c6f67a9df5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  isHit: Is Hit
+  facing: Facing
+  enemyDamage: 0
 --- !u!1 &3237627563140672514
 GameObject:
   m_ObjectHideFlags: 0

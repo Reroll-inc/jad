@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerHpManager))]
 [RequireComponent(typeof(PlayerStats))]
 public class PlayerController : MonoBehaviour
@@ -23,12 +22,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D wandTip;
     private SpriteRenderer wandSprite;
     private Animator animator;
-    private Vector2 playerInput;
-    private Vector2 shootInput;
-    private bool shooting = false;
+    private Vector2 lastMoveInput;
     private float lastShotTime = -Mathf.Infinity;
-
     private PlayerStats playerStats;
+    private InputAction moveAction;
+    private InputAction shootAction;
+    private InputAction pauseAction;
 
     void Start()
     {
@@ -40,30 +39,93 @@ public class PlayerController : MonoBehaviour
         healthManager = GetComponent<PlayerHpManager>();
         playerStats = GetComponent<PlayerStats>();
         playerStats.Initialize(bulletPrefab);
+        PlayerInput playerInput = GameManager.Instance.playerInput; // GameManager controls player inputs
+        InputActionMap gameplayMap = playerInput.actions.FindActionMap("Gameplay");
+        moveAction = gameplayMap.FindAction("Move");
+        shootAction = gameplayMap.FindAction("Shoot");
+        pauseAction = gameplayMap.FindAction("Pause");
     }
 
     void Update()
     {
-        if (Time.time >= lastShotTime + playerStats.CurrentShotCooldown && shooting)
+        if (pauseAction.WasPressedThisFrame())
         {
-            GameObject bullet = Instantiate(bulletPrefab, wandTip.position, Quaternion.identity);
+            GameManager.Instance.TogglePause();
+            return;
+        }
 
+        // Input reading
+        Vector2 moveInput = moveAction.ReadValue<Vector2>();
+        Vector2 shootInput = shootAction.ReadValue<Vector2>();
+        bool isShooting = shootAction.IsPressed();
+
+        OnMoveAnimation(moveInput);
+        WandRotation(shootInput);
+        OnShooting(shootInput, isShooting);
+    }
+
+    void FixedUpdate()
+    {
+        Vector2 moveInput = moveAction.ReadValue<Vector2>();
+        body.linearVelocity = playerStats.CurrentMoveSpeed * moveInput;
+    }
+
+    private void OnMoveAnimation(Vector2 moveInput)
+    {
+        animator.SetFloat(facing, moveInput.x);
+        if (moveInput.magnitude > 0.1f) // if is moving
+        {
+            animator.SetBool(running, true);
+            if (moveInput.x != 0) lastMoveInput.x = moveInput.x; // Save last sprite direction
+        }
+        else // if we stand still
+        {
+            animator.SetBool(running, false);
+            if (lastMoveInput.x != 0) animator.SetFloat(lastFaced, lastMoveInput.x);
+        }
+    }
+
+    private void WandRotation(Vector2 shootInput)
+    {
+        if (shootInput.magnitude < 0.1f) return;
+        if (shootInput.y < 0) wandSprite.sortingOrder = 1;
+        else wandSprite.sortingOrder = -1;
+
+        if (Math.Abs(shootInput.y) >= Math.Abs(shootInput.x))
+            shootInput.x = 0;
+        else if (Math.Abs(shootInput.x) > Math.Abs(shootInput.y))
+            shootInput.y = 0;
+ 
+        float angle = Mathf.Atan2(shootInput.y, shootInput.x) * Mathf.Rad2Deg;
+        wand.MoveRotation(-90 + angle);
+    }
+
+    private void OnShooting(Vector2 shootInput, bool isShooting)
+    {
+        if (!isShooting) return;
+        if (shootInput.magnitude < 0.1f) return;
+
+        if (Math.Abs(shootInput.y) >= Math.Abs(shootInput.x))
+        {
+            shootInput.x = 0;
+        }
+        else if (Math.Abs(shootInput.x) > Mathf.Abs(shootInput.y)) shootInput.y = 0;
+
+        if (Time.time >= lastShotTime + playerStats.CurrentShotCooldown)
+        {
+            lastShotTime = Time.time;
+
+            GameObject bullet = Instantiate(bulletPrefab, wandTip.position, Quaternion.identity);
             bullet.transform.localScale = playerStats.CurrentBulletSize;
 
             if (bullet.TryGetComponent(out Rigidbody2D rbBullet))
             {
                 rbBullet.linearVelocity = shootInput * playerStats.ShotSpeed;
             }
-            lastShotTime = Time.time;
         }
     }
 
-    void FixedUpdate()
-    {
-        body.linearVelocity = playerStats.CurrentMoveSpeed * playerInput;
-    }
-
-    public void OnMove(InputAction.CallbackContext context)
+    /*public void OnMoves(InputAction.CallbackContext context)
     {
         animator.SetBool(running, true);
 
@@ -78,9 +140,9 @@ public class PlayerController : MonoBehaviour
 
         playerInput = context.ReadValue<Vector2>();
         animator.SetFloat(facing, playerInput.x);
-    }
+    }*/
 
-    public void OnShoot(InputAction.CallbackContext context)
+    /*public void OnShoot(InputAction.CallbackContext context)
     {
         shooting = true;
         shootInput = context.ReadValue<Vector2>();
@@ -103,5 +165,5 @@ public class PlayerController : MonoBehaviour
         {
             shooting = false;
         }
-    }
+    }*/
 }

@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 5012267696533704642}
   - component: {fileID: 7313405077741155747}
   - component: {fileID: 2289593096182817644}
-  - component: {fileID: 6681329969256304044}
   - component: {fileID: 1872512164939160884}
   - component: {fileID: 1380878799613886312}
   - component: {fileID: 2465459863306275939}
   - component: {fileID: 8073355227368366944}
+  - component: {fileID: 2347484608369047405}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Untagged
@@ -143,21 +143,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6681329969256304044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218508955566157647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70f3230cf52cd4f4dba3c6f67a9df5b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isHit: Is Hit
-  facing: Facing
-  enemyDamage: 1
 --- !u!212 &1872512164939160884
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -297,6 +282,22 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
   constrainInsideGraph: 0
+--- !u!114 &2347484608369047405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218508955566157647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f3230cf52cd4f4dba3c6f67a9df5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
+  isHit: Is Hit
+  facing: Facing
+  enemyDamage: 0
 --- !u!1 &484372161996059772
 GameObject:
   m_ObjectHideFlags: 0

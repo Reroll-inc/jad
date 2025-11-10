@@ -15,6 +15,8 @@ public class CardScreenController : MonoBehaviour
         Time.timeScale = 0f;
         cardScreenPanel.SetActive(true);
 
+        GameManager.Instance.playerInput.SwitchCurrentActionMap("UI");
+
         List<CardType> allCards = System.Enum.GetValues(typeof(CardType))
             .Cast<CardType>()
             .ToList();

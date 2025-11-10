@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerHpManager))]
-[RequireComponent(typeof(PlayerInput))]
 [RequireComponent(typeof(PlayerController))]
 public class MageHitVFX : MonoBehaviour
 {
@@ -54,7 +53,6 @@ public class MageHitVFX : MonoBehaviour
         animator.SetBool(isRunningBool, false);
 
         animator.SetTrigger(isDeadTrigger);
-        GetComponent<PlayerInput>().enabled = false;
         GetComponent<PlayerController>().enabled = false;
     }
     public void EndImmunity()

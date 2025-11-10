@@ -26494,63 +26494,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc8e884e90736254f95dab6812a647a6, type: 3}
---- !u!1001 &1596620326
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 88261813471809939, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_Name
-      value: MapBounds
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.4434128
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.010239934
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5440544298476820425, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
 --- !u!1001 &1708031633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26811,14 +26754,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamera
       objectReference: {fileID: 0}
-    - target: {fileID: 2311378430663163717, guid: 392197dde2022b44880a63f4af90fb4e, type: 3}
-      propertyPath: BoundingShape2D
-      value: 
-      objectReference: {fileID: 2102019225}
-    - target: {fileID: 4164639021943857754, guid: 392197dde2022b44880a63f4af90fb4e, type: 3}
-      propertyPath: Target.TrackingTarget
-      value: 
-      objectReference: {fileID: 2134519095}
     - target: {fileID: 5890742250637024142, guid: 392197dde2022b44880a63f4af90fb4e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.05
@@ -26864,19 +26799,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 392197dde2022b44880a63f4af90fb4e, type: 3}
---- !u!60 &2102019225 stripped
-PolygonCollider2D:
-  m_CorrespondingSourceObject: {fileID: 1875142456344241787, guid: d5c4701a21ed96b4993df97df60b347f, type: 3}
-  m_PrefabInstance: {fileID: 1596620326}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2134519088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5047799067560922029, guid: 61110a55f950eab4eacb467c02192a0b, type: 3}
-  m_PrefabInstance: {fileID: 1923780538}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2134519095 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 974389954510104223, guid: 61110a55f950eab4eacb467c02192a0b, type: 3}
   m_PrefabInstance: {fileID: 1923780538}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
@@ -26886,7 +26811,6 @@ SceneRoots:
   - {fileID: 2002960456}
   - {fileID: 2044456230}
   - {fileID: 1708031633}
-  - {fileID: 1596620326}
   - {fileID: 1029313129}
   - {fileID: 618544841}
   - {fileID: 1923780538}

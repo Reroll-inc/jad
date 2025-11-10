@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(EnemyHpManager))]
 public class EnemyHpManager : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 3;
@@ -8,6 +9,7 @@ public class EnemyHpManager : MonoBehaviour
     private int currentHealth;
 
     public UnityEvent onDeath;
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -15,36 +17,21 @@ public class EnemyHpManager : MonoBehaviour
 
     public void ReceiveDamage(int damage)
     {
-        // Discount damage received
         currentHealth -= damage;
 
-        // Avoid HP below 0 on specific scenarios (2 ticks on same frame)
         if (currentHealth < 0)
         {
             currentHealth = 0;
         }
 
-        Debug.Log(gameObject.name + "received" + damage + " de daño. Vida restante: " + currentHealth);
+        Debug.Log(gameObject.name + " received " + damage + " of damage. Remaining life: " + currentHealth);
 
         if (currentHealth == 0)
         {
-            Die();
-        }
-    }
+            Debug.Log(gameObject.name + " died.");
 
-    private void Die()
-    {
-        Debug.Log(gameObject.name + "murió");
-
-        if (onDeath != null)
-        {
             onDeath.Invoke();
         }
-    }
-    
-    public int GetCurrentHealth()
-    {
-        return currentHealth;
     }
 
     public int GetMaxHealth()
@@ -52,9 +39,8 @@ public class EnemyHpManager : MonoBehaviour
         return maxHealth;
     }
 
-    public void SetStartingHealth(int newMaxHealth) // Used for HP scaling
+    public void SetStartingHealth(int newMaxHealth)
     {
-        maxHealth = newMaxHealth;
-        currentHealth = maxHealth;
+        currentHealth = newMaxHealth;
     }
 }

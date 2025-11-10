@@ -1,14 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Events;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager Instance { get; private set; }
-
     [Header("HUD reference")]
-    public GameObject hudCanvas;
-    public TextMeshProUGUI enemyCounterText;
+    [SerializeField] private GameObject hudCanvas;
+    [SerializeField] private TextMeshProUGUI enemyCounterText;
 
     [SerializeField] private GameObject screenLevelComplete;
     [SerializeField] private GameObject screenGameOver;
@@ -19,60 +18,29 @@ public class LevelManager : MonoBehaviour
     [Header("Player reference")]
     public PlayerStats playerStats;
 
-    private int remainingEnemies;
+    public UnityEvent OnEnemyDefeated;
 
-    void Awake()
-    {
-        if (Instance != null && Instance != this)
-        { 
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-        }
-    }
+    private int remainingEnemies;
 
     void Start()
     {
+        OnEnemyDefeated.AddListener(EnemyDefeated);
 
         screenLevelComplete.SetActive(false);
-
-        if (screenGameOver != null)
-        {
-            screenGameOver.SetActive(false);
-        }
-
-        if (hudCanvas  != null)
-        {
-            hudCanvas.SetActive(false);
-        }
-
-        if (cardScreenController != null)
-        {
-            cardScreenController.ShowCardSelection();
-        }
-        else
-        {
-            StartLevel();
-        }      
+        screenGameOver.SetActive(false);
+        hudCanvas.SetActive(false);
+        cardScreenController.ShowCardSelection();
     }
-    
-    public void StartLevel()
+
+    void OnDestroy()
     {
-        if (hudCanvas != null)
-        {
-            hudCanvas.SetActive(true);
-        }
-
-        Time.timeScale = 1f; //start level
-        remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        UpdateHUD();
+        OnEnemyDefeated.RemoveListener(EnemyDefeated);
     }
 
-    public void EnemyDefeated()
+    void EnemyDefeated()
     {
         remainingEnemies--;
+
         UpdateHUD();
 
         if (remainingEnemies == 0)
@@ -93,6 +61,16 @@ public class LevelManager : MonoBehaviour
         //GoToNextLevel() goes into screenLevelComplete(Unity UI)
     }
 
+    public void StartLevel()
+    {
+        hudCanvas.SetActive(true);
+
+        Time.timeScale = 1f;
+        remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
+        UpdateHUD();
+    }
+
     public void GoToNextLevel()
     {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
@@ -105,25 +83,28 @@ public class LevelManager : MonoBehaviour
 
     public void ActivateGameOver()
     {
-        if (screenGameOver != null)
-        {
-            screenGameOver.SetActive(true);
-        }
+        screenGameOver.SetActive(true);
+
         Time.timeScale = 0f;
     }
 
     public void CardSelect(CardType cardType)
     {
-        if (playerStats != null)
-        {
-            playerStats.ApplyPowerUp(cardType);
-        }
-
-        if (cardScreenController != null)
-        {
-            cardScreenController.HideCardSelection();
-        }
+        playerStats.ApplyPowerUp(cardType);
+        cardScreenController.HideCardSelection();
 
         StartLevel();
+    }
+
+    public static LevelManager GetComponent()
+    {
+        string tag = "LevelManager";
+
+        if (!GameObject.FindGameObjectWithTag(tag).TryGetComponent(out LevelManager levelManager))
+        {
+            Debug.LogWarning("Node with tag " + tag + " doesn't have a LevelManager component.");
+        }
+
+        return levelManager;
     }
 }

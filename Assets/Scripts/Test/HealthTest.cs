@@ -14,24 +14,18 @@ public class HealthTest : MonoBehaviour
     public void OnAttack(InputAction.CallbackContext context)
     {
         if (context.started)
-        {
             healthManager.UpdateCurrentHealth(HealthOperation.Inc);
-        }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (context.started)
-        {
             healthManager.UpdateCurrentHealth(HealthOperation.Dec);
-        }
     }
 
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.started)
-        {
             healthManager.IncrementMaxHealth();
-        }
     }
 }

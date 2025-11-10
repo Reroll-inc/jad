@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1355737834059546006}
   m_Layer: 0
   m_Name: LevelManager
-  m_TagString: Untagged
+  m_TagString: LevelManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a8885cfcd711214a8e4ae14510d8eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hudCanvas: {fileID: 0}
   enemyCounterText: {fileID: 0}
   screenLevelComplete: {fileID: 0}
   screenGameOver: {fileID: 0}
-  player: {fileID: 0}
+  cardScreenController: {fileID: 0}
+  playerStats: {fileID: 0}
+  OnEnemyDefeated:
+    m_PersistentCalls:
+      m_Calls: []

@@ -1,25 +1,29 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; //Reads Scene index
-using Pathfinding; // AIPath reference
+using UnityEngine.SceneManagement;
+using Pathfinding;
 
 [RequireComponent(typeof(AIPath))]
 [RequireComponent(typeof(EnemyHpManager))]
 public class EnemyStatsScaler : MonoBehaviour
 {
     [Header("Speed scaling per level")]
-    [SerializeField] private float speedBonusPerLevel = 0.025f; // +2.5% Enemy MSPD per level
+    [SerializeField] private float speedBonusPerLevel = 0.025f;
 
     private AIPath aiPath;
     private EnemyHpManager hpManager;
 
-    void Awake()
+    // TODO: This file could be part of the LevelManager file since its the level responsability
+    // to know its number, difficulty and configure it all accordingly.
+    void Start()
     {
         aiPath = GetComponent<AIPath>();
         hpManager = GetComponent<EnemyHpManager>();
+
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
+
         if (currentLevel == 0)
         {
-            currentLevel = 1; //Avoids menu screen (0)
+            currentLevel = 1;
         }
 
         // Speed scaling logic

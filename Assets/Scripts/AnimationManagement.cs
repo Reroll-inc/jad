@@ -5,15 +5,19 @@ public class AnimationManagement : MonoBehaviour
 {
     [SerializeField] private string isHit = "Is Hit";
 
+    private MageHitVFX mageHit;
     private Animator animator;
+    private LevelManager levelManager;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        levelManager = LevelManager.GetComponent();
+        mageHit = GetComponentInParent<MageHitVFX>();
     }
     public void NotifyEndImmunity()
     {
-        GetComponentInParent<MageHitVFX>()?.EndImmunity();
+        mageHit.EndImmunity();
     }
 
     public void EndHitAnimation()
@@ -23,10 +27,6 @@ public class AnimationManagement : MonoBehaviour
 
     public void ShowGameOverScreen()
     {
-        if (LevelManager.Instance != null)
-        {
-            LevelManager.Instance.ActivateGameOver();
-        }
-
+        levelManager.ActivateGameOver();
     }
 }

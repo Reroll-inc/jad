@@ -9,7 +9,7 @@ public class PlayerHpManager : MonoBehaviour
     [SerializeField] private int maxHealth = 3;
     private int currentHealth = 3;
     public UnityEvent OnHealthChange;
-    public UnityEvent OnDeath; // Triggers on player death
+    public UnityEvent OnDeath;
 
     void Start()
     {
@@ -28,10 +28,7 @@ public class PlayerHpManager : MonoBehaviour
 
     public void IncrementMaxHealth()
     {
-        if (maxHealth == 7)
-        {
-            return;
-        }
+        if (maxHealth == 7) return;
 
         maxHealth++;
         currentHealth++;
@@ -49,23 +46,14 @@ public class PlayerHpManager : MonoBehaviour
                 currentHealth = Math.Min(currentHealth + 1, maxHealth);
                 break;
             case HealthOperation.Dec:
-                if (currentHealth > 0)
-                {
-                    currentHealth = Math.Max(currentHealth - 1, 0);
-                }
-                    break;                
+                currentHealth = Math.Max(currentHealth - 1, 0);
+                break;
         }
 
         if (previousHealth != currentHealth)
-        {
             OnHealthChange.Invoke();
-        }
 
-        // Triggers OnDeath when HP <= 0
-        if (type == HealthOperation.Dec && currentHealth <= 0  && previousHealth > 0)
-        {
+        if (currentHealth == 0)
             OnDeath.Invoke();
-        }        
-
     }
 }

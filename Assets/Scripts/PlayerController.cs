@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         healthManager = GetComponent<PlayerHpManager>();
         playerStats = GetComponent<PlayerStats>();
-        playerStats.Initialize(bulletPrefab);      
+        playerStats.Initialize(bulletPrefab);
     }
 
     void Update()
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
             bullet.transform.localScale = playerStats.CurrentBulletSize;
 
-            if (bullet.TryGetComponent<Rigidbody2D>(out var rbBullet))
+            if (bullet.TryGetComponent(out Rigidbody2D rbBullet))
             {
                 rbBullet.linearVelocity = shootInput * playerStats.ShotSpeed;
             }

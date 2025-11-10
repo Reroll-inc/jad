@@ -1,16 +1,14 @@
 using UnityEngine;
-using System.Collections.Generic; //List use
-using System.Linq; //Cast() and .OrderBy()
+using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 
 public class CardScreenController : MonoBehaviour
 {
-    public GameObject cardScreenPanel;
-
-    public CardPowerUp cardOption1;
-    public CardPowerUp cardOption2;
-
-    public TextMeshProUGUI titleText;
+    [SerializeField] private GameObject cardScreenPanel;
+    [SerializeField] private CardPowerUp cardRender1;
+    [SerializeField] private CardPowerUp cardRender2;
+    [SerializeField] private TextMeshProUGUI titleText;
 
     public void ShowCardSelection()
     {
@@ -21,17 +19,14 @@ public class CardScreenController : MonoBehaviour
             .Cast<CardType>()
             .ToList();
 
-        System.Random rng = new System.Random();
+        System.Random rng = new();
         List<CardType> shuffledCards = allCards.OrderBy(c => rng.Next()).ToList();
 
-        if (shuffledCards.Count >= 2)
-        {
-            cardOption1.gameObject.SetActive(true);
-            cardOption1.SetupCard(shuffledCards[0]);
+        cardRender1.gameObject.SetActive(true);
+        cardRender1.SetupCard(shuffledCards[0]);
 
-            cardOption2.gameObject.SetActive(true);
-            cardOption2.SetupCard(shuffledCards[1]);
-        }  
+        cardRender2.gameObject.SetActive(true);
+        cardRender2.SetupCard(shuffledCards[1]);
     }
 
     public void HideCardSelection()

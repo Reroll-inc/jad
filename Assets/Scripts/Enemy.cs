@@ -1,52 +1,50 @@
 using Pathfinding;
 using UnityEngine;
-using UnityEngine.U2D;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AIPath))]
 [RequireComponent(typeof(EnemyHpManager))]
+[RequireComponent(typeof(AIDestinationSetter))]
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private string playerTag;
+
+    [Header("Events")]
     [SerializeField] private string isHit = "Is Hit";
     [SerializeField] private string facing = "Facing";
 
     [Header("Stats")]
     [SerializeField] private int enemyDamage;
 
-    private EnemyHpManager hpManager;
     private bool isDying = false;
+    private EnemyHpManager hpManager;
     private Rigidbody2D body;
     private AIPath path;
     private Animator animator;
+    private LevelManager levelManager;
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         path = GetComponent<AIPath>();
         animator = GetComponent<Animator>();
         hpManager = GetComponent<EnemyHpManager>();
+        levelManager = LevelManager.GetComponent();
 
-        if (hpManager != null)
-        {
-            hpManager.onDeath.AddListener(StartDeathSequence);
-        }
-        else
-        {
-            Debug.LogError("El enemigo" + gameObject.name + "no tiene HpManager en su objeto padre!");
-        }
+        hpManager.onDeath.AddListener(StartDeathSequence);
+
+        GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Transform>();
     }
 
     void OnDestroy()
     {
-        if (hpManager != null)
-        {
-            hpManager.onDeath.RemoveListener(StartDeathSequence);
-        }
-    }     
-    
-    private void Update()
+        hpManager.onDeath.RemoveListener(StartDeathSequence);
+    }
+
+    void Update()
     {
-        if (path != null && path.canMove)
+        if (path.canMove)
         {
             animator.SetFloat(facing, path.desiredVelocity.x);
         }
@@ -54,51 +52,37 @@ public class Enemy : MonoBehaviour
 
     void StartDeathSequence()
     {
-        if (isDying)
-        {
-            return;
-        }
+        if (isDying) return;
 
         isDying = true;
 
         DestroyEnemy();
     }
 
-    public bool IsDying()
+    public void ReceiveDamage(int damage, Vector2 forceOfImpact)
     {
-        return isDying;
+        if (isDying) return;
+
+        hpManager.ReceiveDamage(damage);
+        path.canMove = false;
+        animator.SetBool(isHit, true);
+
+        body.AddForce(forceOfImpact, ForceMode2D.Impulse);
     }
 
     public void EnableAI()
     {
         animator.SetBool(isHit, false);
 
-        if (isDying)
-        {
-            return;
-        }
+        if (isDying) return;
 
-        if (body != null)
-        {
-            body.linearVelocity = Vector2.zero;
-            if (path != null) {
-                path.canMove = true;
-            }
-        }
-    }
-
-    public void DisableAI()
-    {
-        if (path != null)
-            path.canMove = false;
+        body.linearVelocity = Vector2.zero;
+        path.canMove = true;
     }
 
     public void DestroyEnemy()
     {
-        if (LevelManager.Instance != null)
-        {
-            LevelManager.Instance.EnemyDefeated();
-        }
+        levelManager.OnEnemyDefeated.Invoke();
 
         Destroy(gameObject);
     }

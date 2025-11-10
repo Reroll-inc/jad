@@ -4,19 +4,17 @@ public class PlayerStats : MonoBehaviour
 {
     [Header("Base Stats")]
     [SerializeField] private float moveSpeed = 5.0f;
-    [SerializeField] private float shotSpeed = 10.0f;
-    [SerializeField] private float shotCooldown = 0.8f;
+    [SerializeField] private float shootSpeed = 10.0f;
+    [SerializeField] private float shootCooldown = 0.8f;
     [SerializeField] private float dashCooldown = 2.5f;
-        
+
     [HideInInspector] public GameObject bulletPrefab;
 
-    // Saved base Stats for future calculations
     private float baseMoveSpeed;
     private float baseShotCooldown;
     private float baseDashCooldown;
     private Vector2 baseBulletSize;
 
-    // Stacked bonus stats
     private float moveSpeedBonus = 0f;
     private float shotCooldownBonus = 0f;
     private float dashCooldownBonus = 0f;
@@ -27,34 +25,35 @@ public class PlayerStats : MonoBehaviour
     public float ShotSpeed { get; private set; }
     public float CurrentShotCooldown { get; private set; }
     public float CurrentDashCooldown { get; private set; }
-    public Vector2 CurrentBulletSize {  get; private set; }
+    public Vector2 CurrentBulletSize { get; private set; }
 
-    void Awake()
+    void Start()
     {
         baseMoveSpeed = moveSpeed;
-        baseShotCooldown = shotCooldown;
+        baseShotCooldown = shootCooldown;
         baseDashCooldown = dashCooldown;
-        ShotSpeed = shotSpeed;
+        ShotSpeed = shootSpeed;
 
         RecalculateStats();
     }
-        
-    public void Initialize(GameObject bulletPrefabRef)
-    {
-        bulletPrefab = bulletPrefabRef;
-        if (bulletPrefab != null )
-        {
-            baseBulletSize = bulletPrefab.transform.localScale;
-            CurrentBulletSize = baseBulletSize;
-        }
-    }
 
-    private void RecalculateStats()
+    void RecalculateStats()
     {
         CurrentMoveSpeed = baseMoveSpeed * (1f + moveSpeedBonus);
         CurrentShotCooldown = baseShotCooldown / (1f + shotCooldownBonus);
         CurrentDashCooldown = baseDashCooldown / (1f + dashCooldownBonus);
         CurrentBulletSize = baseBulletSize * (1f + bulletSizeBonus);
+    }
+
+    public void Initialize(GameObject bulletPrefabRef)
+    {
+        bulletPrefab = bulletPrefabRef;
+
+        if (bulletPrefab != null)
+        {
+            baseBulletSize = bulletPrefab.transform.localScale;
+            CurrentBulletSize = baseBulletSize;
+        }
     }
 
     public void ApplyPowerUp(CardType selectedPowerUp)
@@ -68,7 +67,7 @@ public class PlayerStats : MonoBehaviour
 
             case CardType.Chariot: // +10% MSPD
                 moveSpeedBonus += 0.10f;
-                Debug.Log("New MSPD Bonus " +  moveSpeedBonus);
+                Debug.Log("New MSPD Bonus " + moveSpeedBonus);
                 break;
 
             case CardType.Wheel: // -10% Dash CD
@@ -79,18 +78,8 @@ public class PlayerStats : MonoBehaviour
             case CardType.Star: // +10% Bullet Size
                 bulletSizeBonus += 0.05f; // sqrt(3). Fits the +10% bonus
                 Debug.Log("New bullet size bonus: " + bulletSizeBonus);
-                break;                        
+                break;
         }
         RecalculateStats();
-    }
-
-    void Start()
-    {
-        
-    }
-        
-    void Update()
-    {
-        
     }
 }

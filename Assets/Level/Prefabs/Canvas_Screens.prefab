@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardScreenPanel: {fileID: 2450673601629990077}
-  cardOption1: {fileID: 8546419197976327747}
-  cardOption2: {fileID: 5792549839040165484}
+  cardRender1: {fileID: 0}
+  cardRender2: {fileID: 0}
   titleText: {fileID: 3516717154021844744}
 --- !u!1 &846853310868419464
 GameObject:
@@ -896,7 +896,7 @@ GameObject:
   - component: {fileID: 3305012956257006238}
   - component: {fileID: 3516717154021844744}
   m_Layer: 5
-  m_Name: CardsTitleText
+  m_Name: ScreenCardTitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

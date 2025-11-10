@@ -2,31 +2,43 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+public enum CardType
+{
+    Mage,
+    Chariot,
+    Wheel,
+    Star,
+}
+
+[RequireComponent(typeof(Button))]
 public class CardPowerUp : MonoBehaviour
 {
     private CardType powerUpType;
 
     [Header("UI References")]
-    public TextMeshProUGUI cardNameText;
-    public TextMeshProUGUI cardDescriptionText;
-    public Image cardIcon;
+    [SerializeField] private TextMeshProUGUI cardNameText;
+    [SerializeField] private TextMeshProUGUI cardDescriptionText;
+    [SerializeField] private Image cardIcon;
 
     [Header("Cards Sprites")]
-    public Sprite mageSprite;
-    public Sprite chariotSprite;
-    public Sprite wheelSprite;
-    public Sprite starSprite;
+    [SerializeField] private Sprite mageSprite;
+    [SerializeField] private Sprite chariotSprite;
+    [SerializeField] private Sprite wheelSprite;
+    [SerializeField] private Sprite starSprite;
 
     private Button button;
+    private LevelManager levelManager;
+
     void Start()
     {
         button = GetComponent<Button>();
+        levelManager = LevelManager.GetComponent();
         button.onClick.AddListener(SelectCard);
     }
 
     void SelectCard()
     {
-        LevelManager.Instance.CardSelect(powerUpType);
+        levelManager.CardSelect(powerUpType);
     }
 
     public void SetupCard(CardType newType)
@@ -52,7 +64,7 @@ public class CardPowerUp : MonoBehaviour
                 break;
             case CardType.Star:
                 cardNameText.text = "La Estrella";
-                cardDescriptionText.text = "+10% Tamaño de Proyectil";
+                cardDescriptionText.text = "+10% TamaÃ±o de Proyectil";
                 cardIcon.sprite = starSprite;
                 break;
         }

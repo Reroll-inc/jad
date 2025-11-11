@@ -7,32 +7,53 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float shootSpeed = 10.0f;
     [SerializeField] private float shootCooldown = 0.8f;
     [SerializeField] private float dashCooldown = 2.5f;
-    [SerializeField] private Vector2 bulletSize = new(1f, 1f);
+
+    [HideInInspector] public GameObject bulletPrefab;
+
+    private float baseMoveSpeed;
+    private float baseShotCooldown;
+    private float baseDashCooldown;
+    private Vector2 baseBulletSize;
 
     private float moveSpeedBonus = 0f;
-    private float shootCooldownBonus = 0f;
+    private float shotCooldownBonus = 0f;
     private float dashCooldownBonus = 0f;
     private float bulletSizeBonus = 0f;
 
     // Actual stats
-    public float MoveSpeed { get; private set; }
-    public float ShootSpeed { get; private set; }
-    public float ShootCooldown { get; private set; }
-    public float DashCooldown { get; private set; }
-    public Vector2 BulletSize { get; private set; }
+    public float CurrentMoveSpeed { get; private set; }
+    public float ShotSpeed { get; private set; }
+    public float CurrentShotCooldown { get; private set; }
+    public float CurrentDashCooldown { get; private set; }
+    public Vector2 CurrentBulletSize { get; private set; }
 
     void Start()
     {
+        baseMoveSpeed = moveSpeed;
+        baseShotCooldown = shootCooldown;
+        baseDashCooldown = dashCooldown;
+        ShotSpeed = shootSpeed;
+
         RecalculateStats();
     }
 
     void RecalculateStats()
     {
-        MoveSpeed = moveSpeed * (1f + moveSpeedBonus);
-        ShootSpeed = shootSpeed;
-        ShootCooldown = shootCooldown / (1f + shootCooldownBonus);
-        DashCooldown = dashCooldown / (1f + dashCooldownBonus);
-        BulletSize = bulletSize * (1f + bulletSizeBonus);
+        CurrentMoveSpeed = baseMoveSpeed * (1f + moveSpeedBonus);
+        CurrentShotCooldown = baseShotCooldown / (1f + shotCooldownBonus);
+        CurrentDashCooldown = baseDashCooldown / (1f + dashCooldownBonus);
+        CurrentBulletSize = baseBulletSize * (1f + bulletSizeBonus);
+    }
+
+    public void Initialize(GameObject bulletPrefabRef)
+    {
+        bulletPrefab = bulletPrefabRef;
+
+        if (bulletPrefab != null)
+        {
+            baseBulletSize = bulletPrefab.transform.localScale;
+            CurrentBulletSize = baseBulletSize;
+        }
     }
 
     public void ApplyPowerUp(CardType selectedPowerUp)
@@ -40,8 +61,8 @@ public class PlayerStats : MonoBehaviour
         switch (selectedPowerUp)
         {
             case CardType.Mage: // +10% ASPD
-                shootCooldownBonus += 0.10f;
-                Debug.Log("New ASPD Bonus: " + shootCooldownBonus);
+                shotCooldownBonus += 0.10f;
+                Debug.Log("New ASPD Bonus: " + shotCooldownBonus);
                 break;
 
             case CardType.Chariot: // +10% MSPD
@@ -59,7 +80,6 @@ public class PlayerStats : MonoBehaviour
                 Debug.Log("New bullet size bonus: " + bulletSizeBonus);
                 break;
         }
-
         RecalculateStats();
     }
 }

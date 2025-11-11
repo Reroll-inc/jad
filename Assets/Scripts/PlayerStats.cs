@@ -76,7 +76,7 @@ public class PlayerStats : MonoBehaviour
                 break;
 
             case CardType.Star: // +10% Bullet Size
-                bulletSizeBonus += 0.05f; // sqrt(3). Fits the +10% bonus
+                bulletSizeBonus += 0.05f;
                 Debug.Log("New bullet size bonus: " + bulletSizeBonus);
                 break;
         }

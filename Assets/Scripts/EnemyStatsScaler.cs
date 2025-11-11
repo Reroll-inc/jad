@@ -7,7 +7,7 @@ using Pathfinding;
 public class EnemyStatsScaler : MonoBehaviour
 {
     [Header("Speed scaling per level")]
-    [SerializeField] private float speedBonusPerLevel = 0.025f;
+    [SerializeField] private float speedBonusPerLevel = 0.08f;
 
     private AIPath aiPath;
     private EnemyHpManager hpManager;

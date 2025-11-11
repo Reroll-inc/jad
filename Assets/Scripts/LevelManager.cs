@@ -65,6 +65,7 @@ public class LevelManager : MonoBehaviour
     {
         hudCanvas.SetActive(true);
         Time.timeScale = 1f;
+        GameManager.Instance.playerInput.SwitchCurrentActionMap("Gameplay");
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         UpdateHUD();

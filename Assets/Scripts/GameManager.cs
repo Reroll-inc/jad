@@ -57,7 +57,6 @@ public class GameManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(currentSceneIndex);
         SceneManager.LoadSceneAsync(firstLevelIndex, LoadSceneMode.Additive);
         currentSceneIndex = firstLevelIndex;
-        playerInput.SwitchCurrentActionMap(gameplayActionMap);
     }
 
     public void LoadCredits()

@@ -63,16 +63,16 @@ public class MainMenu : MonoBehaviour
 
     public void OpenCreditsPanel()
     {
-        SceneManager.LoadScene(2);
+        GameManager.Instance.LoadCredits();
     }
 
     public void QuitGame()
     {
-        Application.Quit();
+        GameManager.Instance.QuitGame();
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(3);
+        GameManager.Instance.StartGame();
     }
 }

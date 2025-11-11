@@ -3,11 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [Header("Menú Principal")]
+    [Header("Menï¿½ Principal")]
     public GameObject mainMenu;
     public GameObject optionsMenu;
 
-    [Header("Menú de Opciones")]
+    [Header("Menï¿½ de Opciones")]
     public GameObject mainOptionsMenu;
     public GameObject controllerMenu;
     public GameObject soundMenu;
@@ -63,16 +63,16 @@ public class MainMenu : MonoBehaviour
 
     public void OpenCreditsPanel()
     {
-        GameManager.Instance.LoadCredits();
+        SceneManager.LoadScene(2);
     }
 
     public void QuitGame()
     {
-        GameManager.Instance.QuitGame();
+        Application.Quit();
     }
 
     public void PlayGame()
     {
-        GameManager.Instance.StartGame();
+        SceneManager.LoadScene(3);
     }
 }

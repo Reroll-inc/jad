@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     // public AudioManager Audio {  get; private set; }
     public PlayerInput playerInput;
 
-    [Header("Scene Indexes")] // Adding index as reference for currentSceneIndex. 
+    [Header("Scene Indexes")] // Adding index as reference for currentSceneIndex.
     // Serialized indexes just in case we change index scene order in edit window.
     [SerializeField] private int splashScreenIndex = 1;
     [SerializeField] private int mainMenuIndex = 2;
@@ -30,14 +30,14 @@ public class GameManager : MonoBehaviour
     private bool isPaused = false;
     private int currentSceneIndex;
 
-    void Awake() { 
+    void Awake() {
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
         playerInput = GetComponent<PlayerInput>();
         // audio = GetComponent<AudioManager>(); // Add AudioManager
     }
-    
+
     void Start()
     {
         SceneManager.LoadSceneAsync(splashScreenIndex, LoadSceneMode.Additive);
@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(currentSceneIndex);
         SceneManager.LoadSceneAsync(firstLevelIndex, LoadSceneMode.Additive);
         currentSceneIndex = firstLevelIndex;
+        playerInput.SwitchCurrentActionMap(gameplayActionMap);
     }
 
     public void LoadCredits()

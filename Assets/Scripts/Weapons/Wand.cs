@@ -63,7 +63,7 @@ public class Wand : MonoBehaviour
 
             return;
         }
-        if (context.started)
+        if (context.performed)
         {
             shooting = true;
             shootInput = context.ReadValue<Vector2>();

@@ -27,18 +27,16 @@ public class CardPowerUp : MonoBehaviour
     [SerializeField] private Sprite starSprite;
 
     private Button button;
-    private LevelManager levelManager;
 
     void Start()
     {
         button = GetComponent<Button>();
-        levelManager = LevelManager.GetComponent();
         button.onClick.AddListener(SelectCard);
     }
 
     void SelectCard()
     {
-        levelManager.CardSelect(powerUpType);
+        LevelManager.Instance.CardSelect(powerUpType);
     }
 
     public void SetupCard(CardType newType)

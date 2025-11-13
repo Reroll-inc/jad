@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
     private Rigidbody2D body;
     private AIPath path;
     private Animator animator;
-    private LevelManager levelManager;
 
     void Start()
     {
@@ -30,7 +29,6 @@ public class Enemy : MonoBehaviour
         path = GetComponent<AIPath>();
         animator = GetComponent<Animator>();
         hpManager = GetComponent<EnemyHpManager>();
-        levelManager = LevelManager.GetComponent();
 
         hpManager.onDeath.AddListener(StartDeathSequence);
 
@@ -82,7 +80,7 @@ public class Enemy : MonoBehaviour
 
     public void DestroyEnemy()
     {
-        levelManager.OnEnemyDefeated.Invoke();
+        LevelManager.Instance.OnEnemyDefeated.Invoke();
 
         Destroy(gameObject);
     }

@@ -2,9 +2,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.Events;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance { get; private set; }
+
     [Header("HUD reference")]
     [SerializeField] private GameObject hudCanvas;
     [SerializeField] private TextMeshProUGUI enemyCounterText;
@@ -21,6 +24,19 @@ public class LevelManager : MonoBehaviour
     public UnityEvent OnEnemyDefeated;
 
     private int remainingEnemies;
+
+    void Awake()
+    {
+        if (Instance != this)
+        {
+            Debug.LogError("Two instances of LevelManager exists shouldn't exist in the same Scene.");
+
+            return;
+        }
+
+        Instance = this;
+    }
+
 
     void Start()
     {
@@ -65,7 +81,7 @@ public class LevelManager : MonoBehaviour
     {
         hudCanvas.SetActive(true);
         Time.timeScale = 1f;
-        GameManager.Instance.playerInput.SwitchCurrentActionMap("Gameplay");
+        GameManager.Instance.ActivateActionMap(GameInputMap.Gameplay);
         remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         UpdateHUD();
@@ -85,7 +101,7 @@ public class LevelManager : MonoBehaviour
     {
         screenGameOver.SetActive(true);
         Time.timeScale = 0f;
-        GameManager.Instance.playerInput.SwitchCurrentActionMap("UI");
+        GameManager.Instance.ActivateActionMap(GameInputMap.UI);
     }
 
     public void CardSelect(CardType cardType)
@@ -94,17 +110,5 @@ public class LevelManager : MonoBehaviour
         cardScreenController.HideCardSelection();
 
         StartLevel();
-    }
-
-    public static LevelManager GetComponent()
-    {
-        string tag = "LevelManager";
-
-        if (!GameObject.FindGameObjectWithTag(tag).TryGetComponent(out LevelManager levelManager))
-        {
-            Debug.LogWarning("Node with tag " + tag + " doesn't have a LevelManager component.");
-        }
-
-        return levelManager;
     }
 }

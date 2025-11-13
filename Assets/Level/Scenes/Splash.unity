@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76284cd34833ae64ab2bff81f77295b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  confirmActionName: Submit
+  confirmAction: {fileID: -1335819900530967275, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!1 &1978058430
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,40 +13,48 @@ public class PauseMenu : MonoBehaviour
     {
         ShowMainPausePanel();
     }
-    public void OnResumeButtonPressed() // pause/resume game
+
+    void OpenSubMenu(SubMenu? subMenu)
+    {
+        controllerPanel.SetActive(SubMenu.CONTROLLER == subMenu);
+        soundPanel.SetActive(SubMenu.SOUND == subMenu);
+        graphicsPanel.SetActive(SubMenu.GRAPHICS == subMenu);
+    }
+
+    public void OnResumeButtonPressed()
     {
         GameManager.Instance.TogglePause();
     }
 
-    public void OnOptionsButtonPressed() // Show options in-game menu
+    public void OnOptionsButtonPressed()
     {
         ShowOptionsMenu();
     }
 
-    public void OnQuitGameButtonPressed() // Quit game
+    public void OnQuitGameButtonPressed()
     {
         GameManager.Instance.QuitGame();
     }
 
-    public void OnControllerButtonPressed() // Open controller panel
+    public void OnControllerButtonPressed()
     {
         optionsMenuPanel.SetActive(false);
-        controllerPanel.SetActive(true);
+        OpenSubMenu(SubMenu.CONTROLLER);
     }
 
-    public void OnSoundButtonPressed() // Open sound settings
+    public void OnSoundButtonPressed()
     {
         optionsMenuPanel.SetActive(false);
-        soundPanel.SetActive(true);
+        OpenSubMenu(SubMenu.SOUND);
     }
 
-    public void OnGraphicsButtonPressed() // Open graphics settings
+    public void OnGraphicsButtonPressed()
     {
         optionsMenuPanel.SetActive(false);
-        graphicsPanel.SetActive(true);
+        OpenSubMenu(SubMenu.GRAPHICS);
     }
 
-    public void OnQuitToMenuButtonPressed() // Exit to main menu
+    public void OnQuitToMenuButtonPressed()
     {
         GameManager.Instance.QuitToMenu();
     }
@@ -65,17 +73,13 @@ public class PauseMenu : MonoBehaviour
     {
         mainPausePanel.SetActive(true);
         optionsMenuPanel.SetActive(false);
-        controllerPanel.SetActive(false);
-        soundPanel.SetActive(false);
-        graphicsPanel.SetActive(false);
+        OpenSubMenu(null);
     }
 
     private void ShowOptionsMenu()
     {
         mainPausePanel.SetActive(false);
         optionsMenuPanel.SetActive(true);
-        controllerPanel.SetActive(false);
-        soundPanel.SetActive(false);
-        graphicsPanel.SetActive(false);
+        OpenSubMenu(null);
     }
 }

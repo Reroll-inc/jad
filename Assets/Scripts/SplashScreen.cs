@@ -4,22 +4,19 @@ using UnityEngine.InputSystem;
 public class SplashScreen : MonoBehaviour
 {
     [Header("Input Settings")]
-    [SerializeField] private string confirmActionName = "Submit"; // Detects any key
+    [SerializeField] private InputActionReference confirmAction;
 
-    private InputAction confirmAction;
-    void Start()
+    void OnEnable()
     {
-        PlayerInput playerInput = GameManager.Instance.playerInput;
-        InputActionMap uiMap = playerInput.actions.FindActionMap("UI");
-        confirmAction = uiMap.FindAction(confirmActionName);
+        confirmAction.action.started += OnSubmit;
+    }
+    void OnDisable()
+    {
+        confirmAction.action.started -= OnSubmit;
     }
 
-    void Update()
+    void OnSubmit(InputAction.CallbackContext context)
     {
-        if (confirmAction.WasPressedThisFrame())
-        {
-            GameManager.Instance.LoadMainMenu();
-            this.enabled = false;
-        }
+        GameManager.Instance.LoadMainMenu();
     }
 }

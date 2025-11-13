@@ -1,31 +1,40 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
+public enum SubMenu
+{
+    CONTROLLER,
+    SOUND,
+    GRAPHICS
+}
 
 public class MainMenu : MonoBehaviour
 {
-    [Header("Men� Principal")]
-    public GameObject mainMenu;
-    public GameObject optionsMenu;
+    [Header("Main Configuration")]
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject optionsMenu;
 
-    [Header("Men� de Opciones")]
-    public GameObject mainOptionsMenu;
-    public GameObject controllerMenu;
-    public GameObject soundMenu;
-    public GameObject graphicsMenu;
+    [Header("Options Menu")]
+    [SerializeField] private GameObject mainOptionsMenu;
+    [SerializeField] private GameObject controllerMenu;
+    [SerializeField] private GameObject soundMenu;
+    [SerializeField] private GameObject graphicsMenu;
 
     void Start()
     {
-        OpenMainMenuPanel(); // Menu starts in main menu
-
-        // Deactivate submenus at the beginning
-        controllerMenu.SetActive(false);
-        soundMenu.SetActive(false);
-        graphicsMenu.SetActive(false);
+        OpenMainMenuPanel();
+        OpenSubMenu(null);
     }
-    public void OpenMainMenuPanel()
+    void OpenMainMenuPanel()
     {
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
+    }
+
+    void OpenSubMenu(SubMenu? subMenu)
+    {
+        controllerMenu.SetActive(SubMenu.CONTROLLER == subMenu);
+        soundMenu.SetActive(SubMenu.SOUND == subMenu);
+        graphicsMenu.SetActive(SubMenu.GRAPHICS == subMenu);
     }
 
     public void OpenOptionsPanel()
@@ -35,30 +44,7 @@ public class MainMenu : MonoBehaviour
 
         mainOptionsMenu.SetActive(true);
 
-        controllerMenu.SetActive(false);
-        soundMenu.SetActive(false);
-        graphicsMenu.SetActive(false);
-    }
-
-    public void OpenControllerMenu()
-    {
-        controllerMenu.SetActive(true);
-        soundMenu.SetActive(false);
-        graphicsMenu.SetActive(false);
-    }
-
-    public void OpenSoundMenu()
-    {
-        soundMenu.SetActive(true);
-        controllerMenu.SetActive(false);
-        graphicsMenu.SetActive(false);
-    }
-
-    public void OpenGraphicsMenu()
-    {
-        graphicsMenu.SetActive(true);
-        controllerMenu.SetActive(false);
-        soundMenu.SetActive(false);
+        OpenSubMenu(SubMenu.CONTROLLER);
     }
 
     public void OpenCreditsPanel()

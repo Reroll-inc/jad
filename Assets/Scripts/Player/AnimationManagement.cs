@@ -7,12 +7,10 @@ public class AnimationManagement : MonoBehaviour
 
     private MageHitVFX mageHit;
     private Animator animator;
-    private LevelManager levelManager;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        levelManager = LevelManager.GetComponent();
         mageHit = GetComponentInParent<MageHitVFX>();
     }
     public void NotifyEndImmunity()
@@ -27,6 +25,6 @@ public class AnimationManagement : MonoBehaviour
 
     public void ShowGameOverScreen()
     {
-        levelManager.ActivateGameOver();
+        LevelManager.Instance.ActivateGameOver();
     }
 }

@@ -13,13 +13,15 @@ public class MageHitVFX : MonoBehaviour
     [SerializeField] private string isRunningBool = "Running";
 
     private Animator animator;
+    private Animator wandAnimator;
     private bool immune = false;
 
     private PlayerHpManager healthManager;
     private bool isDead = false;
     void Start()
     {
-        animator = GetComponentInChildren<Animator>();
+        animator = transform.Find("Player Sprite").GetComponent<Animator>();
+        wandAnimator = transform.Find("Wand Pivot/Wand Sprite").GetComponent<Animator>();
         healthManager = GetComponent<PlayerHpManager>();
 
         healthManager.OnDeath.AddListener(HandleDeath);
@@ -37,6 +39,7 @@ public class MageHitVFX : MonoBehaviour
         StartImmunity();
         healthManager.UpdateCurrentHealth(HealthOperation.Dec);
         animator.SetBool(isHit, true);
+        wandAnimator.SetBool(isHit, true);
     }
 
     public void HandleDeath()

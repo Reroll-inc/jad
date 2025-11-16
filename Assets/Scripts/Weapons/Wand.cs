@@ -10,6 +10,8 @@ public class Wand : MonoBehaviour
 
     private Rigidbody2D pivot;
     private Rigidbody2D tipBody;
+    private SpriteRenderer sprite;
+    private Color invisible;
     private float lastShotTime = -Mathf.Infinity;
     private PlayerStats playerStats;
 
@@ -19,6 +21,7 @@ public class Wand : MonoBehaviour
     void Start()
     {
         pivot = GetComponent<Rigidbody2D>();
+        sprite = GetComponentInChildren<SpriteRenderer>();
         playerStats = GetComponentInParent<PlayerStats>();
         tipBody = transform.Find("Wand Tip").GetComponentInChildren<Rigidbody2D>();
     }
@@ -32,13 +35,16 @@ public class Wand : MonoBehaviour
     {
         if (!shooting || Time.time < lastShotTime + playerStats.ShootCooldown) return;
 
-        // 1. We move the wand
         float angle = Mathf.Atan2(shootInput.y, shootInput.x) * Mathf.Rad2Deg;
 
         pivot.MoveRotation(-90 + angle);
-        // 2. We shoot if CD is up
         lastShotTime = Time.time;
-        shootInput = shootInput.normalized;
+
+        if(Math.Abs(pivot.rotation) == 180)
+            sprite.sortingOrder = 1;
+        else
+            sprite.sortingOrder = -1;
+
 
         if (Math.Abs(shootInput.y) >= Math.Abs(shootInput.x))
             shootInput.x = 0;
@@ -60,12 +66,14 @@ public class Wand : MonoBehaviour
         if (context.canceled)
         {
             shooting = false;
+            sprite.enabled = false;
 
             return;
         }
         if (context.performed)
         {
             shooting = true;
+            sprite.enabled = true;
             shootInput = context.ReadValue<Vector2>();
         }
     }

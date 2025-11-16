@@ -4,7 +4,6 @@ using UnityEngine.InputSystem;
 
 public enum GameInputMap { UI, Gameplay }
 
-
 // [RequireComponent(typeof(AudioManager))] Create and add AudioManager.cs
 // Navigation System -- input system -- llevar track de la navegación del previo botón activo -- botón de salida a la derecha
 public class GameManager : MonoBehaviour

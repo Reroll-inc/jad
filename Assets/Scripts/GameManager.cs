@@ -127,6 +127,7 @@ public class GameManager : MonoBehaviour
         SceneManager.UnloadSceneAsync(currentSceneIndex);
         SceneManager.LoadSceneAsync(firstLevelIndex, LoadSceneMode.Additive);
         currentSceneIndex = firstLevelIndex;
+        Debug.Log($"Current Index = {currentSceneIndex}");
     }
 
     public void LoadCredits()
@@ -148,12 +149,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Loading Level {nextIndex}");
+            Debug.Log($"Loading Level {nextIndex}");            
             SceneManager.UnloadSceneAsync(currentSceneIndex);
             SceneManager.LoadSceneAsync(nextIndex, LoadSceneMode.Additive);
             currentSceneIndex = nextIndex;
-
-            ActivateActionMap(GameInputMap.Gameplay);
+            Debug.Log($"Current Index = {currentSceneIndex}");
+            //ActivateActionMap(GameInputMap.Gameplay);
         }
     }
 

@@ -73,6 +73,8 @@ public class LevelManager : MonoBehaviour
 
     public void CompleteLevel()
     {
+        GameManager.Instance.ActivateActionMap(GameInputMap.UI);
+        warningMenuPanel.SetActive(false);
         screenLevelComplete.SetActive(true);
         Time.timeScale = 0f;        
     }
@@ -95,12 +97,13 @@ public class LevelManager : MonoBehaviour
 
     public void GoToNextLevel()
     {
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        GameManager.Instance.LoadNextLevel();
+        /*int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
-        }
+        }*/
     }
 
     public void ActivateGameOver()

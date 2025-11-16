@@ -355,6 +355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyTag: Enemy
+  fireballTag: Boss Fireball
   isImmune: Is Immune
   isHit: Is Hit
   isDeadTrigger: Is Dead

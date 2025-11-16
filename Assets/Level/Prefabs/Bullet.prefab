@@ -191,3 +191,4 @@ MonoBehaviour:
   lifetime: 1.5
   enemyTag: Enemy
   terrainTag: Wall
+  fireballTag: Boss Fireball

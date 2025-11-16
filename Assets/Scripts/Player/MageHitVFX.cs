@@ -5,6 +5,7 @@ using UnityEngine;
 public class MageHitVFX : MonoBehaviour
 {
     [SerializeField] private string enemyTag = "Enemy";
+    [SerializeField] private string fireballTag = "Boss Fireball";
 
     [Header("Animation")]
     [SerializeField] private string isImmune = "Is Immune";
@@ -32,7 +33,12 @@ public class MageHitVFX : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (isDead || immune || !collision.CompareTag(enemyTag)) return;
+        if (
+            isDead ||
+            immune ||
+            !(collision.CompareTag(enemyTag) || collision.CompareTag(fireballTag))
+        )
+            return;
 
         StartImmunity();
         healthManager.UpdateCurrentHealth(HealthOperation.Dec);

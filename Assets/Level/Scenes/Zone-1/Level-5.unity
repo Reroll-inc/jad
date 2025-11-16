@@ -1630,6 +1630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 1380878799613886312, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
       propertyPath: m_LocalPosition.x
       value: -11.9
@@ -1670,6 +1674,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2465459863306275939, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012267696533704642, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8073355227368366944, guid: 54b0430966158a142be837c22a210456, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1689,7 +1705,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7004137415503380421, guid: cc8e884e90736254f95dab6812a647a6, type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAACon+ujoI2jXgIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVEtz2jAQ/iuMzqVjEgKht9YQ0gMJE9rJxRdhrbEGWfLowSMZ/ntXsowdemL59tvdbx/yJ+HS1JBbpZeas5ViQH4MiLfJt0HnfIYT3Sm54R/Qct45s6Un0cB5o5YrxEc+zKgKrOb5T7kTnpwg6CQvlK4WbAepMtYgXFBhAF1aWR8tEfockBP+DGc+5IzW3dRbH2jNksEFzRykBd2jTr4/RO4oMhuik7mgVQ3Mq+740/vIvp8EmsR+IiMJmXIlBDdRDrHnOrSb0to4bAYJjFNsL2jwFUvgu9J6qf3g16IwYGPvmp7nXOOUmqzkl2pGV1Gzb5QdqHC+zmQcRDU5V/+5h6PgLrSqntuyo8SXsCXP92/0nFNje6Ptw/Ovup08UrGnWwHvJcgXtdTKSYZOq50PdQbu5t3fa2dpCfm+wxupN6Cru4G3m2z36Hu4hOZPqeDVNgx+3AAbocK4w/pB42p+o+BwHCamQNSr+GvgD931ryg6nrg2Fl2xS+nlbZXTnkoWYWa+G2dTpSUEOIquQVJhz2tMY283eOPrlb3xPFH/XmLx6GufwU1IgDt+kty41up4XZYp1XEFpnx1VnAJnWjveME5pUrK5sD6M2nDNk4XNO+F7RxnX0+LTOh0xsaP4+ksYcCms2GC9iQvto8UHkaz8T0Jt8cl9knFuhEax4Nb689E4qG135HBUtM6XDvT9LjkH5XqzZzLQm1yDSBfv6YwoLEKvku2YBwntAFruQwLJ58ZESrfA8uuibLQ6uJkNc26LBmp+UFZj2QkDR+OjHj4esxrDQcOR1+8TXYhl39QSwMEFAAACAgAAKif63zj8JJsAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJZorlliomFibmlQUpqirmlrgGQbZaclmSRmGpqaGlirBQLVF9SWZDql5ibCtETkFiSkZaZl5KZl67nXpSZ4g4yWim2FgBQSwECLQAUAAAICAAAqJ/ro6CNo14CAAAXBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAqJ/rfOPwkmwAAAB4AAAACQAkAAAAAAAAAAAAAACrAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGIDAAAAAA==
+      value: UEsDBBQAAAgIAACon+sKDmxJYQIAABcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzk3HUBJCb61DSA9JmJBOLr4Ia401yJJHHwGS4b93V7axQ08sb9/uvv2QP5nUrobcG7u0UjwaAezniJHNvo165wMc+NbotfyAjvMmhS+JxCPnhXtpEB9TmDMVeCvzX3qriJwgGLQsjK0WYgupcd4hXHDlAF3WeIrWCH2O2AF/ruYUckRrMiPrA615MjqhmYP2YAfUm+/XLTeJFnEbatC54lUNgnT3EbOOP21oGjtqGaQ+N0pJ18ph/ljHdlNeu4DNIEFIju1FDcQvQW5LT1KHwc9F4cC3vVt+vJMWp9RkZb9NM7qKu12j652rQHUm4/EkimqyPv5HuBpHd2FN9dAVHidUxJcy373wY86dHwx3CN99VR70nqsd3yh4K0E/maU1QQt0ehsoNDiY3PV/z72lJeS7Hm+kXoCh7gfe7bLbJPVwiu0fUiWrTVzdtAHWysSBxwMAi6v5g4Ljebg2BaKk4q+DV74d3lHruJfWeXS1XWqStzHBEpUt4syom+BTYzVEuBVdg+bKH1eYxl/u8MI3KHvhuef0Ytrira97CBchEe75SXLhWpn9eVmuNPtHcOVz8Epq6EWT4wnnlBqtmxNzX50UtQ624Pkgahuk+HpZ7IbP5mJ6O53NEwFiNr9K0L7Ji80th+vxfPqDxdOTGtvkatXobKeDS9N9co1n1n1HRkvL63jtwvL9Un5UZqBP6sKscwugn5sM3YQcWCyCr1IshMT5rMF7qeO62WfGlMl3ILJzoix2ujh4y7M+S8Zq+W48IRlL44cjYwSfT3ll4V3Cnop3yU7s9A9QSwMEFAAACAgAAKif63zj8JJsAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJZorlliomFibmlQUpqirmlrgGQbZaclmSRmGpqaGlirBQLVF9SWZDql5ibCtETkFiSkZaZl5KZl67nXpSZ4g4yWim2FgBQSwECLQAUAAAICAAAqJ/rCg5sSWECAAAXBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAqJ/rfOPwkmwAAAB4AAAACQAkAAAAAAAAAAAAAACuAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAGUDAAAAAA==
       objectReference: {fileID: 0}
     - target: {fileID: 8108561417065746006, guid: cc8e884e90736254f95dab6812a647a6, type: 3}
       propertyPath: m_LocalPosition.x

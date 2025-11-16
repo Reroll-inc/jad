@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-        ActivateActionMap(GameInputMap.UI);
+            ActivateActionMap(GameInputMap.UI);
             DEV_LoadLevel();
         }
     }

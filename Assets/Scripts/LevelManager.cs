@@ -13,6 +13,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI enemyCounterText;
 
     [SerializeField] private GameObject screenLevelComplete;
+    [SerializeField] private GameObject warningMenuPanel;
     [SerializeField] private GameObject screenGameOver;
 
     [Header("Card Selection")]
@@ -70,11 +71,16 @@ public class LevelManager : MonoBehaviour
         enemyCounterText.text = remainingEnemies.ToString();
     }
 
-    void CompleteLevel()
+    public void CompleteLevel()
     {
         screenLevelComplete.SetActive(true);
-        Time.timeScale = 0f;
-        //GoToNextLevel() goes into screenLevelComplete(Unity UI)
+        Time.timeScale = 0f;        
+    }
+
+    public void WarningBackToMenu()
+    {
+        screenLevelComplete.SetActive(false);
+        warningMenuPanel.SetActive(true);
     }
 
     public void StartLevel()
@@ -110,5 +116,10 @@ public class LevelManager : MonoBehaviour
         cardScreenController.HideCardSelection();
 
         StartLevel();
+    }
+
+    public void GoBackToMenu()
+    {
+        GameManager.Instance.LoadMainMenu();
     }
 }

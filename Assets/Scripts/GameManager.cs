@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("Input Action Maps")]
     [SerializeField] private string uiActionMap = "UI";
     [SerializeField] private string gameplayActionMap = "Gameplay";
+    [SerializeField] private string splashActionMap = "Splash";
 
     [Header("Pause UI")]
     [SerializeField] private GameObject pauseMenuPanel;
@@ -41,18 +42,18 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ActivateActionMap(GameInputMap.UI);
 
         // audio = GetComponent<AudioManager>(); // Add AudioManager
 
         if (devInitialLevel == -1)
         {
-
+            ToggleSplashKeymap(true);
             SceneManager.LoadSceneAsync(splashScreenIndex, LoadSceneMode.Additive);
             currentSceneIndex = splashScreenIndex;
         }
         else
         {
+        ActivateActionMap(GameInputMap.UI);
             DEV_LoadLevel();
         }
     }
@@ -98,13 +99,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void ToggleSplashKeymap(bool activate)
+    {
+        if (activate)
+        {
+            InputSystem.actions.FindActionMap(splashActionMap).Enable();
+            InputSystem.actions.FindActionMap(uiActionMap).Disable();
+            InputSystem.actions.FindActionMap(gameplayActionMap).Disable();
+        }
+        else
+        {
+            InputSystem.actions.FindActionMap(splashActionMap).Disable();
+            InputSystem.actions.FindActionMap(uiActionMap).Enable();
+            InputSystem.actions.FindActionMap(gameplayActionMap).Disable();
+        }
+    }
+
     public void LoadMainMenu()
     {
+        ToggleSplashKeymap(false);
         SceneManager.UnloadSceneAsync(currentSceneIndex);
         SceneManager.LoadSceneAsync(mainMenuIndex, LoadSceneMode.Additive);
         currentSceneIndex = mainMenuIndex;
-
-        ActivateActionMap(GameInputMap.UI);
     }
 
     public void StartGame()
@@ -153,14 +169,12 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         isPaused = false;
-
         LoadMainMenu();
     }
 
     public void QuitGame()
     {
         Debug.Log("Closing game...");
-
         Application.Quit();
     }
 }

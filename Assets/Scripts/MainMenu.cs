@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum SubMenu
 {
@@ -9,6 +10,9 @@ public enum SubMenu
 
 public class MainMenu : MonoBehaviour
 {
+    //[Header("Input Settings")]
+    //[SerializeField] private InputActionReference menuActions;
+
     [Header("Main Configuration")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject optionsMenu;
@@ -24,7 +28,7 @@ public class MainMenu : MonoBehaviour
         OpenMainMenuPanel();
         OpenSubMenu(null);
     }
-    void OpenMainMenuPanel()
+    public void OpenMainMenuPanel()
     {
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
@@ -35,6 +39,25 @@ public class MainMenu : MonoBehaviour
         controllerMenu.SetActive(SubMenu.CONTROLLER == subMenu);
         soundMenu.SetActive(SubMenu.SOUND == subMenu);
         graphicsMenu.SetActive(SubMenu.GRAPHICS == subMenu);
+    }
+
+    public void OpenControllerMenu()
+    {
+        controllerMenu.SetActive(true);
+        soundMenu.SetActive(false);
+        graphicsMenu.SetActive(false);
+    }
+    public void OpenSoundMenu()
+    {
+        controllerMenu.SetActive(false);
+        soundMenu.SetActive(true);
+        graphicsMenu.SetActive(false);
+    }
+    public void OpenGraphicsMenu()
+    {
+        controllerMenu.SetActive(false);
+        soundMenu.SetActive(false);
+        graphicsMenu.SetActive(true);
     }
 
     public void OpenOptionsPanel()
@@ -60,5 +83,13 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         GameManager.Instance.StartGame();
+    }
+
+    void Update()
+    {
+        if (Gamepad.current != null && Gamepad.current.IsActuated())
+        {
+            Debug.Log("Xbox Controller is actuated!");
+        }
     }
 }

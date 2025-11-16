@@ -395,7 +395,7 @@ MonoBehaviour:
   shootCooldown: 0.8
   dashCooldown: 2.5
   dashDuration: 0.1
-  dashVelocity: 7
+  dashVelocity: 35
   bulletSize: {x: 1, y: 1}
 --- !u!1 &7462751676788176070
 GameObject:

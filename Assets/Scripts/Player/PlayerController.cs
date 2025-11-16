@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHpManager))]
 [RequireComponent(typeof(PlayerStats))]
+[RequireComponent(typeof(MageHitVFX))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Animation States")]
@@ -19,9 +20,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionReference dash;
 
     private Rigidbody2D body;
-    private Animator animator;
     private Vector2 playerInput;
+    private Animator animator;
     private PlayerStats playerStats;
+    private MageHitVFX mageHitVFX;
     private Wand weapon;
 
     void Awake()
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
         playerStats = GetComponent<PlayerStats>();
+        mageHitVFX = GetComponent<MageHitVFX>();
         weapon = GetComponentInChildren<Wand>();
     }
 
@@ -78,25 +81,27 @@ public class PlayerController : MonoBehaviour
 
     void OnDash(InputAction.CallbackContext context)
     {
-
         if (body.linearVelocity.x != 0 || body.linearVelocity.y != 0)
         {
             dash.action.performed -= OnDash;
 
             StartCoroutine(DashCoroutine());
         }
-
     }
 
     IEnumerator DashCoroutine()
     {
+        mageHitVFX.StartImmunity();
+
         Vector2 baseVelocity = body.linearVelocity;
 
-        body.linearVelocity *= playerStats.DashVelocity;
+        body.linearVelocity = body.linearVelocity.normalized * playerStats.DashVelocity;
 
         yield return new WaitForSeconds(playerStats.DashDuration);
 
         body.linearVelocity = baseVelocity;
+
+        mageHitVFX.EndImmunity();
 
         yield return new WaitForSeconds(playerStats.DashCooldown);
 

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerHpManager))]
 [RequireComponent(typeof(PlayerController))]
@@ -35,8 +34,7 @@ public class MageHitVFX : MonoBehaviour
     {
         if (isDead || immune || !collision.CompareTag(enemyTag)) return;
 
-        immune = true;
-        animator.SetBool(isImmune, true);
+        StartImmunity();
         healthManager.UpdateCurrentHealth(HealthOperation.Dec);
         animator.SetBool(isHit, true);
     }
@@ -55,6 +53,13 @@ public class MageHitVFX : MonoBehaviour
         animator.SetTrigger(isDeadTrigger);
         GetComponent<PlayerController>().enabled = false;
     }
+
+    public void StartImmunity()
+    {
+        immune = true;
+        animator.SetBool(isImmune, true);
+    }
+
     public void EndImmunity()
     {
         if (isDead) return;

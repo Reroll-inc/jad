@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3575447136608514164, guid: d52871296c16db64697ed04c84a449b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3604416476658979448, guid: d52871296c16db64697ed04c84a449b2, type: 3}
       propertyPath: m_IsActive
@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209765492353326768, guid: d52871296c16db64697ed04c84a449b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6230044191063761527, guid: d52871296c16db64697ed04c84a449b2, type: 3}
       propertyPath: m_Pivot.x
@@ -241,15 +241,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7359027926911271842, guid: d52871296c16db64697ed04c84a449b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8412329066328948015, guid: d52871296c16db64697ed04c84a449b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8839411977769549210, guid: d52871296c16db64697ed04c84a449b2, type: 3}
       propertyPath: m_Name
       value: OptionsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8839411977769549210, guid: d52871296c16db64697ed04c84a449b2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2721861422262088863, guid: d52871296c16db64697ed04c84a449b2, type: 3}
@@ -800,7 +804,7 @@ GameObject:
   - component: {fileID: 1277159258}
   - component: {fileID: 1277159257}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: QuitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,7 +849,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Salir
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de03e1376b88c8a4db74e3400457950d, type: 2}
   m_sharedMaterial: {fileID: 2370695034948875953, guid: de03e1376b88c8a4db74e3400457950d, type: 2}
@@ -936,7 +940,7 @@ GameObject:
   - component: {fileID: 1410009400}
   - component: {fileID: 1410009399}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PlayText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,7 +985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Jugar
+  m_text: Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de03e1376b88c8a4db74e3400457950d, type: 2}
   m_sharedMaterial: {fileID: 2370695034948875953, guid: de03e1376b88c8a4db74e3400457950d, type: 2}
@@ -1277,7 +1281,7 @@ GameObject:
   - component: {fileID: 1883092339}
   - component: {fileID: 1883092338}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CreditsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1322,7 +1326,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cr\xE9ditos"
+  m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de03e1376b88c8a4db74e3400457950d, type: 2}
   m_sharedMaterial: {fileID: 2370695034948875953, guid: de03e1376b88c8a4db74e3400457950d, type: 2}
@@ -1546,7 +1550,7 @@ GameObject:
   - component: {fileID: 1970429284}
   - component: {fileID: 1970429283}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: OptionsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1591,7 +1595,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Opciones
+  m_text: Options
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de03e1376b88c8a4db74e3400457950d, type: 2}
   m_sharedMaterial: {fileID: 2370695034948875953, guid: de03e1376b88c8a4db74e3400457950d, type: 2}

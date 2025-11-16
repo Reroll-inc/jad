@@ -1148,6 +1148,7 @@ MonoBehaviour:
   creditsIndex: 3
   firstLevelIndex: 4
   lastLevelIndex: 23
+  devInitialLevel: -1
   uiActionMap: UI
   gameplayActionMap: Gameplay
   pauseMenuPanel: {fileID: 343020501}

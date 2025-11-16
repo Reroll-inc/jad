@@ -17,8 +17,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int mainMenuIndex = 2;
     [SerializeField] private int creditsIndex = 3;
     [SerializeField] private int firstLevelIndex = 4;
-    [Tooltip("If Index = 23, NextScene = Credits")]
+    [Tooltip("If the index is lastLevelIndex, next scene goes to credits")]
     [SerializeField] private int lastLevelIndex = 23;
+    [Tooltip("DEV_ONLY. If set, we jump to that level")]
+    [SerializeField] private int devInitialLevel = -1;
 
     [Header("Input Action Maps")]
     [SerializeField] private string uiActionMap = "UI";
@@ -39,11 +41,20 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // audio = GetComponent<AudioManager>(); // Add AudioManager
-        SceneManager.LoadSceneAsync(splashScreenIndex, LoadSceneMode.Additive);
-        currentSceneIndex = splashScreenIndex;
-
         ActivateActionMap(GameInputMap.UI);
+
+        // audio = GetComponent<AudioManager>(); // Add AudioManager
+
+        if (devInitialLevel == -1)
+        {
+
+            SceneManager.LoadSceneAsync(splashScreenIndex, LoadSceneMode.Additive);
+            currentSceneIndex = splashScreenIndex;
+        }
+        else
+        {
+            DEV_LoadLevel();
+        }
     }
 
     void PauseGame()
@@ -62,6 +73,14 @@ public class GameManager : MonoBehaviour
         pauseMenuPanel.SetActive(false);
 
         ActivateActionMap(GameInputMap.Gameplay);
+    }
+
+    void DEV_LoadLevel()
+    {
+        if (devInitialLevel == -1) return;
+
+        SceneManager.LoadSceneAsync(firstLevelIndex + devInitialLevel - 1, LoadSceneMode.Additive);
+        currentSceneIndex = firstLevelIndex + devInitialLevel;
     }
 
     public void ActivateActionMap(GameInputMap actionMapName)

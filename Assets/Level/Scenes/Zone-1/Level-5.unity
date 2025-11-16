@@ -1647,17 +1647,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2242200132978468508, guid: 54b0430966158a142be837c22a210456, type: 3}
   m_PrefabInstance: {fileID: 1193866588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &784046592031932957 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1681455178621061713, guid: c40ccd8d08b52b84991e011f493efc29, type: 3}
-  m_PrefabInstance: {fileID: 8925275319266805909}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f469a0c2c51cbca4a8d3452110d56059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1476572090365109047 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1340447541536762377, guid: c40ccd8d08b52b84991e011f493efc29, type: 3}
@@ -1928,10 +1917,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1355737834059546006, guid: 1cdfbbcfc6fa0cf4b80750a7b6d39def, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 784046592031932957}
-    - target: {fileID: 1355737834059546006, guid: 1cdfbbcfc6fa0cf4b80750a7b6d39def, type: 3}
       propertyPath: hudCanvas
       value: 
       objectReference: {fileID: 1228426060}
@@ -1942,7 +1927,7 @@ PrefabInstance:
     - target: {fileID: 1355737834059546006, guid: 1cdfbbcfc6fa0cf4b80750a7b6d39def, type: 3}
       propertyPath: screenGameOver
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8514792581724162970}
     - target: {fileID: 1355737834059546006, guid: 1cdfbbcfc6fa0cf4b80750a7b6d39def, type: 3}
       propertyPath: enemyCounterText
       value: 
@@ -2471,6 +2456,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 8763281851974880643}
   m_SourcePrefab: {fileID: 100100000, guid: 18cf231d409b59e4aa84337a989539c6, type: 3}
+--- !u!1 &8514792581724162970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6391428041381814325, guid: 18cf231d409b59e4aa84337a989539c6, type: 3}
+  m_PrefabInstance: {fileID: 8514792581724162969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8763281851974880643
 MonoBehaviour:
   m_ObjectHideFlags: 0

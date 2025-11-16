@@ -8,7 +8,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float shootCooldown = 0.8f;
     [SerializeField] private float dashCooldown = 2.5f;
     [SerializeField] private float dashDuration = 0.3f;
-    [SerializeField] private float dashVelocity = 35f;
+    [SerializeField] private float dashVelocity = 20f;
     [SerializeField] private Vector2 bulletSize = new(1f, 1f);
 
     private float moveSpeedBonus = 0f;

@@ -1,7 +1,16 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
+enum HandleToggle
+{
+    ON, OFF
+}
+enum HandleAction
+{
+    MOVE, ATTACK, DASH
+}
+
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHpManager))]
@@ -26,6 +35,8 @@ public class PlayerController : MonoBehaviour
     private MageHitVFX mageHitVFX;
     private Wand weapon;
 
+    private bool dashing = false;
+
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -37,28 +48,70 @@ public class PlayerController : MonoBehaviour
 
     void OnEnable()
     {
-        move.action.performed += OnMove;
-        move.action.canceled += OnCancelMove;
-
-        attack.action.performed += weapon.OnShoot;
-        attack.action.canceled += weapon.OnShoot;
-
-        dash.action.performed += OnDash;
+        HandleActionEvents(HandleAction.ATTACK, HandleToggle.ON);
+        HandleActionEvents(HandleAction.MOVE, HandleToggle.ON);
+        HandleActionEvents(HandleAction.DASH, HandleToggle.ON);
     }
 
     void OnDisable()
     {
-        move.action.performed -= OnMove;
-        move.action.canceled -= OnCancelMove;
+        HandleActionEvents(HandleAction.ATTACK, HandleToggle.OFF);
+        HandleActionEvents(HandleAction.MOVE, HandleToggle.OFF);
+        HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
+    }
 
-        attack.action.performed -= weapon.OnShoot;
-        attack.action.canceled -= weapon.OnShoot;
-
-        dash.action.performed -= OnDash;
+    void HandleActionEvents(HandleAction action, HandleToggle handle)
+    {
+        switch (action)
+        {
+            case HandleAction.ATTACK:
+                switch (handle)
+                {
+                    case HandleToggle.ON:
+                        attack.action.performed += weapon.OnShoot;
+                        attack.action.canceled += weapon.OnShoot;
+                        break;
+                    case HandleToggle.OFF:
+                        attack.action.performed -= weapon.OnShoot;
+                        attack.action.canceled -= weapon.OnShoot;
+                        break;
+                }
+                break;
+            case HandleAction.MOVE:
+                switch (handle)
+                {
+                    case HandleToggle.ON:
+                        move.action.performed += OnMove;
+                        move.action.canceled += OnCancelMove;
+                        break;
+                    case HandleToggle.OFF:
+                        move.action.performed -= OnMove;
+                        move.action.canceled -= OnCancelMove;
+                        break;
+                }
+                break;
+            case HandleAction.DASH:
+                switch (handle)
+                {
+                    case HandleToggle.ON:
+                        dash.action.started += OnDash;
+                        break;
+                    case HandleToggle.OFF:
+                        dash.action.started -= OnDash;
+                        break;
+                }
+                break;
+        }
     }
 
     void OnCancelMove(InputAction.CallbackContext context)
     {
+        if (dashing)
+        {
+            playerInput = new(0f, 0f);
+            return;
+        }
+
         body.linearVelocity = new(0f, 0f);
         animator.SetBool(running, false);
 
@@ -70,10 +123,10 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputAction.CallbackContext context)
     {
-        animator.SetBool(running, true);
-
         playerInput = context.ReadValue<Vector2>();
 
+        if (dashing) return;
+        animator.SetBool(running, true);
         animator.SetFloat(facing, playerInput.x);
 
         body.linearVelocity = playerStats.MoveSpeed * playerInput;
@@ -83,7 +136,7 @@ public class PlayerController : MonoBehaviour
     {
         if (body.linearVelocity.x != 0 || body.linearVelocity.y != 0)
         {
-            dash.action.performed -= OnDash;
+            HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
 
             StartCoroutine(DashCoroutine());
         }
@@ -91,20 +144,20 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator DashCoroutine()
     {
+        dashing = true;
         mageHitVFX.StartImmunity();
-
-        Vector2 baseVelocity = body.linearVelocity;
 
         body.linearVelocity = body.linearVelocity.normalized * playerStats.DashVelocity;
 
         yield return new WaitForSeconds(playerStats.DashDuration);
 
-        body.linearVelocity = baseVelocity;
+        dashing = false;
+        body.linearVelocity = playerStats.MoveSpeed * playerInput;
 
         mageHitVFX.EndImmunity();
 
         yield return new WaitForSeconds(playerStats.DashCooldown);
 
-        dash.action.performed += OnDash;
+        HandleActionEvents(HandleAction.DASH, HandleToggle.ON);
     }
 }

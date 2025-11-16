@@ -340,8 +340,8 @@ MonoBehaviour:
   facing: CurrentInput
   lastFaced: LastInput
   move: {fileID: -782300744077357920, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  dash: {fileID: -7814181618715315215, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   attack: {fileID: -1059095091592818815, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  dash: {fileID: -7814181618715315215, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!114 &2450407349542409742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -394,8 +394,8 @@ MonoBehaviour:
   shootSpeed: 10
   shootCooldown: 0.8
   dashCooldown: 2.5
-  dashDuration: 0.1
-  dashVelocity: 35
+  dashDuration: 0.3
+  dashVelocity: 20
   bulletSize: {x: 1, y: 1}
 --- !u!1 &7462751676788176070
 GameObject:

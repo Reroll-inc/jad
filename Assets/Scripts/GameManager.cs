@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int firstLevelIndex = 4;
     [Tooltip("If Index = 23, NextScene = Credits")]
     [SerializeField] private int lastLevelIndex = 23;
-    [SerializeField] private InputActionReference inputActionRef;
 
     [Header("Input Action Maps")]
     [SerializeField] private string uiActionMap = "UI";

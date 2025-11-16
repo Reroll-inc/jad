@@ -7,6 +7,8 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float shootSpeed = 10.0f;
     [SerializeField] private float shootCooldown = 0.8f;
     [SerializeField] private float dashCooldown = 2.5f;
+    [SerializeField] private float dashDuration = 0.3f;
+    [SerializeField] private float dashVelocity = 15f;
     [SerializeField] private Vector2 bulletSize = new(1f, 1f);
 
     private float moveSpeedBonus = 0f;
@@ -19,6 +21,8 @@ public class PlayerStats : MonoBehaviour
     public float ShootSpeed { get; private set; }
     public float ShootCooldown { get; private set; }
     public float DashCooldown { get; private set; }
+    public float DashDuration { get; private set; }
+    public float DashVelocity { get; private set; }
     public Vector2 BulletSize { get; private set; }
 
     void Start()
@@ -32,6 +36,8 @@ public class PlayerStats : MonoBehaviour
         ShootSpeed = shootSpeed;
         ShootCooldown = shootCooldown / (1f + shootCooldownBonus);
         DashCooldown = dashCooldown / (1f + dashCooldownBonus);
+        DashDuration = dashDuration;
+        DashVelocity = dashVelocity;
         BulletSize = bulletSize * (1f + bulletSizeBonus);
     }
 

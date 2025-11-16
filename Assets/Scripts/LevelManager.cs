@@ -27,7 +27,7 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != this)
+        if (Instance != null && Instance != this)
         {
             Debug.LogError("Two instances of LevelManager exists shouldn't exist in the same Scene.");
 

@@ -9,11 +9,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject soundPanel;
     [SerializeField] private GameObject graphicsPanel;
 
-    void OnEnable()
-    {
-        ShowMainPausePanel();
-    }
-
     void OpenSubMenu(SubMenu? subMenu)
     {
         controllerPanel.SetActive(SubMenu.CONTROLLER == subMenu);

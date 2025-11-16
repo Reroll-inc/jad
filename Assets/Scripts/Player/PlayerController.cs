@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [Header("Inputs")]
     [SerializeField] private InputActionReference move;
     [SerializeField] private InputActionReference attack;
+    [SerializeField] private InputActionReference dash;
 
     private Rigidbody2D body;
     private Animator animator;
@@ -22,7 +24,7 @@ public class PlayerController : MonoBehaviour
     private PlayerStats playerStats;
     private Wand weapon;
 
-    void Start()
+    void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
@@ -37,6 +39,8 @@ public class PlayerController : MonoBehaviour
 
         attack.action.performed += weapon.OnShoot;
         attack.action.canceled += weapon.OnShoot;
+
+        dash.action.performed += OnDash;
     }
 
     void OnDisable()
@@ -46,6 +50,8 @@ public class PlayerController : MonoBehaviour
 
         attack.action.performed -= weapon.OnShoot;
         attack.action.canceled -= weapon.OnShoot;
+
+        dash.action.performed -= OnDash;
     }
 
     void OnCancelMove(InputAction.CallbackContext context)
@@ -68,5 +74,32 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat(facing, playerInput.x);
 
         body.linearVelocity = playerStats.MoveSpeed * playerInput;
+    }
+
+    void OnDash(InputAction.CallbackContext context)
+    {
+
+        if (body.linearVelocity.x != 0 || body.linearVelocity.y != 0)
+        {
+            dash.action.performed -= OnDash;
+
+            StartCoroutine(DashCoroutine());
+        }
+
+    }
+
+    IEnumerator DashCoroutine()
+    {
+        Vector2 baseVelocity = body.linearVelocity;
+
+        body.linearVelocity *= playerStats.DashVelocity;
+
+        yield return new WaitForSeconds(playerStats.DashDuration);
+
+        body.linearVelocity = baseVelocity;
+
+        yield return new WaitForSeconds(playerStats.DashCooldown);
+
+        dash.action.performed += OnDash;
     }
 }

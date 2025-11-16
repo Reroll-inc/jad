@@ -46,23 +46,23 @@ public class CardPowerUp : MonoBehaviour
         switch (powerUpType)
         {
             case CardType.Mage:
-                cardNameText.text = "El Mago";
-                cardDescriptionText.text = "+10% Velocidad de Ataque";
+                cardNameText.text = "The Magician";
+                cardDescriptionText.text = "+10% Attack speed";
                 cardIcon.sprite = mageSprite;
                 break;
             case CardType.Chariot:
-                cardNameText.text = "El Carro";
-                cardDescriptionText.text = "+10% Velocidad de Movimiento";
+                cardNameText.text = "The Chariot";
+                cardDescriptionText.text = "+10% Move speed";
                 cardIcon.sprite = chariotSprite;
                 break;
             case CardType.Wheel:
-                cardNameText.text = "La Rueda de la Fortuna";
-                cardDescriptionText.text = "-10% Enfriamiento de Dash";
+                cardNameText.text = "Wheel of Fortune";
+                cardDescriptionText.text = "-10% Dash cooldown";
                 cardIcon.sprite = wheelSprite;
                 break;
             case CardType.Star:
-                cardNameText.text = "La Estrella";
-                cardDescriptionText.text = "+10% Tamaño de Proyectil";
+                cardNameText.text = "The Star";
+                cardDescriptionText.text = "+10% Spell size";
                 cardIcon.sprite = starSprite;
                 break;
         }

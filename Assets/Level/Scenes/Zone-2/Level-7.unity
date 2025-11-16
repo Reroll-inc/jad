@@ -884,6 +884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_Screens
       objectReference: {fileID: 0}
+    - target: {fileID: 6391428041381814325, guid: 18cf231d409b59e4aa84337a989539c6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6870198171700576422, guid: 18cf231d409b59e4aa84337a989539c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -978,6 +982,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7124086845036227209, guid: 18cf231d409b59e4aa84337a989539c6, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102460553761052084, guid: 18cf231d409b59e4aa84337a989539c6, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 3752822781140829819}
   - component: {fileID: 2168439291256181794}
   - component: {fileID: 8752027396403688576}
-  m_Layer: 0
+  - component: {fileID: 4819563625589741181}
+  - component: {fileID: 2858271682172750709}
+  m_Layer: 11
   m_Name: Boss_Brown
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -32,7 +34,8 @@ Transform:
   m_LocalPosition: {x: -4, y: 8.6, z: 0}
   m_LocalScale: {x: 3.2956, y: 3.0963, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5308298303405330615}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3423555048936496390
@@ -185,3 +188,63 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4819563625589741181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839418327468215869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630fb90b52dda6444a8571776bf35a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouthNode: Mouth
+  playerTag: Player
+  fireballPrefab: {fileID: 168772508720003752, guid: e92061051f0efc8408874991d6beef3a, type: 3}
+--- !u!114 &2858271682172750709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839418327468215869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e311d6a2beccdd64facbed3bc7ce8eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballSpeed: 10
+  fireballCD: 3
+--- !u!1 &6548708160953527228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5308298303405330615}
+  m_Layer: 7
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5308298303405330615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548708160953527228}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.042, y: 0.13, z: 0}
+  m_LocalScale: {x: 0.30343488, y: 0.32296613, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1162086299915802304}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -1,25 +1,52 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(BossStats))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class BossController : MonoBehaviour
 {
-
+    private static WaitForSeconds _waitForSeconds1 = new(1f);
     [SerializeField] private string mouthNode = "Mouth";
     [SerializeField] private string playerTag = "Player";
+    [SerializeField] private string bossPortalTag = "Boss Portal";
     [SerializeField] private GameObject fireballPrefab;
 
     private Transform mouth;
     private Transform playerTransform;
     private BossStats stats;
+    private Rigidbody2D body;
+    private Transform[] teleporters;
+
+    private int portalIndex = 1;
+
+    private Coroutine throwFireballCoroutine;
+    private Coroutine teletransportCoroutine;
+
+    void Awake()
+    {
+        stats = GetComponent<BossStats>();
+        body = GetComponent<Rigidbody2D>();
+        mouth = transform.Find(mouthNode);
+        playerTransform = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Transform>();
+        teleporters = GameObject
+            .FindGameObjectsWithTag(bossPortalTag)
+            .Select(bossPortal => bossPortal.transform)
+            .ToArray();
+    }
 
     void Start()
     {
-        stats = GetComponent<BossStats>();
-        mouth = transform.Find(mouthNode);
-        playerTransform = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Transform>();
 
-        StartCoroutine(ThrowFireball());
+        throwFireballCoroutine = StartCoroutine(ThrowFireball());
+        teletransportCoroutine = StartCoroutine(Teletransport());
+        portalIndex = CalculateShorterTP();
+    }
+
+    void OnDestroy()
+    {
+        StopCoroutine(throwFireballCoroutine);
+        StopCoroutine(teletransportCoroutine);
     }
 
     IEnumerator ThrowFireball()
@@ -40,5 +67,49 @@ public class BossController : MonoBehaviour
             fireballBody.linearVelocity = direction * stats.FireballSpeed;
 
         }
+    }
+
+    IEnumerator Teletransport()
+    {
+        while (true)
+        {
+            yield return _waitForSeconds1;
+
+            int nextIndex = CalculateShorterTP();
+
+            if (nextIndex != portalIndex)
+            {
+                portalIndex = nextIndex;
+
+                body.position = teleporters[portalIndex].position;
+
+                stats.TeleportPenalization();
+
+                yield return new WaitForSeconds(stats.TeletransportCD);
+            }
+        }
+    }
+
+    int CalculateShorterTP()
+    {
+
+        int nextIndex = portalIndex;
+        Vector3 playerPosition = playerTransform.position;
+        float nextDistance = (playerPosition - teleporters[nextIndex].position).magnitude;
+
+        for (int i = 0; i < teleporters.Length; i++)
+        {
+            if (nextIndex == i) continue;
+
+            float distance = (playerPosition - teleporters[i].position).magnitude;
+
+            if (distance < nextDistance)
+            {
+                nextIndex = i;
+                nextDistance = distance;
+            }
+        }
+
+        return nextIndex;
     }
 }

@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouthNode: Mouth
   playerTag: Player
+  bossPortalTag: Boss Portal
   fireballPrefab: {fileID: 168772508720003752, guid: e92061051f0efc8408874991d6beef3a, type: 3}
 --- !u!114 &2858271682172750709
 MonoBehaviour:
@@ -217,6 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireballSpeed: 10
   fireballCD: 3
+  teletransportCD: 5
+  tpPenalization: 0.25
 --- !u!1 &6548708160953527228
 GameObject:
   m_ObjectHideFlags: 0

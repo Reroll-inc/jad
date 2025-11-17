@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - LevelManager
   - Boss Fireball
+  - Boss Portal
   layers:
   - Default
   - TransparentFX

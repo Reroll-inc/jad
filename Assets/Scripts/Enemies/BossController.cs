@@ -17,6 +17,7 @@ public class BossController : MonoBehaviour
     [SerializeField] private AudioClip fireballClip;
     [SerializeField] private AudioClip fireBreathClip;
     [SerializeField] private AudioClip earthquakeClip;
+    [SerializeField] private AudioClip teleportClip;
     [SerializeField] private AudioClip hitClip;
     [SerializeField] private AudioClip deathClip;
 
@@ -121,7 +122,7 @@ public class BossController : MonoBehaviour
             if (nextIndex != portalIndex)
             {
                 portalIndex = nextIndex;
-
+                audioSource.PlayOneShot(teleportClip);
                 body.position = teleporters[portalIndex].position;
 
                 stats.TeleportPenalization();

@@ -209,6 +209,7 @@ MonoBehaviour:
   fireballClip: {fileID: 8300000, guid: d7745c861f73d994ab2695b4ae1a655f, type: 3}
   fireBreathClip: {fileID: 8300000, guid: 66926f35a2f46534f83a066498d400d4, type: 3}
   earthquakeClip: {fileID: 8300000, guid: 10e5626435b1f1543913b44d6ec6641b, type: 3}
+  teleportClip: {fileID: 8300000, guid: ae6a1cd969e390e46a2678acd7ffd5f4, type: 3}
   hitClip: {fileID: 8300000, guid: 20e0628604362bc4aab9289c725c1d12, type: 3}
   deathClip: {fileID: 8300000, guid: 6f7d414c31b693947baf9b3b128b99d7, type: 3}
   minPitch: 0.7

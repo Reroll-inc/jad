@@ -11,7 +11,7 @@ enum HandleAction
     MOVE, ATTACK, DASH, PAUSE
 }
 
-
+[RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHpManager))]
 [RequireComponent(typeof(MageHitVFX))]

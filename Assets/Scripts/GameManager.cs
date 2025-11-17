@@ -1,12 +1,14 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public enum GameInputMap { UI, Gameplay }
 
 // [RequireComponent(typeof(AudioManager))] Create and add AudioManager.cs
 // Navigation System -- input system -- llevar track de la navegación del previo botón activo -- botón de salida a la derecha
 [RequireComponent(typeof(PlayerStats))]
+[RequireComponent(typeof(AudioSource))]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -27,20 +29,34 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string gameplayActionMap = "Gameplay";
     [SerializeField] private string splashActionMap = "Splash";
 
+    [Header("Audio")]
+    [SerializeField] private AudioMixer audioMixer;
+
+    [Header("SoundSettings")]
+    public float currentMusicVolume = 10f;
+    public float currentSFXVolume = 10f;
+
+    [Header("UI Sound Effects")]
+    [SerializeField] private AudioClip uiConfirmClip;
+    [SerializeField] private AudioClip uiCancelClip;
+    [SerializeField] private AudioSource uiAudioSource;
+
+    [Header("Sound Variation")]
+    [SerializeField, Range(0.1f, 3f)] private float minPitch = 0.95f;
+    [SerializeField, Range(0.1f, 3f)] private float maxPitch = 1.05f;
+
     private int currentSceneIndex;
     public PlayerStats playerStats;
 
     void Awake()
     {
         Instance = this;
-
         DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
         playerStats = GetComponent<PlayerStats>();
-        // audio = GetComponent<AudioManager>(); // Add AudioManager
 
         if (devInitialLevel == -1)
         {
@@ -63,21 +79,6 @@ public class GameManager : MonoBehaviour
         currentSceneIndex = firstLevelIndex + devInitialLevel;
     }
 
-    public void ActivateActionMap(GameInputMap actionMapName)
-    {
-        switch (actionMapName)
-        {
-            case GameInputMap.UI:
-                InputSystem.actions.FindActionMap(gameplayActionMap).Disable();
-                InputSystem.actions.FindActionMap(uiActionMap).Enable();
-                break;
-            case GameInputMap.Gameplay:
-                InputSystem.actions.FindActionMap(uiActionMap).Disable();
-                InputSystem.actions.FindActionMap(gameplayActionMap).Enable();
-                break;
-        }
-    }
-
     void ToggleSplashKeymap(bool activate)
     {
         if (activate)
@@ -94,6 +95,32 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void PlayUIConfirmSound()
+    {
+        uiAudioSource.pitch = Random.Range(minPitch, maxPitch);
+        uiAudioSource.PlayOneShot(uiConfirmClip);
+    }
+
+    public void PlayUICancelSound()
+    {
+        uiAudioSource.pitch = Random.Range(minPitch, maxPitch);
+        uiAudioSource.PlayOneShot(uiCancelClip);
+    }
+
+    public void ActivateActionMap(GameInputMap actionMapName)
+    {
+        switch (actionMapName)
+        {
+            case GameInputMap.UI:
+                InputSystem.actions.FindActionMap(gameplayActionMap).Disable();
+                InputSystem.actions.FindActionMap(uiActionMap).Enable();
+                break;
+            case GameInputMap.Gameplay:
+                InputSystem.actions.FindActionMap(uiActionMap).Disable();
+                InputSystem.actions.FindActionMap(gameplayActionMap).Enable();
+                break;
+        }
+    }
     public void LoadMainMenu()
     {
         ToggleSplashKeymap(false);

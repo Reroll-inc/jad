@@ -30,6 +30,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OpenMainMenuPanel()
     {
+        GameManager.Instance.PlayUICancelSound();
         mainMenu.SetActive(true);
         optionsMenu.SetActive(false);
     }
@@ -43,18 +44,21 @@ public class MainMenu : MonoBehaviour
 
     public void OpenControllerMenu()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         controllerMenu.SetActive(true);
         soundMenu.SetActive(false);
         graphicsMenu.SetActive(false);
     }
     public void OpenSoundMenu()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         controllerMenu.SetActive(false);
         soundMenu.SetActive(true);
         graphicsMenu.SetActive(false);
     }
     public void OpenGraphicsMenu()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         controllerMenu.SetActive(false);
         soundMenu.SetActive(false);
         graphicsMenu.SetActive(true);
@@ -62,6 +66,7 @@ public class MainMenu : MonoBehaviour
 
     public void OpenOptionsPanel()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         mainMenu.SetActive(false);
         optionsMenu.SetActive(true);
 
@@ -72,16 +77,19 @@ public class MainMenu : MonoBehaviour
 
     public void OpenCreditsPanel()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         GameManager.Instance.LoadCredits();
     }
 
     public void QuitGame()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         GameManager.Instance.QuitGame();
     }
 
     public void PlayGame()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         GameManager.Instance.StartGame();
     }
 

@@ -28,11 +28,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionReference dash;
     [SerializeField] private InputActionReference pause;
 
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip shootClip;
+    [SerializeField] private AudioClip dashClip;
+
+    [Header("Sound Variation")]
+    [SerializeField, Range(0.1f, 3f)] private float minPitch = 0.9f;
+    [SerializeField, Range(0.1f, 3f)] private float maxPitch = 1.1f;
+
     private Rigidbody2D body;
     private Vector2 playerInput;
     private Animator animator;
     private MageHitVFX mageHitVFX;
     private Wand weapon;
+    private AudioSource audioSource;
 
     private bool dashing = false;
     private bool attacking = false;
@@ -43,6 +52,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         mageHitVFX = GetComponent<MageHitVFX>();
         weapon = GetComponentInChildren<Wand>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void OnEnable()
@@ -171,6 +181,8 @@ public class PlayerController : MonoBehaviour
         {
             attacking = true;
             HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(shootClip);
         }
     }
     void OnPause(InputAction.CallbackContext context)
@@ -182,6 +194,8 @@ public class PlayerController : MonoBehaviour
     {
         dashing = true;
         mageHitVFX.StartImmunity();
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        audioSource.PlayOneShot(dashClip);
 
         body.linearVelocity = body.linearVelocity.normalized * GameManager.Instance.playerStats.DashVelocity;
 

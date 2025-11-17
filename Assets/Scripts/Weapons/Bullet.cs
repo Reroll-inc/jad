@@ -30,8 +30,8 @@ public class Bullet : MonoBehaviour
 
         if (collision.CompareTag(bossTag))
         {
-            EnemyHpManager bossHp = collision.GetComponentInParent<EnemyHpManager>();
-            bossHp.ReceiveDamage(bulletDamage);
+            BossController boss = collision.GetComponentInParent<BossController>();
+            boss.ReceiveDamage(bulletDamage);
             Destroy(gameObject);
             return;
         }

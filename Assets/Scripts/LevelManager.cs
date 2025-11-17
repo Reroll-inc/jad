@@ -26,6 +26,16 @@ public class LevelManager : MonoBehaviour
     [Header("Card Selection")]
     [SerializeField] private CardScreenController cardScreenController;
 
+    [Header("Level Sounds")]
+    [SerializeField] private AudioClip levelCompleteClip;
+    [SerializeField] private AudioClip cardSelectClip;
+
+    [Header("Sound Variation")]
+    [SerializeField, Range(0.1f, 3f)] private float minPitch = 0.95f;
+    [SerializeField, Range(0.1f, 3f)] private float maxPitch = 1.05f;
+
+    private AudioSource sceneAudioSource;
+
     public UnityEvent OnEnemyDefeated;
 
     private int remainingEnemies;
@@ -33,6 +43,7 @@ public class LevelManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        sceneAudioSource = GetComponent<AudioSource>();
     }
 
     public void PauseGame()
@@ -79,6 +90,9 @@ public class LevelManager : MonoBehaviour
 
     public void CompleteLevel()
     {
+        sceneAudioSource.pitch = UnityEngine.Random.Range(minPitch, maxPitch);
+        sceneAudioSource.PlayOneShot(levelCompleteClip);
+
         GameManager.Instance.ActivateActionMap(GameInputMap.UI);
         warningMenuPanel.SetActive(false);
         screenLevelComplete.SetActive(true);
@@ -87,6 +101,7 @@ public class LevelManager : MonoBehaviour
 
     public void WarningBackToMenu()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         screenLevelComplete.SetActive(false);
         warningMenuPanel.SetActive(true);
     }
@@ -105,6 +120,7 @@ public class LevelManager : MonoBehaviour
 
     public void GoToNextLevel()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         GameManager.Instance.LoadNextLevel();
     }
 
@@ -117,6 +133,8 @@ public class LevelManager : MonoBehaviour
 
     public void CardSelect(CardType cardType)
     {
+        sceneAudioSource.pitch = UnityEngine.Random.Range(minPitch, maxPitch);
+        sceneAudioSource.PlayOneShot(cardSelectClip);
         GameManager.Instance.playerStats.ApplyPowerUp(cardType);
         cardScreenController.HideCardSelection();
 
@@ -125,6 +143,7 @@ public class LevelManager : MonoBehaviour
 
     public void GoBackToMenu()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         GameManager.Instance.LoadMainMenu();
     }
 }

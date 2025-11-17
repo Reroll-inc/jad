@@ -20,33 +20,39 @@ public class PauseMenu : MonoBehaviour
 
     public void OnResumeButtonPressed()
     {
+        GameManager.Instance.PlayUICancelSound();
         ResumeGame();
     }
 
     public void OnPauseButtonPressed()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         ShowMainPausePanel();
     }
 
     public void OnOptionsButtonPressed()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         ShowOptionsMenu();
     }
 
     public void OpenControllerPanel()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         controllerPanel.SetActive(true);
         soundPanel.SetActive(false);
         graphicsPanel.SetActive(false);
     }
     public void OpenSoundPanel()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         controllerPanel.SetActive(false);
         soundPanel.SetActive(true);
         graphicsPanel.SetActive(false);
     }
     public void OpenGraphicsPanel()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         controllerPanel.SetActive(false);
         soundPanel.SetActive(false);
         graphicsPanel.SetActive(true);
@@ -54,11 +60,13 @@ public class PauseMenu : MonoBehaviour
 
     public void OnQuitToMenuButtonPressed()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         LevelManager.Instance.GoBackToMenu();
     }
 
     public void OnQuitGameButtonPressed()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         GameManager.Instance.QuitGame();
     }
 
@@ -86,12 +94,14 @@ public class PauseMenu : MonoBehaviour
 
     public void WarningBackToMenu()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         mainPausePanel.SetActive(false);
         warningMenuPanel.SetActive(true);
     }
 
     public void WarningQuitGame()
     {
+        GameManager.Instance.PlayUIConfirmSound();
         mainPausePanel.SetActive(false);
         warningQuitPanel.SetActive(true);
     }

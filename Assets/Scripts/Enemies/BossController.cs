@@ -13,12 +13,24 @@ public class BossController : MonoBehaviour
     [SerializeField] private string bossPortalTag = "Boss Portal";
     [SerializeField] private GameObject fireballPrefab;
 
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip fireballClip;
+    [SerializeField] private AudioClip fireBreathClip;
+    [SerializeField] private AudioClip earthquakeClip;
+    [SerializeField] private AudioClip hitClip;
+    [SerializeField] private AudioClip deathClip;
+
+    [Header("Sound Variation")]
+    [SerializeField, Range(0.1f, 3f)] private float minPitch = 0.9f;
+    [SerializeField, Range(0.1f, 3f)] private float maxPitch = 1.1f;
+
     private Transform mouth;
     private Transform playerTransform;
     private BossStats stats;
     private Rigidbody2D body;
     private Transform[] teleporters;
     private EnemyHpManager bossHpManager;
+    private AudioSource audioSource;
 
     private int portalIndex = 1;
     private bool isDying = false;
@@ -31,6 +43,7 @@ public class BossController : MonoBehaviour
         stats = GetComponent<BossStats>();
         body = GetComponent<Rigidbody2D>();
         bossHpManager = GetComponent<EnemyHpManager>();
+        audioSource = GetComponent<AudioSource>();
         bossHpManager.onDeath.AddListener(StartDeathSequence);
         mouth = transform.Find(mouthNode);
         playerTransform = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Transform>();
@@ -59,7 +72,8 @@ public class BossController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(stats.FireballCD);
-
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(fireballClip);
             GameObject fireball = Instantiate(fireballPrefab, mouth.position, Quaternion.identity);
 
             fireball.transform.SetParent(mouth);
@@ -73,10 +87,24 @@ public class BossController : MonoBehaviour
 
         }
     }
+
+    public void ReceiveDamage(int damage)
+    {
+        if (isDying) return;
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        audioSource.PlayOneShot(hitClip);
+        bossHpManager.ReceiveDamage(damage);
+    }
+
     void StartDeathSequence()
     {
         if (isDying) return;
-
+        // Everything below is for reproducing dead sound while mob is dying.
+        body.linearVelocity = Vector2.zero;
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        audioSource.PlayOneShot(deathClip);
         isDying = true;
 
         DestroyEnemy();
@@ -129,7 +157,8 @@ public class BossController : MonoBehaviour
     public void DestroyEnemy()
     {
         LevelManager.Instance.OnEnemyDefeated.Invoke();
-
-        Destroy(gameObject);
+        float delay = 0f;
+        delay = deathClip.length;
+        Destroy(gameObject, delay);
     }
 }

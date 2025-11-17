@@ -8,12 +8,24 @@ public class PlayerHpManager : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 3;
     private int currentHealth = 3;
+
+    [Header("Sound Effects")]
+    [SerializeField] private AudioClip hitClip;
+    [SerializeField] private AudioClip deathClip;
+
+    [Header("Sound Variation")]
+    [SerializeField, Range(0.1f, 3f)] private float minPitch = 0.9f;
+    [SerializeField, Range(0.1f, 3f)] private float maxPitch = 1.1f;
+
     public UnityEvent OnHealthChange;
     public UnityEvent OnDeath;
+
+    private AudioSource audioSource;
 
     void Start()
     {
         currentHealth = maxHealth;
+        audioSource = GetComponent<AudioSource>();
     }
 
     public int GetMaxHealth()
@@ -51,9 +63,17 @@ public class PlayerHpManager : MonoBehaviour
         }
 
         if (previousHealth != currentHealth)
+        {
             OnHealthChange.Invoke();
+            audioSource.pitch = UnityEngine.Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(hitClip);
+        }
 
         if (currentHealth == 0)
+        {
+            audioSource.pitch = UnityEngine.Random.Range(minPitch, maxPitch);
+            audioSource.PlayOneShot(deathClip);
             OnDeath.Invoke();
+        }
     }
 }

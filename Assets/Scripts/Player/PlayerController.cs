@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
     private Wand weapon;
 
     private bool dashing = false;
+    private bool attacking = false;
 
     void Awake()
     {
@@ -70,10 +71,14 @@ public class PlayerController : MonoBehaviour
                     case HandleToggle.ON:
                         attack.action.performed += weapon.OnShoot;
                         attack.action.canceled += weapon.OnShoot;
+                        attack.action.performed += OnShoot;
+                        attack.action.canceled += OnShoot;
                         break;
                     case HandleToggle.OFF:
                         attack.action.performed -= weapon.OnShoot;
                         attack.action.canceled -= weapon.OnShoot;
+                        attack.action.performed -= OnShoot;
+                        attack.action.canceled -= OnShoot;
                         break;
                 }
                 break;
@@ -123,7 +128,7 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputAction.CallbackContext context)
     {
-        playerInput = context.ReadValue<Vector2>();
+        playerInput = context.ReadValue<Vector2>() * (attacking ? playerStats.MovePenalization : 1);
 
         if (dashing) return;
         animator.SetBool(running, true);
@@ -139,6 +144,22 @@ public class PlayerController : MonoBehaviour
             HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
 
             StartCoroutine(DashCoroutine());
+        }
+    }
+
+    void OnShoot(InputAction.CallbackContext context)
+    {
+        if (context.canceled)
+        {
+            attacking = false;
+            HandleActionEvents(HandleAction.DASH, HandleToggle.ON);
+
+            return;
+        }
+        if (context.performed)
+        {
+            attacking = true;
+            HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
         }
     }
 

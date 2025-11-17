@@ -4,6 +4,7 @@ public class PlayerStats : MonoBehaviour
 {
     [Header("Base Stats")]
     [SerializeField] private float moveSpeed = 5.0f;
+    [SerializeField] private float movePenalization = 0.5f;
     [SerializeField] private float shootSpeed = 10.0f;
     [SerializeField] private float shootCooldown = 0.8f;
     [SerializeField] private float dashCooldown = 2.5f;
@@ -18,6 +19,7 @@ public class PlayerStats : MonoBehaviour
 
     // Actual stats
     public float MoveSpeed { get; private set; }
+    public float MovePenalization { get; private set; }
     public float ShootSpeed { get; private set; }
     public float ShootCooldown { get; private set; }
     public float DashCooldown { get; private set; }
@@ -33,6 +35,7 @@ public class PlayerStats : MonoBehaviour
     void RecalculateStats()
     {
         MoveSpeed = moveSpeed * (1f + moveSpeedBonus);
+        MovePenalization = movePenalization;
         ShootSpeed = shootSpeed;
         ShootCooldown = shootCooldown / (1f + shootCooldownBonus);
         DashCooldown = dashCooldown / (1f + dashCooldownBonus);
@@ -45,24 +48,21 @@ public class PlayerStats : MonoBehaviour
     {
         switch (selectedPowerUp)
         {
-            case CardType.Mage: // +10% ASPD
+            case CardType.Mage:
                 shootCooldownBonus += 0.10f;
-                Debug.Log("New ASPD Bonus: " + shootCooldownBonus);
+                Debug.Log($"New ASPD Bonus: {shootCooldownBonus}");
                 break;
-
-            case CardType.Chariot: // +10% MSPD
+            case CardType.Chariot:
                 moveSpeedBonus += 0.10f;
-                Debug.Log("New MSPD Bonus " + moveSpeedBonus);
+                Debug.Log($"New MSPD Bonus {moveSpeedBonus}");
                 break;
-
-            case CardType.Wheel: // -10% Dash CD
+            case CardType.Wheel:
                 dashCooldownBonus += 0.10f;
-                Debug.Log("New DashCD Bonus: " + dashCooldownBonus);
+                Debug.Log($"New DashCD Bonus: {dashCooldownBonus}" );
                 break;
-
-            case CardType.Star: // +10% Bullet Size
+            case CardType.Star:
                 bulletSizeBonus += 0.05f;
-                Debug.Log("New bullet size bonus: " + bulletSizeBonus);
+                Debug.Log($"New bullet size bonus: {bulletSizeBonus}");
                 break;
         }
 

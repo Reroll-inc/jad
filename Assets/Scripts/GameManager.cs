@@ -6,6 +6,8 @@ public enum GameInputMap { UI, Gameplay }
 
 // [RequireComponent(typeof(AudioManager))] Create and add AudioManager.cs
 // Navigation System -- input system -- llevar track de la navegación del previo botón activo -- botón de salida a la derecha
+[RequireComponent(typeof(PlayerStats))]
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string splashActionMap = "Splash";
 
     private int currentSceneIndex;
+    public PlayerStats playerStats;
 
     void Awake()
     {
@@ -37,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        playerStats = GetComponent<PlayerStats>();
         // audio = GetComponent<AudioManager>(); // Add AudioManager
 
         if (devInitialLevel == -1)

@@ -11,7 +11,6 @@ public class Wand : MonoBehaviour
     private Rigidbody2D pivot;
     private Rigidbody2D tipBody;
     private float lastShotTime = -Mathf.Infinity;
-    private PlayerStats playerStats;
 
     private bool shooting = false;
     private Vector2 shootInput;
@@ -19,7 +18,6 @@ public class Wand : MonoBehaviour
     void Start()
     {
         pivot = GetComponent<Rigidbody2D>();
-        playerStats = GetComponentInParent<PlayerStats>();
         tipBody = transform.Find("Wand Tip").GetComponentInChildren<Rigidbody2D>();
     }
 
@@ -30,7 +28,7 @@ public class Wand : MonoBehaviour
 
     void TryShooting()
     {
-        if (!shooting || Time.time < lastShotTime + playerStats.ShootCooldown) return;
+        if (!shooting || Time.time < lastShotTime + GameManager.Instance.playerStats.ShootCooldown) return;
 
         // 1. We move the wand
         float angle = Mathf.Atan2(shootInput.y, shootInput.x) * Mathf.Rad2Deg;
@@ -47,11 +45,11 @@ public class Wand : MonoBehaviour
 
         GameObject bullet = Instantiate(bulletPrefab, tipBody.position, Quaternion.identity);
 
-        bullet.transform.localScale = playerStats.BulletSize;
+        bullet.transform.localScale = GameManager.Instance.playerStats.BulletSize;
 
         if (bullet.TryGetComponent(out Rigidbody2D rbBullet))
         {
-            rbBullet.linearVelocity = shootInput * playerStats.ShootSpeed;
+            rbBullet.linearVelocity = shootInput * GameManager.Instance.playerStats.ShootSpeed;
         }
     }
 

@@ -62,10 +62,7 @@ public class Enemy : MonoBehaviour
         if (isDying) return;
 
         hpManager.ReceiveDamage(damage);
-        path.canMove = false;
         animator.SetBool(isHit, true);
-
-        body.AddForce(forceOfImpact, ForceMode2D.Impulse);
     }
 
     public void EnableAI()

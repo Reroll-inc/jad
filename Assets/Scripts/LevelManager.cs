@@ -109,7 +109,7 @@ public class LevelManager : MonoBehaviour
 
     public void CardSelect(CardType cardType)
     {
-        playerStats.ApplyPowerUp(cardType);
+        GameManager.Instance.playerStats.ApplyPowerUp(cardType);
         cardScreenController.HideCardSelection();
 
         StartLevel();

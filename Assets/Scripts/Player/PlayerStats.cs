@@ -50,7 +50,7 @@ public class PlayerStats : MonoBehaviour
         {
             case CardType.Mage:
                 shootCooldownBonus += 0.10f;
-                Debug.Log($"New ASPD Bonus: {shootCooldownBonus}");
+                Debug.Log($"New ASPD Bonus: {shootCooldownBonus}");                
                 break;
             case CardType.Chariot:
                 moveSpeedBonus += 0.10f;
@@ -66,6 +66,9 @@ public class PlayerStats : MonoBehaviour
                 break;
         }
         RecalculateStats();
-
+        Debug.Log($"ASPD: {ShootCooldown}");
+        Debug.Log($"MSPD: {MoveSpeed}");
+        Debug.Log($"DashCD: {DashCooldown}");
+        Debug.Log($"BulletSize: {BulletSize}");
     }
 }

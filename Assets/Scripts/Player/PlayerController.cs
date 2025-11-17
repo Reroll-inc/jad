@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D body;
     private Vector2 playerInput;
     private Animator animator;
-    private PlayerStats playerStats;
     private MageHitVFX mageHitVFX;
     private Wand weapon;
 
@@ -42,7 +41,6 @@ public class PlayerController : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         animator = GetComponentInChildren<Animator>();
-        playerStats = GetComponent<PlayerStats>();
         mageHitVFX = GetComponent<MageHitVFX>();
         weapon = GetComponentInChildren<Wand>();
     }
@@ -141,13 +139,13 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputAction.CallbackContext context)
     {
-        playerInput = context.ReadValue<Vector2>() * (attacking ? playerStats.MovePenalization : 1);
+        playerInput = context.ReadValue<Vector2>() * (attacking ? GameManager.Instance.playerStats.MovePenalization : 1);
 
         if (dashing) return;
         animator.SetBool(running, true);
         animator.SetFloat(facing, playerInput.x);
 
-        body.linearVelocity = playerStats.MoveSpeed * playerInput;
+        body.linearVelocity = GameManager.Instance.playerStats.MoveSpeed * playerInput;
     }
 
     void OnDash(InputAction.CallbackContext context)
@@ -185,16 +183,16 @@ public class PlayerController : MonoBehaviour
         dashing = true;
         mageHitVFX.StartImmunity();
 
-        body.linearVelocity = body.linearVelocity.normalized * playerStats.DashVelocity;
+        body.linearVelocity = body.linearVelocity.normalized * GameManager.Instance.playerStats.DashVelocity;
 
-        yield return new WaitForSeconds(playerStats.DashDuration);
+        yield return new WaitForSeconds(GameManager.Instance.playerStats.DashDuration);
 
         dashing = false;
-        body.linearVelocity = playerStats.MoveSpeed * playerInput;
+        body.linearVelocity = GameManager.Instance.playerStats.MoveSpeed * playerInput;
 
         mageHitVFX.EndImmunity();
 
-        yield return new WaitForSeconds(playerStats.DashCooldown);
+        yield return new WaitForSeconds(GameManager.Instance.playerStats.DashCooldown);
 
         HandleActionEvents(HandleAction.DASH, HandleToggle.ON);
     }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 511efe2842a38bd429a06d5f41ed965b
+guid: fe66038ba3bc99349b09e522af169373
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5725383246273863555
-    second: Floor_Clearbrown_0
+      213: 6420865991821705400
+    second: Floor_Clearbrown_n_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Floor_Clearbrown_0
+      name: Floor_Clearbrown_n_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,21 +108,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d70afda954a5b80b0800000000000000
-      internalID: -5725383246273863555
+      spriteID: 8b04be0b99f7b1950800000000000000
+      internalID: 6420865991821705400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_1
+      name: Floor_Clearbrown_n_1
       rect:
         serializedVersion: 2
         x: 16
@@ -130,21 +130,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b74f84bf5480a2d4a93ff623302d2a4d
-      internalID: -1923133941
+      spriteID: e79197beb700329469be44227b9a6f12
+      internalID: 1726002836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_2
+      name: Floor_Clearbrown_n_2
       rect:
         serializedVersion: 2
         x: 32
@@ -152,21 +152,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 475355cbb8d48724dadaf587e35f76a9
-      internalID: -406999800
+      spriteID: 741d817a0ce2b9c46961a147aa226cdd
+      internalID: -1293621921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_3
+      name: Floor_Clearbrown_n_3
       rect:
         serializedVersion: 2
         x: 48
@@ -174,21 +174,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59576583643b49c4a8d560e72d4e9323
-      internalID: 1558117055
+      spriteID: 2407d4757721e584e959dada33daa299
+      internalID: 170274776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_4
+      name: Floor_Clearbrown_n_4
       rect:
         serializedVersion: 2
         x: 64
@@ -196,21 +196,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e405ceca45133884ba63b684ea34b669
-      internalID: -317260429
+      spriteID: 45e4138b5ddacd44ca0b99299cc38a37
+      internalID: 352616692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_5
+      name: Floor_Clearbrown_n_5
       rect:
         serializedVersion: 2
         x: 80
@@ -218,21 +218,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a243891af8f54414ab3d4a8d7ca084f4
-      internalID: -2040870128
+      spriteID: bcd2c62b95808c249aeff96b3959bd0e
+      internalID: 245030872
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_6
+      name: Floor_Clearbrown_n_6
       rect:
         serializedVersion: 2
         x: 96
@@ -240,21 +240,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45123e2d8c2be64479adde88a01a28db
-      internalID: -1669620091
+      spriteID: e22f12ba101cc5340a1d07c5c26a2ea1
+      internalID: 1851795811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_7
+      name: Floor_Clearbrown_n_7
       rect:
         serializedVersion: 2
         x: 112
@@ -262,21 +262,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0491ca8a0016dc4cab491038ecb182a
-      internalID: -1740247839
+      spriteID: 271550bc103f3874e8deeb8d0da22c25
+      internalID: -2097174755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_8
+      name: Floor_Clearbrown_n_8
       rect:
         serializedVersion: 2
         x: 128
@@ -284,21 +284,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5728f61f3dafb547a814182a83608a0
-      internalID: 1020255132
+      spriteID: 12f8143b8ba738f49bed428e0e0f99af
+      internalID: -767603352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_9
+      name: Floor_Clearbrown_n_9
       rect:
         serializedVersion: 2
         x: 144
@@ -306,21 +306,43 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26764b1f74577ee42903dbe9d7dc24d6
-      internalID: -1710757134
+      spriteID: 9c821918bda0dd149915b876c1f3eeb3
+      internalID: 1328817759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_10
+      name: Floor_Clearbrown_n_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f35a6550f22b54c975d4ea54898756
+      internalID: 1835239658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_11
       rect:
         serializedVersion: 2
         x: 0
@@ -328,21 +350,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac18af5d2fc281740826458ee1cad892
-      internalID: -1615015506
+      spriteID: 1b1b9dcc98d82374db834c484d55240b
+      internalID: 306469201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_11
+      name: Floor_Clearbrown_n_12
       rect:
         serializedVersion: 2
         x: 16
@@ -350,21 +372,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 837fcd6f8e3fe5748907ffd5f4270dca
-      internalID: 935143815
+      spriteID: 27a7ce3ba1746e64baa3c5ec1f48dfe3
+      internalID: -2089638770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_12
+      name: Floor_Clearbrown_n_13
       rect:
         serializedVersion: 2
         x: 32
@@ -372,21 +394,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23a403083fd14644096f0af27ffac172
-      internalID: 1928373958
+      spriteID: 0577bce1c85c39a4fa4c7cda9b73359d
+      internalID: 1018535262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_13
+      name: Floor_Clearbrown_n_14
       rect:
         serializedVersion: 2
         x: 48
@@ -394,21 +416,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56176914adc35784984dedb4ca52ef35
-      internalID: -2016655598
+      spriteID: b611463637f7a8043b362f90c5f0d50f
+      internalID: -1510037745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_14
+      name: Floor_Clearbrown_n_15
       rect:
         serializedVersion: 2
         x: 64
@@ -416,21 +438,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0abefae93f556f740a2e35f10ec96f36
-      internalID: 612736459
+      spriteID: 591714a2fc6e845499335985963bad9f
+      internalID: 1402885562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_15
+      name: Floor_Clearbrown_n_16
       rect:
         serializedVersion: 2
         x: 80
@@ -438,21 +460,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cea8d01f4a1ac3446a055cd8801d9db7
-      internalID: 1637678926
+      spriteID: a7a5f096a2e06224283ad6b32ca31d9a
+      internalID: -728528976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_16
+      name: Floor_Clearbrown_n_17
       rect:
         serializedVersion: 2
         x: 96
@@ -460,21 +482,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f98bae6fa0f60644b5f28ec13d9eef1
-      internalID: 37934327
+      spriteID: 623e66f17b06aa5428bde96414cbf95c
+      internalID: 1802694938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_17
+      name: Floor_Clearbrown_n_18
       rect:
         serializedVersion: 2
         x: 112
@@ -482,21 +504,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0338bf0906b98394f9cc0d8df424bfed
-      internalID: 1137933004
+      spriteID: fad8bc49904c3f54d8d47714e0fb9fd1
+      internalID: -204917587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_18
+      name: Floor_Clearbrown_n_19
       rect:
         serializedVersion: 2
         x: 128
@@ -504,21 +526,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 022d5ea53aa6e2243bfde68ce9c15cda
-      internalID: 1485896090
+      spriteID: 7145838200230974abde1b189c26e1d9
+      internalID: 1979666648
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_19
+      name: Floor_Clearbrown_n_20
       rect:
         serializedVersion: 2
         x: 144
@@ -526,21 +548,43 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3de8b6767b3d2f54c8d06bd6af962b54
-      internalID: 130582118
+      spriteID: b8c75cd52e719a4458badab9932c2c27
+      internalID: 481051941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_20
+      name: Floor_Clearbrown_n_21
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c9a3635c3677ab4db475c21eb7af1fd
+      internalID: -1266930626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_22
       rect:
         serializedVersion: 2
         x: 0
@@ -548,21 +592,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2767f00e352593147ad63e2975846e8e
-      internalID: -527078867
+      spriteID: 3302e03f9059dda4299444110c420ab3
+      internalID: -905015100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_21
+      name: Floor_Clearbrown_n_23
       rect:
         serializedVersion: 2
         x: 16
@@ -570,21 +614,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54425616c30ab384ea3c0662dafc46da
-      internalID: 913903846
+      spriteID: a0a70afe00dfc44478b5d7110847805e
+      internalID: -244738439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_22
+      name: Floor_Clearbrown_n_24
       rect:
         serializedVersion: 2
         x: 32
@@ -592,21 +636,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57c77a6c0685d1643946aa9036304af5
-      internalID: -1348666091
+      spriteID: 65d136eea68c6d3438ec8ff4cbd34769
+      internalID: 371933639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_23
+      name: Floor_Clearbrown_n_25
       rect:
         serializedVersion: 2
         x: 48
@@ -614,21 +658,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea9df53830f4041409f5cb19f2bb019d
-      internalID: 1687120994
+      spriteID: 25b326c277859c84a9c2b8c24e599880
+      internalID: -503499997
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_24
+      name: Floor_Clearbrown_n_26
       rect:
         serializedVersion: 2
         x: 64
@@ -636,21 +680,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa41722e47d0ee544909975151ecd640
-      internalID: 1279633879
+      spriteID: da63a099cdc043a4fa5fe949c445ab3f
+      internalID: 2141352682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_25
+      name: Floor_Clearbrown_n_27
       rect:
         serializedVersion: 2
         x: 80
@@ -658,21 +702,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 642e0e4d442467a40a03babdc848a988
-      internalID: -1126632458
+      spriteID: cb18c7a704b576c49bb526a1355090f2
+      internalID: 724506226
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_26
+      name: Floor_Clearbrown_n_28
       rect:
         serializedVersion: 2
         x: 96
@@ -680,21 +724,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e2b27666bcc3664eb1566780c7ba2a2
-      internalID: 1951289125
+      spriteID: fd2f64b517412d5418d1f0de2753ad4e
+      internalID: -1154615923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_27
+      name: Floor_Clearbrown_n_29
       rect:
         serializedVersion: 2
         x: 112
@@ -702,21 +746,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95300a09304bbf041be8f2040ae9628f
-      internalID: -1852382765
+      spriteID: 0fe3774175a06824bbf91a751a6f0142
+      internalID: -1407367519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_28
+      name: Floor_Clearbrown_n_30
       rect:
         serializedVersion: 2
         x: 128
@@ -724,21 +768,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 208afe1520bc6444b92f6fae0e413676
-      internalID: 909783847
+      spriteID: cb8c4bc15c64ea14c81b5e1752a65264
+      internalID: 830908352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_29
+      name: Floor_Clearbrown_n_31
       rect:
         serializedVersion: 2
         x: 144
@@ -746,21 +790,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06ceb9ddfebcb0e48a56d58edc9b5ae4
-      internalID: 1479908002
+      spriteID: b27a51141dc66fc4a9f14ed360c69b80
+      internalID: -1660217910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_30
+      name: Floor_Clearbrown_n_32
       rect:
         serializedVersion: 2
         x: 160
@@ -768,21 +812,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40d9949270ff75c469b1f131231d6c5f
-      internalID: 678518079
+      spriteID: 72b6397ca67469f4c9da144be9db6f77
+      internalID: -946792493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_31
+      name: Floor_Clearbrown_n_33
       rect:
         serializedVersion: 2
         x: 0
@@ -790,21 +834,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a03e22af692b29944b4e12224eadbeff
-      internalID: -1871847148
+      spriteID: 72f17589bb35b4e4e8120f96e55b5704
+      internalID: -1928975960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_32
+      name: Floor_Clearbrown_n_34
       rect:
         serializedVersion: 2
         x: 16
@@ -812,21 +856,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9de38679aad934346a6db178a6c86963
-      internalID: 988894315
+      spriteID: 50bcbc9c39d40af418dfdcc20e5fd2fc
+      internalID: -1938643505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_33
+      name: Floor_Clearbrown_n_35
       rect:
         serializedVersion: 2
         x: 32
@@ -834,21 +878,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c339e6e4cec5d0844b918bbcd1949dff
-      internalID: -1087761447
+      spriteID: 6705d3ff2ad0ca1438f37fe80edadf7b
+      internalID: 620687107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_34
+      name: Floor_Clearbrown_n_36
       rect:
         serializedVersion: 2
         x: 48
@@ -856,21 +900,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eedad1ce39b7c64480702999951f656
-      internalID: -762107530
+      spriteID: 989e8d00d4677ee418ccb3c52ad6a735
+      internalID: -2009446745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_35
+      name: Floor_Clearbrown_n_37
       rect:
         serializedVersion: 2
         x: 64
@@ -878,21 +922,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe9405525469e4e42822170a295d6204
-      internalID: 105316014
+      spriteID: 89d12379bdb534841af1523b7d402393
+      internalID: 1181644089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_36
+      name: Floor_Clearbrown_n_38
       rect:
         serializedVersion: 2
         x: 80
@@ -900,21 +944,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7e140aa1f2ff814aad6b7958a2e04fa
-      internalID: -1944203516
+      spriteID: f723250ab76234148bfb34a157ad5fdc
+      internalID: 1024427877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_37
+      name: Floor_Clearbrown_n_39
       rect:
         serializedVersion: 2
         x: 96
@@ -922,21 +966,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27afa6ddaadc0494ea3f90031b21cf7a
-      internalID: -1961443769
+      spriteID: 722e406b0030e784e8eec41da0ef1327
+      internalID: -839080201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_38
+      name: Floor_Clearbrown_n_40
       rect:
         serializedVersion: 2
         x: 112
@@ -944,21 +988,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ceb74700da75da47bad4acf30eb679a
-      internalID: 672085277
+      spriteID: 428c08c9104c2c945b02d9ba3ffc44cc
+      internalID: -1791420057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_39
+      name: Floor_Clearbrown_n_41
       rect:
         serializedVersion: 2
         x: 128
@@ -966,21 +1010,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 503c29bc7ed972545a666c6d1a3e5ce1
-      internalID: 31399150
+      spriteID: 4cd1446e302f4564cac8941d12661805
+      internalID: 2103746010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_40
+      name: Floor_Clearbrown_n_42
       rect:
         serializedVersion: 2
         x: 144
@@ -988,21 +1032,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40bd6e43f282be84592221e02396ed75
-      internalID: -1986737168
+      spriteID: f74844acab6f8924b939caad8c1171f3
+      internalID: 1747820574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_41
+      name: Floor_Clearbrown_n_43
       rect:
         serializedVersion: 2
         x: 160
@@ -1010,21 +1054,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c0933da89ad9544c97d627e9036c9e4
-      internalID: 1786746636
+      spriteID: 69372aa2817f95f48a869d50c1e80e1a
+      internalID: 1191100210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_42
+      name: Floor_Clearbrown_n_44
       rect:
         serializedVersion: 2
         x: 0
@@ -1032,21 +1076,87 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cde94f29ea8d194a98be1fc46f2c312
-      internalID: -2101130124
+      spriteID: f830afec8fe598441a1955510ad61f42
+      internalID: 1319127526
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_43
+      name: Floor_Clearbrown_n_45
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2396f6b65365b439d6a4ea2077ef04
+      internalID: 1162695708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_46
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7302889bf9df5a46b86e68be36114df
+      internalID: 211648930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c73b64eb6fe6041af7b8564be24446
+      internalID: -1691607350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_48
       rect:
         serializedVersion: 2
         x: 64
@@ -1054,21 +1164,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69422e4f25f876d4b81d44e08d4e254c
-      internalID: -826735693
+      spriteID: 2f026f7bcfd917646a58059a354857ec
+      internalID: -1526942485
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_44
+      name: Floor_Clearbrown_n_49
       rect:
         serializedVersion: 2
         x: 80
@@ -1076,21 +1186,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4637ab2b4ba1db439a4335ef5b3451e
-      internalID: 2107028644
+      spriteID: 71b3378a57580b6498611001f8357471
+      internalID: -824733300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_45
+      name: Floor_Clearbrown_n_50
       rect:
         serializedVersion: 2
         x: 96
@@ -1098,21 +1208,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e0d457261663d04abb4fb672a26a42e
-      internalID: -1071747173
+      spriteID: e600650b6307f3948b6f4f18ffaf7d92
+      internalID: 637291847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_46
+      name: Floor_Clearbrown_n_51
       rect:
         serializedVersion: 2
         x: 112
@@ -1120,21 +1230,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7559de9590a69e418250f63af6be299
-      internalID: 1403731609
+      spriteID: 9d7e4c7e6a7c0eb498d97e41cd843320
+      internalID: 1517963946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_47
+      name: Floor_Clearbrown_n_52
       rect:
         serializedVersion: 2
         x: 128
@@ -1142,21 +1252,65 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec41ecf0b8fbefa4faca0bcc868f8e40
-      internalID: -527766250
+      spriteID: 0fb3f0e35e1d35c46a2fc6b4a4a1815e
+      internalID: -260249791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_48
+      name: Floor_Clearbrown_n_53
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9a0572dce8085449baddce4b04ba430
+      internalID: -586382184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_54
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b504de95dd58e4847852123cb8aa6014
+      internalID: -1945901134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_55
       rect:
         serializedVersion: 2
         x: 0
@@ -1164,21 +1318,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 868d8e9b953cd3945838fa70c032e68e
-      internalID: 168432372
+      spriteID: 828802c38e8ba7343a3ec532f4675008
+      internalID: -1869562328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_49
+      name: Floor_Clearbrown_n_56
       rect:
         serializedVersion: 2
         x: 16
@@ -1186,21 +1340,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5723b64da2b35f04cbfcbf16d953eaa8
-      internalID: 633964378
+      spriteID: bb8e4a6f4c54fb8418bbf43b9d0eb54a
+      internalID: 1849599295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_50
+      name: Floor_Clearbrown_n_57
       rect:
         serializedVersion: 2
         x: 32
@@ -1208,21 +1362,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a29972759066d1d41825bc5a7327ab89
-      internalID: -822803103
+      spriteID: 5aecf66ec16edc045a00923c4b43d292
+      internalID: 270355832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Floor_Clearbrown_51
+      name: Floor_Clearbrown_n_58
       rect:
         serializedVersion: 2
         x: 48
@@ -1230,15 +1384,169 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00904e78dcf02a5438c4a1b2b6be1d77
-      internalID: 992706569
+      spriteID: d5744871f99b1eb45bbdd5e97f2673bd
+      internalID: 749117800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_59
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce342daf5b5f2f489abe0f3b05fcada
+      internalID: -167903090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_60
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757c713c01a12124ca704f9681924d0e
+      internalID: 1634247663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0e5e0d1be1ef1409344c0b5f10cfd7
+      internalID: -782554374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_62
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304400446fc968447a5da0685c0a702a
+      internalID: -1334514377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_63
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667df69fa65d4614d821bb86bfa84a39
+      internalID: -760260642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_64
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b625aa35cdcfe4bb31e25403bf2df6
+      internalID: 1580938121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_Clearbrown_n_65
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdca0d2885fa724ba26bbf093a72f52
+      internalID: -326888856
       vertices: []
       indices: 
       edges: []
@@ -1247,70 +1555,82 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0a38a0a0b737dc24090b62eb0249ca45
+    spriteID: a42343f2071a91f4e8b13c050bf68ae1
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: fe66038ba3bc99349b09e522af169373, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Floor_Clearbrown_0: -5725383246273863555
-      Floor_Clearbrown_1: -1923133941
-      Floor_Clearbrown_10: -1615015506
-      Floor_Clearbrown_11: 935143815
-      Floor_Clearbrown_12: 1928373958
-      Floor_Clearbrown_13: -2016655598
-      Floor_Clearbrown_14: 612736459
-      Floor_Clearbrown_15: 1637678926
-      Floor_Clearbrown_16: 37934327
-      Floor_Clearbrown_17: 1137933004
-      Floor_Clearbrown_18: 1485896090
-      Floor_Clearbrown_19: 130582118
-      Floor_Clearbrown_2: -406999800
-      Floor_Clearbrown_20: -527078867
-      Floor_Clearbrown_21: 913903846
-      Floor_Clearbrown_22: -1348666091
-      Floor_Clearbrown_23: 1687120994
-      Floor_Clearbrown_24: 1279633879
-      Floor_Clearbrown_25: -1126632458
-      Floor_Clearbrown_26: 1951289125
-      Floor_Clearbrown_27: -1852382765
-      Floor_Clearbrown_28: 909783847
-      Floor_Clearbrown_29: 1479908002
-      Floor_Clearbrown_3: 1558117055
-      Floor_Clearbrown_30: 678518079
-      Floor_Clearbrown_31: -1871847148
-      Floor_Clearbrown_32: 988894315
-      Floor_Clearbrown_33: -1087761447
-      Floor_Clearbrown_34: -762107530
-      Floor_Clearbrown_35: 105316014
-      Floor_Clearbrown_36: -1944203516
-      Floor_Clearbrown_37: -1961443769
-      Floor_Clearbrown_38: 672085277
-      Floor_Clearbrown_39: 31399150
-      Floor_Clearbrown_4: -317260429
-      Floor_Clearbrown_40: -1986737168
-      Floor_Clearbrown_41: 1786746636
-      Floor_Clearbrown_42: -2101130124
-      Floor_Clearbrown_43: -826735693
-      Floor_Clearbrown_44: 2107028644
-      Floor_Clearbrown_45: -1071747173
-      Floor_Clearbrown_46: 1403731609
-      Floor_Clearbrown_47: -527766250
-      Floor_Clearbrown_48: 168432372
-      Floor_Clearbrown_49: 633964378
-      Floor_Clearbrown_5: -2040870128
-      Floor_Clearbrown_50: -822803103
-      Floor_Clearbrown_51: 992706569
-      Floor_Clearbrown_6: -1669620091
-      Floor_Clearbrown_7: -1740247839
-      Floor_Clearbrown_8: 1020255132
-      Floor_Clearbrown_9: -1710757134
+      Floor_Clearbrown_n_0: 6420865991821705400
+      Floor_Clearbrown_n_1: 1726002836
+      Floor_Clearbrown_n_10: 1835239658
+      Floor_Clearbrown_n_11: 306469201
+      Floor_Clearbrown_n_12: -2089638770
+      Floor_Clearbrown_n_13: 1018535262
+      Floor_Clearbrown_n_14: -1510037745
+      Floor_Clearbrown_n_15: 1402885562
+      Floor_Clearbrown_n_16: -728528976
+      Floor_Clearbrown_n_17: 1802694938
+      Floor_Clearbrown_n_18: -204917587
+      Floor_Clearbrown_n_19: 1979666648
+      Floor_Clearbrown_n_2: -1293621921
+      Floor_Clearbrown_n_20: 481051941
+      Floor_Clearbrown_n_21: -1266930626
+      Floor_Clearbrown_n_22: -905015100
+      Floor_Clearbrown_n_23: -244738439
+      Floor_Clearbrown_n_24: 371933639
+      Floor_Clearbrown_n_25: -503499997
+      Floor_Clearbrown_n_26: 2141352682
+      Floor_Clearbrown_n_27: 724506226
+      Floor_Clearbrown_n_28: -1154615923
+      Floor_Clearbrown_n_29: -1407367519
+      Floor_Clearbrown_n_3: 170274776
+      Floor_Clearbrown_n_30: 830908352
+      Floor_Clearbrown_n_31: -1660217910
+      Floor_Clearbrown_n_32: -946792493
+      Floor_Clearbrown_n_33: -1928975960
+      Floor_Clearbrown_n_34: -1938643505
+      Floor_Clearbrown_n_35: 620687107
+      Floor_Clearbrown_n_36: -2009446745
+      Floor_Clearbrown_n_37: 1181644089
+      Floor_Clearbrown_n_38: 1024427877
+      Floor_Clearbrown_n_39: -839080201
+      Floor_Clearbrown_n_4: 352616692
+      Floor_Clearbrown_n_40: -1791420057
+      Floor_Clearbrown_n_41: 2103746010
+      Floor_Clearbrown_n_42: 1747820574
+      Floor_Clearbrown_n_43: 1191100210
+      Floor_Clearbrown_n_44: 1319127526
+      Floor_Clearbrown_n_45: 1162695708
+      Floor_Clearbrown_n_46: 211648930
+      Floor_Clearbrown_n_47: -1691607350
+      Floor_Clearbrown_n_48: -1526942485
+      Floor_Clearbrown_n_49: -824733300
+      Floor_Clearbrown_n_5: 245030872
+      Floor_Clearbrown_n_50: 637291847
+      Floor_Clearbrown_n_51: 1517963946
+      Floor_Clearbrown_n_52: -260249791
+      Floor_Clearbrown_n_53: -586382184
+      Floor_Clearbrown_n_54: -1945901134
+      Floor_Clearbrown_n_55: -1869562328
+      Floor_Clearbrown_n_56: 1849599295
+      Floor_Clearbrown_n_57: 270355832
+      Floor_Clearbrown_n_58: 749117800
+      Floor_Clearbrown_n_59: -167903090
+      Floor_Clearbrown_n_6: 1851795811
+      Floor_Clearbrown_n_60: 1634247663
+      Floor_Clearbrown_n_61: -782554374
+      Floor_Clearbrown_n_62: -1334514377
+      Floor_Clearbrown_n_63: -760260642
+      Floor_Clearbrown_n_64: 1580938121
+      Floor_Clearbrown_n_65: -326888856
+      Floor_Clearbrown_n_7: -2097174755
+      Floor_Clearbrown_n_8: -767603352
+      Floor_Clearbrown_n_9: 1328817759
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

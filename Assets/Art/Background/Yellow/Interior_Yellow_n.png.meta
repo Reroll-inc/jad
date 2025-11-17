@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9d843b38801e6aa4789b6e676d01fa9c
+guid: 887ecb3d4bdb2ca458b67b52885099f3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2462766143137927352
-    second: Interior_Yellow_0
+      213: 2007633320995368975
+    second: Interior_Yellow_n_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Interior_Yellow_0
+      name: Interior_Yellow_n_0
       rect:
         serializedVersion: 2
         x: 0
@@ -108,21 +108,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8b0589642c08d2220800000000000000
-      internalID: 2462766143137927352
+      spriteID: f00ba295edb8cdb10800000000000000
+      internalID: 2007633320995368975
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_1
+      name: Interior_Yellow_n_1
       rect:
         serializedVersion: 2
         x: 16
@@ -130,21 +130,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e642fa15cc534247afa06a9928c0f24
-      internalID: 581067295
+      spriteID: 9691ede2bc76f7e4e812e49a5fa9177c
+      internalID: 1864029597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_2
+      name: Interior_Yellow_n_2
       rect:
         serializedVersion: 2
         x: 32
@@ -152,21 +152,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73713a15bcca4f443b9518626e509fc0
-      internalID: 1595927537
+      spriteID: 33e3d0f0ae2a89e4fb1619672e4c92c7
+      internalID: -2063857076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_3
+      name: Interior_Yellow_n_3
       rect:
         serializedVersion: 2
         x: 48
@@ -174,21 +174,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 618f6f2bf8ee0dd448a49b335625d580
-      internalID: -589925792
+      spriteID: 3f19cd8ba3d8a5e409537ac5ec9bcfb3
+      internalID: -1184175861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_4
+      name: Interior_Yellow_n_4
       rect:
         serializedVersion: 2
         x: 64
@@ -196,21 +196,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36eaed4d0b7ed994991e4762ba99aeca
-      internalID: -1228347391
+      spriteID: 127e75d33daf7844f811d7160fa7419f
+      internalID: -1064274907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_5
+      name: Interior_Yellow_n_5
       rect:
         serializedVersion: 2
         x: 80
@@ -218,21 +218,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0417717d1ee1769458aca11523dbc1c6
-      internalID: 847950394
+      spriteID: 4061592c60e522e419461f5b131756fd
+      internalID: -2063828498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_6
+      name: Interior_Yellow_n_6
       rect:
         serializedVersion: 2
         x: 96
@@ -240,21 +240,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ef8be49c62eeeb4abad9722d9485ae9
-      internalID: -422732931
+      spriteID: f8f99d68629c2e84792daa803620d134
+      internalID: 1813442141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_7
+      name: Interior_Yellow_n_7
       rect:
         serializedVersion: 2
         x: 112
@@ -262,21 +262,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1c5a2662fad8fb4498db1bb00de8a04
-      internalID: -667813852
+      spriteID: 8b993ebb5f075f341ab8f074fe0abf25
+      internalID: -1614684121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_8
+      name: Interior_Yellow_n_8
       rect:
         serializedVersion: 2
         x: 0
@@ -284,21 +284,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6c3bb606e4a9d84a864379416579d12
-      internalID: -901577837
+      spriteID: cfa03a99b2711ef44b5fdea9c7203ae4
+      internalID: 222034879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_9
+      name: Interior_Yellow_n_9
       rect:
         serializedVersion: 2
         x: 16
@@ -306,21 +306,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8c509897b74f6e4299648848da03f1e
-      internalID: 224279115
+      spriteID: 8911b19363dac9b4a806ef1e8bdbbc1a
+      internalID: 1541153076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_10
+      name: Interior_Yellow_n_10
       rect:
         serializedVersion: 2
         x: 32
@@ -328,21 +328,87 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4facb9f40483324eaa4002015d0a511
-      internalID: 1407612943
+      spriteID: c991c8c99c12a4f478b77af2ff81550a
+      internalID: -853774511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_11
+      name: Interior_Yellow_n_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225b261174dcc2f46869c2b346546617
+      internalID: -1504058697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_12
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4211bdf5ff933f4ab7da0abc19cbf44
+      internalID: 468607284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_13
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dac7a4444ba80b42b75e99d3c352baa
+      internalID: -1830899230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_14
       rect:
         serializedVersion: 2
         x: 96
@@ -350,21 +416,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8f7163e0a9e494429867a5093ccfaac
-      internalID: -520415311
+      spriteID: 1d320b46050bbea49a85db0f68c1e7da
+      internalID: -554769594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_12
+      name: Interior_Yellow_n_15
       rect:
         serializedVersion: 2
         x: 112
@@ -372,21 +438,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26403137801a8ab4cb9f1277116504b9
-      internalID: -723629201
+      spriteID: b248118bf282bbf47999eafb26fb2c09
+      internalID: 691178441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_13
+      name: Interior_Yellow_n_16
       rect:
         serializedVersion: 2
         x: 0
@@ -394,21 +460,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62d613cd60892b241a0b0a27f50e0d44
-      internalID: 669974666
+      spriteID: b216cb5086f7c604e807593c9b5c3329
+      internalID: 1373667624
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_14
+      name: Interior_Yellow_n_17
       rect:
         serializedVersion: 2
         x: 16
@@ -416,21 +482,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d55c1fc3ef7db224bb47045bfe56eb80
-      internalID: 488999503
+      spriteID: 5fac686d043e01d438d46556e75556d7
+      internalID: -642658408
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_15
+      name: Interior_Yellow_n_18
       rect:
         serializedVersion: 2
         x: 32
@@ -438,21 +504,65 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edc0086c47c0779409363bebc1b61795
-      internalID: -1531208370
+      spriteID: 83a176f143b270e4faaa52c2eda29280
+      internalID: -1924625303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_16
+      name: Interior_Yellow_n_19
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779c7b9290cb2af429ecd49cf25b18ab
+      internalID: 1330356551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3908fce6a77904ca66a7575d3db878
+      internalID: 902899180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_21
       rect:
         serializedVersion: 2
         x: 80
@@ -460,21 +570,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fc9f0f1c47b3b544af8196153877fac
-      internalID: -1772400888
+      spriteID: 3dd9e3e512637f045a285dbce35db64f
+      internalID: 1980174017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_17
+      name: Interior_Yellow_n_22
       rect:
         serializedVersion: 2
         x: 96
@@ -482,21 +592,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2df9ee34124f4154e98a76f1c20b3f94
-      internalID: -1881626255
+      spriteID: 3dad633a8acb05d469caac898676374e
+      internalID: 17981865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_18
+      name: Interior_Yellow_n_23
       rect:
         serializedVersion: 2
         x: 112
@@ -504,21 +614,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07d6067eebe6d5e4496630bfa47acde6
-      internalID: 648709360
+      spriteID: 7f5e2b9d3048a4440a71d0d5f9a8ac17
+      internalID: 537185207
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_19
+      name: Interior_Yellow_n_24
       rect:
         serializedVersion: 2
         x: 0
@@ -526,21 +636,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16506270e3d887f4da4ad220c557f71d
-      internalID: -666135794
+      spriteID: 04899e6ecb7727f448787f70681929a1
+      internalID: -175431378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_20
+      name: Interior_Yellow_n_25
       rect:
         serializedVersion: 2
         x: 16
@@ -548,21 +658,109 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3b9446a65fcc1446bda283b3de9ad82
-      internalID: 695212130
+      spriteID: fd86a3b5a8c6c8b45a5ff79e7a32b1ab
+      internalID: -1445010041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_21
+      name: Interior_Yellow_n_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081e6f18770ae844a90f45a4658c805c
+      internalID: -1157503349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ade25c35c55a5dc42927d2ac8280b9ba
+      internalID: 353098300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_28
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570edb78d6212e348b2cf4b799606248
+      internalID: 1810905693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_29
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd24235e02a6d374389af7cf82ea157a
+      internalID: 1039286054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_30
       rect:
         serializedVersion: 2
         x: 96
@@ -570,21 +768,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90d1d79e4eec5e44e8714599d11d6d0f
-      internalID: 1082968362
+      spriteID: 1f96f602221d11a4a901abcf20a4a752
+      internalID: -962181897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_22
+      name: Interior_Yellow_n_31
       rect:
         serializedVersion: 2
         x: 112
@@ -592,21 +790,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 864c7853ea066d5499fe737e14e9fd5b
-      internalID: -722314998
+      spriteID: dfef305c285f61641807560803b908ff
+      internalID: 1171100598
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_23
+      name: Interior_Yellow_n_32
       rect:
         serializedVersion: 2
         x: 0
@@ -614,21 +812,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9e2aad34e0035349878ac9405a9dd1e
-      internalID: -500703158
+      spriteID: 8bea4473057ce984fa717f0b79b40f8a
+      internalID: -1314692084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_24
+      name: Interior_Yellow_n_33
       rect:
         serializedVersion: 2
         x: 16
@@ -636,21 +834,109 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88da8dd515dac7c429b745e716ec5fbd
-      internalID: 389348842
+      spriteID: f46b9361dfd03cd46b680417618d49ab
+      internalID: -1525853050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_25
+      name: Interior_Yellow_n_34
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe3a6c247cf2ef4382752a018764979
+      internalID: 1463159875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_35
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7ec826ee0a90c4ba67f2e1bd5a774a
+      internalID: -915464058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33531d78bae2a41428f2168d612841d7
+      internalID: -233475680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_37
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397da634d6658ef419dfe6ada20a07f6
+      internalID: -906713395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_38
       rect:
         serializedVersion: 2
         x: 96
@@ -658,21 +944,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f5afc15a50f0d40bbf29d5530d988b
-      internalID: 956241482
+      spriteID: 16b636a772422b34498bcf2a96b618d5
+      internalID: -1245582537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_26
+      name: Interior_Yellow_n_39
       rect:
         serializedVersion: 2
         x: 112
@@ -680,21 +966,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97e2200424adbe647848727a0c9db9b8
-      internalID: 1831500108
+      spriteID: af3d758b86b644742959c1670fbed518
+      internalID: -1765960848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_27
+      name: Interior_Yellow_n_40
       rect:
         serializedVersion: 2
         x: 0
@@ -702,21 +988,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e01ec3da882d8f4e803eaf8d7ac0ae2
-      internalID: 677493467
+      spriteID: ef2a3808b271d604b9b748e8098a5ce9
+      internalID: 1987332698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_28
+      name: Interior_Yellow_n_41
       rect:
         serializedVersion: 2
         x: 16
@@ -724,21 +1010,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c3d0105cc4fcf64ba66821213107141
-      internalID: -435780486
+      spriteID: ce30bb2230baf2846bc6d213a1e9b4b6
+      internalID: -1052818021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_29
+      name: Interior_Yellow_n_42
       rect:
         serializedVersion: 2
         x: 32
@@ -746,21 +1032,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6108f4a8bff2cfa4a94c371359e34fa7
-      internalID: 652834666
+      spriteID: afbda0de883941b449311987648e5d4a
+      internalID: -1322256536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_30
+      name: Interior_Yellow_n_43
       rect:
         serializedVersion: 2
         x: 48
@@ -768,21 +1054,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ab7c7e93776aa14d9f01acad098d555
-      internalID: -907185176
+      spriteID: 1dbba9dd3ff23fd49bfa3e2d2559552f
+      internalID: 1252916273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_31
+      name: Interior_Yellow_n_44
       rect:
         serializedVersion: 2
         x: 64
@@ -790,21 +1076,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07668afd0cd8b6a409cd5324724b7d70
-      internalID: 495462535
+      spriteID: 7b9120256525e1c4d899ee89a8375be9
+      internalID: -2069561874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_32
+      name: Interior_Yellow_n_45
       rect:
         serializedVersion: 2
         x: 80
@@ -812,21 +1098,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b02646517b21aa4c89b85292e8c0569
-      internalID: -740563406
+      spriteID: 3b2cd394d1ded574aa85da67b9227d90
+      internalID: -689983981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_33
+      name: Interior_Yellow_n_46
       rect:
         serializedVersion: 2
         x: 96
@@ -834,21 +1120,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 821bd374c3183e34aa7bae6c6cabddea
-      internalID: 1318698096
+      spriteID: 3e7d5a1aface9e1429e9435ad6698eac
+      internalID: -675773633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_34
+      name: Interior_Yellow_n_47
       rect:
         serializedVersion: 2
         x: 112
@@ -856,21 +1142,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4de3e9d0c6edd844caf72afc536155f4
-      internalID: 1193398497
+      spriteID: 2537a29ef68b4e5498b5be57ef532931
+      internalID: 1814974742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_35
+      name: Interior_Yellow_n_48
       rect:
         serializedVersion: 2
         x: 0
@@ -878,21 +1164,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0da1190409b326948a39d939c4eead01
-      internalID: -1547576636
+      spriteID: 147712e429db9d54ea6090970804542c
+      internalID: 687392729
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_36
+      name: Interior_Yellow_n_49
       rect:
         serializedVersion: 2
         x: 16
@@ -900,21 +1186,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c921c6976195cd4caa610e85e9440e3
-      internalID: -957135701
+      spriteID: 3fa68a8d9bc5a4d49a6973ba612e4c8a
+      internalID: 188323237
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_37
+      name: Interior_Yellow_n_50
       rect:
         serializedVersion: 2
         x: 32
@@ -922,21 +1208,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 724a4d38cea819647990063ef04fe37e
-      internalID: -1729257341
+      spriteID: 78f7fdcac14e0ec4fa5e144d9cfd3e4f
+      internalID: 1050630637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_38
+      name: Interior_Yellow_n_51
       rect:
         serializedVersion: 2
         x: 48
@@ -944,21 +1230,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 663dcb988cf64734cbe95aa45fecabc1
-      internalID: -672264929
+      spriteID: a068d23f99aa23e408ffc89525f45555
+      internalID: -1358451455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_39
+      name: Interior_Yellow_n_52
       rect:
         serializedVersion: 2
         x: 64
@@ -966,21 +1252,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65bef0f1b9dc3ff42a7b9dc5b91dd037
-      internalID: -1152208164
+      spriteID: 38f7856143b43514fbb8e140e97b98e9
+      internalID: 1206042806
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_40
+      name: Interior_Yellow_n_53
       rect:
         serializedVersion: 2
         x: 80
@@ -988,21 +1274,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f844c69694f1b7e4fbe2b16fe5c2114e
-      internalID: 497398599
+      spriteID: eceace56b2599104281e0052ed5f5f5a
+      internalID: -1392104671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_41
+      name: Interior_Yellow_n_54
       rect:
         serializedVersion: 2
         x: 96
@@ -1010,21 +1296,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eff4702bc253b714bb01e47dc27a0202
-      internalID: -2024005879
+      spriteID: 8540361e356cec1449e6a021a6440d63
+      internalID: 1546578197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_42
+      name: Interior_Yellow_n_55
       rect:
         serializedVersion: 2
         x: 112
@@ -1032,21 +1318,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a77a87a2d387eea4994334b6c52909e3
-      internalID: -856241330
+      spriteID: a518e95f5d829514199feb3394ce62ce
+      internalID: -138724021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_43
+      name: Interior_Yellow_n_56
       rect:
         serializedVersion: 2
         x: 0
@@ -1054,21 +1340,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d30b04cdddb2ed43b43725b07b690c3
-      internalID: 307503655
+      spriteID: 2330b7c4c6d3f8746a2e8a048bde2bb8
+      internalID: 1563207376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_44
+      name: Interior_Yellow_n_57
       rect:
         serializedVersion: 2
         x: 16
@@ -1076,21 +1362,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16be0791f0bbd3b4ba5a247dc13bc053
-      internalID: 1814136449
+      spriteID: c133ebab087ab7c4c96c396a0622bdbe
+      internalID: 46014080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_45
+      name: Interior_Yellow_n_58
       rect:
         serializedVersion: 2
         x: 32
@@ -1098,21 +1384,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4f2603f712cfc34a99b0125ed7fd5c9
-      internalID: 149424548
+      spriteID: cd54adb1c35cb634aae6015a691e6b90
+      internalID: -1701917788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_46
+      name: Interior_Yellow_n_59
       rect:
         serializedVersion: 2
         x: 48
@@ -1120,21 +1406,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4ba78749825de542a66eccd3d3d7aa4
-      internalID: 647937668
+      spriteID: 709562fa6a93b0a43a6f917f8664874d
+      internalID: -173575078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_47
+      name: Interior_Yellow_n_60
       rect:
         serializedVersion: 2
         x: 64
@@ -1142,21 +1428,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b6754645bdc014c8ac6b54df38681c
-      internalID: 1823561289
+      spriteID: cd6afb6ebed69f94089fffe2b7e3cc1f
+      internalID: 506543780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_48
+      name: Interior_Yellow_n_61
       rect:
         serializedVersion: 2
         x: 80
@@ -1164,21 +1450,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b8f37b667020784d8cd3ee2f709d0a5
-      internalID: 613858098
+      spriteID: 70fbec8cd9fc1bd4c93e14eda1cbc5b6
+      internalID: -264351504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_49
+      name: Interior_Yellow_n_62
       rect:
         serializedVersion: 2
         x: 96
@@ -1186,21 +1472,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 762ddda681d302c41a7a044658bf34ab
-      internalID: -1572191573
+      spriteID: 69156449dbdae194d8aa3b407ae82d09
+      internalID: 831992805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_50
+      name: Interior_Yellow_n_63
       rect:
         serializedVersion: 2
         x: 112
@@ -1208,21 +1494,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2e278840118bc6478b6b042c049475a
-      internalID: 312499699
+      spriteID: c3ddd8e6f2175c74abb46928df0ae630
+      internalID: 187783844
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_51
+      name: Interior_Yellow_n_64
       rect:
         serializedVersion: 2
         x: 0
@@ -1230,21 +1516,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c936643865dc5a4a85111391d1d548e
-      internalID: -495678718
+      spriteID: e0775e096a7fb4041844df4e1415f837
+      internalID: 1065732572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_52
+      name: Interior_Yellow_n_65
       rect:
         serializedVersion: 2
         x: 16
@@ -1252,21 +1538,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8d10e36e41f5e944983fa7214362467
-      internalID: 652898279
+      spriteID: 74e58adee92ec7d4e9f24819cd51ba0c
+      internalID: 1964610831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_53
+      name: Interior_Yellow_n_66
       rect:
         serializedVersion: 2
         x: 32
@@ -1274,21 +1560,87 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea337cedf0411b540931153afcf9fc8b
-      internalID: -340998050
+      spriteID: 70d7231a6bdccfb4c9021fd133d2e999
+      internalID: 671061794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_54
+      name: Interior_Yellow_n_67
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4112d3b18cb4f44a417649f3dfc781
+      internalID: 1290336219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_68
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55dfd333b2fc1c45a8561b2f014a347
+      internalID: -630046517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_69
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: defa27074793b4f4faf2416cbfb68dfb
+      internalID: -959570299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interior_Yellow_n_70
       rect:
         serializedVersion: 2
         x: 96
@@ -1296,21 +1648,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 392e1c3b6436ba84488c98807fd412f3
-      internalID: -1157103662
+      spriteID: 9f775127e2aebac4c96e92bdf84a61c0
+      internalID: -2084757128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_55
+      name: Interior_Yellow_n_71
       rect:
         serializedVersion: 2
         x: 112
@@ -1318,21 +1670,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6592f95fd6252a146af606efac2fd773
-      internalID: 1932867767
+      spriteID: 3b94f5de04b10ac49a1de55f79d1baa7
+      internalID: -1484605875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_56
+      name: Interior_Yellow_n_72
       rect:
         serializedVersion: 2
         x: 0
@@ -1340,21 +1692,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 051a562cbf321214dbff20fea955d035
-      internalID: -1869154512
+      spriteID: 8bfc559f4a945c541b0ce0afc0f0f6fa
+      internalID: -1000198187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_57
+      name: Interior_Yellow_n_73
       rect:
         serializedVersion: 2
         x: 16
@@ -1362,21 +1714,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a176eddf287cea643b2d095ac0fcc42c
-      internalID: -98245301
+      spriteID: 7732e67ccf3c9d5428a77ffbe3a5b3b5
+      internalID: -506402357
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_58
+      name: Interior_Yellow_n_74
       rect:
         serializedVersion: 2
         x: 32
@@ -1384,21 +1736,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92c10d827d9998143b69d565f27d67e5
-      internalID: 114770042
+      spriteID: 243e8ce3d2178534faf6aaa191899f46
+      internalID: -1469374771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_59
+      name: Interior_Yellow_n_75
       rect:
         serializedVersion: 2
         x: 48
@@ -1406,21 +1758,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b28cfbfb5b391da4cae86e0ce25e52d0
-      internalID: 656283080
+      spriteID: 77d06bb566ff6ef4081996c6e72b35fd
+      internalID: 551457675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_60
+      name: Interior_Yellow_n_76
       rect:
         serializedVersion: 2
         x: 64
@@ -1428,21 +1780,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92c4c0ca8b859164b85b91775a4c8f7e
-      internalID: -1887735809
+      spriteID: 5b95ece0a4f414345b5c80eb4391fee2
+      internalID: -165535434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_61
+      name: Interior_Yellow_n_77
       rect:
         serializedVersion: 2
         x: 80
@@ -1450,21 +1802,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfbaeb987401cb448b0e016525624fb7
-      internalID: 1766910745
+      spriteID: 0ccd82776f3766345bb9e2474c3b4204
+      internalID: -137391925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_62
+      name: Interior_Yellow_n_78
       rect:
         serializedVersion: 2
         x: 96
@@ -1472,21 +1824,21 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c42c3c504b26dc640b6b17be4976f338
-      internalID: 561498892
+      spriteID: 6791e4f819bac6a4fa8eb6f5638132ac
+      internalID: -526678742
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interior_Yellow_63
+      name: Interior_Yellow_n_79
       rect:
         serializedVersion: 2
         x: 112
@@ -1494,15 +1846,15 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f26a42451a83834ca59bebd297cbd2f
-      internalID: -598980162
+      spriteID: 2c8733db7430f254ea1cbacee3f6059f
+      internalID: 1251557205
       vertices: []
       indices: 
       edges: []
@@ -1511,82 +1863,96 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 91a379c82dcaffb4d979eb42b0492c90
+    spriteID: dfc6793e7b86d42408c53ea9690788a7
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
-    secondaryTextures:
-    - texture: {fileID: 2800000, guid: 887ecb3d4bdb2ca458b67b52885099f3, type: 3}
-      name: _NormalMap
+    secondaryTextures: []
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Interior_Yellow_0: 2462766143137927352
-      Interior_Yellow_1: 581067295
-      Interior_Yellow_10: 1407612943
-      Interior_Yellow_11: -520415311
-      Interior_Yellow_12: -723629201
-      Interior_Yellow_13: 669974666
-      Interior_Yellow_14: 488999503
-      Interior_Yellow_15: -1531208370
-      Interior_Yellow_16: -1772400888
-      Interior_Yellow_17: -1881626255
-      Interior_Yellow_18: 648709360
-      Interior_Yellow_19: -666135794
-      Interior_Yellow_2: 1595927537
-      Interior_Yellow_20: 695212130
-      Interior_Yellow_21: 1082968362
-      Interior_Yellow_22: -722314998
-      Interior_Yellow_23: -500703158
-      Interior_Yellow_24: 389348842
-      Interior_Yellow_25: 956241482
-      Interior_Yellow_26: 1831500108
-      Interior_Yellow_27: 677493467
-      Interior_Yellow_28: -435780486
-      Interior_Yellow_29: 652834666
-      Interior_Yellow_3: -589925792
-      Interior_Yellow_30: -907185176
-      Interior_Yellow_31: 495462535
-      Interior_Yellow_32: -740563406
-      Interior_Yellow_33: 1318698096
-      Interior_Yellow_34: 1193398497
-      Interior_Yellow_35: -1547576636
-      Interior_Yellow_36: -957135701
-      Interior_Yellow_37: -1729257341
-      Interior_Yellow_38: -672264929
-      Interior_Yellow_39: -1152208164
-      Interior_Yellow_4: -1228347391
-      Interior_Yellow_40: 497398599
-      Interior_Yellow_41: -2024005879
-      Interior_Yellow_42: -856241330
-      Interior_Yellow_43: 307503655
-      Interior_Yellow_44: 1814136449
-      Interior_Yellow_45: 149424548
-      Interior_Yellow_46: 647937668
-      Interior_Yellow_47: 1823561289
-      Interior_Yellow_48: 613858098
-      Interior_Yellow_49: -1572191573
-      Interior_Yellow_5: 847950394
-      Interior_Yellow_50: 312499699
-      Interior_Yellow_51: -495678718
-      Interior_Yellow_52: 652898279
-      Interior_Yellow_53: -340998050
-      Interior_Yellow_54: -1157103662
-      Interior_Yellow_55: 1932867767
-      Interior_Yellow_56: -1869154512
-      Interior_Yellow_57: -98245301
-      Interior_Yellow_58: 114770042
-      Interior_Yellow_59: 656283080
-      Interior_Yellow_6: -422732931
-      Interior_Yellow_60: -1887735809
-      Interior_Yellow_61: 1766910745
-      Interior_Yellow_62: 561498892
-      Interior_Yellow_63: -598980162
-      Interior_Yellow_7: -667813852
-      Interior_Yellow_8: -901577837
-      Interior_Yellow_9: 224279115
+      Interior_Yellow_n_0: 2007633320995368975
+      Interior_Yellow_n_1: 1864029597
+      Interior_Yellow_n_10: -853774511
+      Interior_Yellow_n_11: -1504058697
+      Interior_Yellow_n_12: 468607284
+      Interior_Yellow_n_13: -1830899230
+      Interior_Yellow_n_14: -554769594
+      Interior_Yellow_n_15: 691178441
+      Interior_Yellow_n_16: 1373667624
+      Interior_Yellow_n_17: -642658408
+      Interior_Yellow_n_18: -1924625303
+      Interior_Yellow_n_19: 1330356551
+      Interior_Yellow_n_2: -2063857076
+      Interior_Yellow_n_20: 902899180
+      Interior_Yellow_n_21: 1980174017
+      Interior_Yellow_n_22: 17981865
+      Interior_Yellow_n_23: 537185207
+      Interior_Yellow_n_24: -175431378
+      Interior_Yellow_n_25: -1445010041
+      Interior_Yellow_n_26: -1157503349
+      Interior_Yellow_n_27: 353098300
+      Interior_Yellow_n_28: 1810905693
+      Interior_Yellow_n_29: 1039286054
+      Interior_Yellow_n_3: -1184175861
+      Interior_Yellow_n_30: -962181897
+      Interior_Yellow_n_31: 1171100598
+      Interior_Yellow_n_32: -1314692084
+      Interior_Yellow_n_33: -1525853050
+      Interior_Yellow_n_34: 1463159875
+      Interior_Yellow_n_35: -915464058
+      Interior_Yellow_n_36: -233475680
+      Interior_Yellow_n_37: -906713395
+      Interior_Yellow_n_38: -1245582537
+      Interior_Yellow_n_39: -1765960848
+      Interior_Yellow_n_4: -1064274907
+      Interior_Yellow_n_40: 1987332698
+      Interior_Yellow_n_41: -1052818021
+      Interior_Yellow_n_42: -1322256536
+      Interior_Yellow_n_43: 1252916273
+      Interior_Yellow_n_44: -2069561874
+      Interior_Yellow_n_45: -689983981
+      Interior_Yellow_n_46: -675773633
+      Interior_Yellow_n_47: 1814974742
+      Interior_Yellow_n_48: 687392729
+      Interior_Yellow_n_49: 188323237
+      Interior_Yellow_n_5: -2063828498
+      Interior_Yellow_n_50: 1050630637
+      Interior_Yellow_n_51: -1358451455
+      Interior_Yellow_n_52: 1206042806
+      Interior_Yellow_n_53: -1392104671
+      Interior_Yellow_n_54: 1546578197
+      Interior_Yellow_n_55: -138724021
+      Interior_Yellow_n_56: 1563207376
+      Interior_Yellow_n_57: 46014080
+      Interior_Yellow_n_58: -1701917788
+      Interior_Yellow_n_59: -173575078
+      Interior_Yellow_n_6: 1813442141
+      Interior_Yellow_n_60: 506543780
+      Interior_Yellow_n_61: -264351504
+      Interior_Yellow_n_62: 831992805
+      Interior_Yellow_n_63: 187783844
+      Interior_Yellow_n_64: 1065732572
+      Interior_Yellow_n_65: 1964610831
+      Interior_Yellow_n_66: 671061794
+      Interior_Yellow_n_67: 1290336219
+      Interior_Yellow_n_68: -630046517
+      Interior_Yellow_n_69: -959570299
+      Interior_Yellow_n_7: -1614684121
+      Interior_Yellow_n_70: -2084757128
+      Interior_Yellow_n_71: -1484605875
+      Interior_Yellow_n_72: -1000198187
+      Interior_Yellow_n_73: -506402357
+      Interior_Yellow_n_74: -1469374771
+      Interior_Yellow_n_75: 551457675
+      Interior_Yellow_n_76: -165535434
+      Interior_Yellow_n_77: -137391925
+      Interior_Yellow_n_78: -526678742
+      Interior_Yellow_n_79: 1251557205
+      Interior_Yellow_n_8: 222034879
+      Interior_Yellow_n_9: 1541153076
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

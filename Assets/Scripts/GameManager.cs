@@ -7,7 +7,6 @@ public enum GameInputMap { UI, Gameplay }
 // [RequireComponent(typeof(AudioManager))] Create and add AudioManager.cs
 // Navigation System -- input system -- llevar track de la navegación del previo botón activo -- botón de salida a la derecha
 [RequireComponent(typeof(PlayerStats))]
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
@@ -126,16 +125,17 @@ public class GameManager : MonoBehaviour
         if (nextIndex > lastLevelIndex)
         {
             Debug.Log("Game finished! Showing credits");
+
             LoadCredits();
         }
         else
         {
-            Debug.Log($"Loading Level {nextIndex}");            
+            Debug.Log($"Loading Level {nextIndex}");
             SceneManager.UnloadSceneAsync(currentSceneIndex);
             SceneManager.LoadSceneAsync(nextIndex, LoadSceneMode.Additive);
             currentSceneIndex = nextIndex;
+
             Debug.Log($"Current Index = {currentSceneIndex}");
-            //ActivateActionMap(GameInputMap.Gameplay);
         }
     }
 

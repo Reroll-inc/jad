@@ -8,10 +8,14 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
+    [Header("Tags")]
+    [SerializeField] private string enemyTag = "Enemy";
+    [SerializeField] private string bossTag = "Boss";
+
     [Header("HUD reference")]
     [SerializeField] private GameObject hudCanvas;
     [SerializeField] private TextMeshProUGUI enemyCounterText;
-     
+
     [SerializeField] private GameObject screenLevelComplete;
     [SerializeField] private GameObject warningMenuPanel;
     [SerializeField] private GameObject screenGameOver;
@@ -30,9 +34,11 @@ public class LevelManager : MonoBehaviour
     {
         Instance = this;
     }
+
     public void PauseGame()
     {
         Debug.Log("Game Paused");
+
         hudCanvas.SetActive(false);
         Time.timeScale = 0f;
         pauseMenuPanel.SetActive(true);
@@ -76,7 +82,7 @@ public class LevelManager : MonoBehaviour
         GameManager.Instance.ActivateActionMap(GameInputMap.UI);
         warningMenuPanel.SetActive(false);
         screenLevelComplete.SetActive(true);
-        Time.timeScale = 0f;        
+        Time.timeScale = 0f;
     }
 
     public void WarningBackToMenu()
@@ -90,8 +96,8 @@ public class LevelManager : MonoBehaviour
         hudCanvas.SetActive(true);
         Time.timeScale = 1f;
         GameManager.Instance.ActivateActionMap(GameInputMap.Gameplay);
-        int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        int bossCount = GameObject.FindGameObjectsWithTag("Boss").Length;
+        int enemyCount = GameObject.FindGameObjectsWithTag(enemyTag).Length;
+        int bossCount = GameObject.FindGameObjectsWithTag(bossTag).Length;
         remainingEnemies = enemyCount + bossCount;
 
         UpdateHUD();

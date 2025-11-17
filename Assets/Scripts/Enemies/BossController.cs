@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BossStats))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(EnemyHpManager))]
 public class BossController : MonoBehaviour
 {
     private static WaitForSeconds _waitForSeconds1 = new(1f);

@@ -1759,10 +1759,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss_Brown
       objectReference: {fileID: 0}
-    - target: {fileID: 5839418327468215869, guid: e24d076f999213442b9e895bcf3b97dd, type: 3}
-      propertyPath: m_TagString
-      value: Boss
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

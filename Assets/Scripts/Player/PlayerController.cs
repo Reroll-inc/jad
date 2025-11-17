@@ -15,6 +15,7 @@ enum HandleAction
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHpManager))]
 [RequireComponent(typeof(MageHitVFX))]
+[RequireComponent(typeof(AudioSource))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Animation States")]
@@ -160,7 +161,7 @@ public class PlayerController : MonoBehaviour
 
     void OnDash(InputAction.CallbackContext context)
     {
-        if (body.linearVelocity.x != 0 || body.linearVelocity.y != 0)
+        if (!attacking && !dashing && (body.linearVelocity.x != 0 || body.linearVelocity.y != 0))
         {
             HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
 
@@ -209,5 +210,11 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(GameManager.Instance.playerStats.DashCooldown);
 
         HandleActionEvents(HandleAction.DASH, HandleToggle.ON);
+    }
+
+    public void OnDead()
+    {
+        enabled = false;
+        body.linearVelocity = new(0f, 0f);
     }
 }

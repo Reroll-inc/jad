@@ -17,11 +17,14 @@ public class MageHitVFX : MonoBehaviour
     private bool immune = false;
 
     private PlayerHpManager healthManager;
+    private PlayerController playerController;
+
     private bool isDead = false;
     void Start()
     {
         animator = GetComponentInChildren<Animator>();
         healthManager = GetComponent<PlayerHpManager>();
+        playerController = GetComponent<PlayerController>();
 
         healthManager.OnDeath.AddListener(HandleDeath);
     }
@@ -57,7 +60,7 @@ public class MageHitVFX : MonoBehaviour
         animator.SetBool(isRunningBool, false);
 
         animator.SetTrigger(isDeadTrigger);
-        GetComponent<PlayerController>().enabled = false;
+        playerController.OnDead();
     }
 
     public void StartImmunity()

@@ -65,7 +65,7 @@ public class PlayerStats : MonoBehaviour
                 Debug.Log($"New bullet size bonus: {bulletSizeBonus}");
                 break;
         }
-
         RecalculateStats();
+
     }
 }

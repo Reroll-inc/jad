@@ -8,13 +8,12 @@ enum HandleToggle
 }
 enum HandleAction
 {
-    MOVE, ATTACK, DASH
+    MOVE, ATTACK, DASH, PAUSE
 }
 
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerHpManager))]
-[RequireComponent(typeof(PlayerStats))]
 [RequireComponent(typeof(MageHitVFX))]
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +26,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionReference move;
     [SerializeField] private InputActionReference attack;
     [SerializeField] private InputActionReference dash;
+    [SerializeField] private InputActionReference pause;
 
     private Rigidbody2D body;
     private Vector2 playerInput;
@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
         HandleActionEvents(HandleAction.ATTACK, HandleToggle.ON);
         HandleActionEvents(HandleAction.MOVE, HandleToggle.ON);
         HandleActionEvents(HandleAction.DASH, HandleToggle.ON);
+        HandleActionEvents(HandleAction.PAUSE, HandleToggle.ON);
     }
 
     void OnDisable()
@@ -59,6 +60,7 @@ public class PlayerController : MonoBehaviour
         HandleActionEvents(HandleAction.ATTACK, HandleToggle.OFF);
         HandleActionEvents(HandleAction.MOVE, HandleToggle.OFF);
         HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
+        HandleActionEvents(HandleAction.PAUSE, HandleToggle.OFF);
     }
 
     void HandleActionEvents(HandleAction action, HandleToggle handle)
@@ -103,6 +105,17 @@ public class PlayerController : MonoBehaviour
                         break;
                     case HandleToggle.OFF:
                         dash.action.started -= OnDash;
+                        break;
+                }
+                break;
+            case HandleAction.PAUSE:
+                switch (handle)
+                {
+                    case HandleToggle.ON:
+                        pause.action.performed += OnPause;
+                        break;
+                    case HandleToggle.OFF:
+                        pause.action.performed -= OnPause;
                         break;
                 }
                 break;
@@ -161,6 +174,10 @@ public class PlayerController : MonoBehaviour
             attacking = true;
             HandleActionEvents(HandleAction.DASH, HandleToggle.OFF);
         }
+    }
+    void OnPause(InputAction.CallbackContext context)
+    {
+        LevelManager.Instance.PauseGame();
     }
 
     IEnumerator DashCoroutine()

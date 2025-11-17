@@ -8,6 +8,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject controllerPanel;
     [SerializeField] private GameObject soundPanel;
     [SerializeField] private GameObject graphicsPanel;
+    [SerializeField] private GameObject warningMenuPanel;
+    [SerializeField] private GameObject warningQuitPanel;
 
     void OpenSubMenu(SubMenu? subMenu)
     {
@@ -18,7 +20,12 @@ public class PauseMenu : MonoBehaviour
 
     public void OnResumeButtonPressed()
     {
-        GameManager.Instance.TogglePause();
+        ResumeGame();
+    }
+
+    public void OnPauseButtonPressed()
+    {
+        ShowMainPausePanel();
     }
 
     public void OnOptionsButtonPressed()
@@ -26,55 +33,66 @@ public class PauseMenu : MonoBehaviour
         ShowOptionsMenu();
     }
 
+    public void OpenControllerPanel()
+    {
+        controllerPanel.SetActive(true);
+        soundPanel.SetActive(false);
+        graphicsPanel.SetActive(false);
+    }
+    public void OpenSoundPanel()
+    {
+        controllerPanel.SetActive(false);
+        soundPanel.SetActive(true);
+        graphicsPanel.SetActive(false);
+    }
+    public void OpenGraphicsPanel()
+    {
+        controllerPanel.SetActive(false);
+        soundPanel.SetActive(false);
+        graphicsPanel.SetActive(true);
+    }
+
+    public void OnQuitToMenuButtonPressed()
+    {
+        LevelManager.Instance.GoBackToMenu();
+    }
+
     public void OnQuitGameButtonPressed()
     {
         GameManager.Instance.QuitGame();
     }
 
-    public void OnControllerButtonPressed()
+    void ResumeGame()
     {
-        optionsMenuPanel.SetActive(false);
-        OpenSubMenu(SubMenu.CONTROLLER);
+        mainPausePanel.SetActive(false);
+        LevelManager.Instance.StartLevel();
     }
 
-    public void OnSoundButtonPressed()
-    {
-        optionsMenuPanel.SetActive(false);
-        OpenSubMenu(SubMenu.SOUND);
-    }
-
-    public void OnGraphicsButtonPressed()
-    {
-        optionsMenuPanel.SetActive(false);
-        OpenSubMenu(SubMenu.GRAPHICS);
-    }
-
-    public void OnQuitToMenuButtonPressed()
-    {
-        GameManager.Instance.QuitToMenu();
-    }
-
-    public void OnOptionsBackButtonPressed()
-    {
-        ShowMainPausePanel();
-    }
-
-    public void OnSubMenuBackButtonPressed()
-    {
-        ShowOptionsMenu();
-    }
-
-    private void ShowMainPausePanel()
+    void ShowMainPausePanel()
     {
         mainPausePanel.SetActive(true);
         optionsMenuPanel.SetActive(false);
-        OpenSubMenu(null);
+        warningMenuPanel.SetActive(false);
+        warningQuitPanel.SetActive(false);
+        //OpenSubMenu(null);
     }
 
-    private void ShowOptionsMenu()
+    void ShowOptionsMenu()
     {
         mainPausePanel.SetActive(false);
         optionsMenuPanel.SetActive(true);
-        OpenSubMenu(null);
+        OpenSubMenu(SubMenu.CONTROLLER);
+    }
+
+    public void WarningBackToMenu()
+    {
+        mainPausePanel.SetActive(false);
+        warningMenuPanel.SetActive(true);
+    }
+
+    public void WarningQuitGame()
+    {
+        mainPausePanel.SetActive(false);
+        warningQuitPanel.SetActive(true);
     }
 }

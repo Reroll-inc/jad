@@ -11,16 +11,16 @@ public class LevelManager : MonoBehaviour
     [Header("HUD reference")]
     [SerializeField] private GameObject hudCanvas;
     [SerializeField] private TextMeshProUGUI enemyCounterText;
-
+     
     [SerializeField] private GameObject screenLevelComplete;
     [SerializeField] private GameObject warningMenuPanel;
     [SerializeField] private GameObject screenGameOver;
 
+    [Header("Pause UI")]
+    [SerializeField] private GameObject pauseMenuPanel;
+
     [Header("Card Selection")]
     [SerializeField] private CardScreenController cardScreenController;
-
-    [Header("Player reference")]
-    public PlayerStats playerStats;
 
     public UnityEvent OnEnemyDefeated;
 
@@ -28,16 +28,16 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Debug.LogError("Two instances of LevelManager exists shouldn't exist in the same Scene.");
-
-            return;
-        }
-
         Instance = this;
     }
-
+    public void PauseGame()
+    {
+        Debug.Log("Game Paused");
+        hudCanvas.SetActive(false);
+        Time.timeScale = 0f;
+        pauseMenuPanel.SetActive(true);
+        GameManager.Instance.ActivateActionMap(GameInputMap.UI);
+    }
 
     void Start()
     {
@@ -98,12 +98,6 @@ public class LevelManager : MonoBehaviour
     public void GoToNextLevel()
     {
         GameManager.Instance.LoadNextLevel();
-        /*int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-
-        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(nextSceneIndex);
-        }*/
     }
 
     public void ActivateGameOver()

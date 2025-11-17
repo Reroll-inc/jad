@@ -26,10 +26,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private string gameplayActionMap = "Gameplay";
     [SerializeField] private string splashActionMap = "Splash";
 
-    [Header("Pause UI")]
-    [SerializeField] private GameObject pauseMenuPanel;
-
-    private bool isPaused = false;
     private int currentSceneIndex;
 
     void Awake()
@@ -55,24 +51,6 @@ public class GameManager : MonoBehaviour
             ActivateActionMap(GameInputMap.UI);
             DEV_LoadLevel();
         }
-    }
-
-    void PauseGame()
-    {
-        Debug.Log("Game Paused");
-        Time.timeScale = 0f;
-        pauseMenuPanel.SetActive(true);
-
-        ActivateActionMap(GameInputMap.UI);
-    }
-
-    void ResumeGame()
-    {
-        Debug.Log("Game resumed");
-        Time.timeScale = 1f;
-        pauseMenuPanel.SetActive(false);
-
-        ActivateActionMap(GameInputMap.Gameplay);
     }
 
     void DEV_LoadLevel()
@@ -156,20 +134,6 @@ public class GameManager : MonoBehaviour
             Debug.Log($"Current Index = {currentSceneIndex}");
             //ActivateActionMap(GameInputMap.Gameplay);
         }
-    }
-
-    public void TogglePause()
-    {
-        isPaused = !isPaused;
-        if (isPaused) PauseGame();
-        else ResumeGame();
-    }
-
-    public void QuitToMenu()
-    {
-        Time.timeScale = 1f;
-        isPaused = false;
-        LoadMainMenu();
     }
 
     public void QuitGame()

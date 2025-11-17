@@ -235,7 +235,6 @@ GameObject:
   - component: {fileID: 1681455178621061713}
   - component: {fileID: 2450407349542409742}
   - component: {fileID: 5963039342677610811}
-  - component: {fileID: 9215452831308299109}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -342,6 +341,7 @@ MonoBehaviour:
   move: {fileID: -782300744077357920, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   attack: {fileID: -1059095091592818815, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   dash: {fileID: -7814181618715315215, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  pause: {fileID: -8180149988448338850, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!114 &2450407349542409742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,25 +379,6 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9215452831308299109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4552516324413041329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce0f985e139211c4084bb542241b90a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  shootSpeed: 10
-  shootCooldown: 0.8
-  dashCooldown: 2.5
-  dashDuration: 0.3
-  dashVelocity: 20
-  bulletSize: {x: 1, y: 1}
 --- !u!1 &7462751676788176070
 GameObject:
   m_ObjectHideFlags: 0

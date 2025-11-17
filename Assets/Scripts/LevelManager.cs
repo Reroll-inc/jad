@@ -90,7 +90,9 @@ public class LevelManager : MonoBehaviour
         hudCanvas.SetActive(true);
         Time.timeScale = 1f;
         GameManager.Instance.ActivateActionMap(GameInputMap.Gameplay);
-        remainingEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        int enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        int bossCount = GameObject.FindGameObjectsWithTag("Boss").Length;
+        remainingEnemies = enemyCount + bossCount;
 
         UpdateHUD();
     }

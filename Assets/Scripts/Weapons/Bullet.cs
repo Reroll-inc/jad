@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private string enemyTag = "Enemy";
     [SerializeField] private string terrainTag = "Wall";
     [SerializeField] private string fireballTag = "Boss Fireball";
+    [SerializeField] private string bossTag = "Boss";
 
     private readonly int bulletDamage = 1;
     private Rigidbody2D body;
@@ -26,11 +27,20 @@ public class Bullet : MonoBehaviour
 
             return;
         }
+
+        if (collision.CompareTag(bossTag))
+        {
+            EnemyHpManager bossHp = collision.GetComponentInParent<EnemyHpManager>();
+            bossHp.ReceiveDamage(bulletDamage);
+            Destroy(gameObject);
+            return;
+        }
+
         if (!collision.CompareTag(enemyTag)) return;
 
         Enemy enemy = collision.GetComponentInParent<Enemy>();
 
-        enemy.ReceiveDamage(bulletDamage, body.linearVelocity.normalized * body.linearVelocity.magnitude);
+        enemy.ReceiveDamage(bulletDamage);
 
         Destroy(gameObject);
     }

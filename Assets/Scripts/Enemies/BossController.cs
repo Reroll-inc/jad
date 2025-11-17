@@ -17,8 +17,10 @@ public class BossController : MonoBehaviour
     private BossStats stats;
     private Rigidbody2D body;
     private Transform[] teleporters;
+    private EnemyHpManager bossHpManager;
 
     private int portalIndex = 1;
+    private bool isDying = false;
 
     private Coroutine throwFireballCoroutine;
     private Coroutine teletransportCoroutine;
@@ -27,6 +29,8 @@ public class BossController : MonoBehaviour
     {
         stats = GetComponent<BossStats>();
         body = GetComponent<Rigidbody2D>();
+        bossHpManager = GetComponent<EnemyHpManager>();
+        bossHpManager.onDeath.AddListener(StartDeathSequence);
         mouth = transform.Find(mouthNode);
         playerTransform = GameObject.FindGameObjectWithTag(playerTag).GetComponent<Transform>();
         teleporters = GameObject
@@ -67,6 +71,14 @@ public class BossController : MonoBehaviour
             fireballBody.linearVelocity = direction * stats.FireballSpeed;
 
         }
+    }
+    void StartDeathSequence()
+    {
+        if (isDying) return;
+
+        isDying = true;
+
+        DestroyEnemy();
     }
 
     IEnumerator Teletransport()
@@ -111,5 +123,12 @@ public class BossController : MonoBehaviour
         }
 
         return nextIndex;
+    }
+
+    public void DestroyEnemy()
+    {
+        LevelManager.Instance.OnEnemyDefeated.Invoke();
+
+        Destroy(gameObject);
     }
 }

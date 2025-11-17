@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
         DestroyEnemy();
     }
 
-    public void ReceiveDamage(int damage, Vector2 forceOfImpact)
+    public void ReceiveDamage(int damage)
     {
         if (isDying) return;
 

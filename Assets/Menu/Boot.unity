@@ -238,6 +238,7 @@ MonoBehaviour:
   uiActionMap: UI
   gameplayActionMap: Gameplay
   splashActionMap: Splash
+  playerStats: {fileID: 0}
 --- !u!4 &1978866074
 Transform:
   m_ObjectHideFlags: 0
@@ -274,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  movePenalization: 0.5
   shootSpeed: 10
   shootCooldown: 0.8
   dashCooldown: 2.5

@@ -10,6 +10,7 @@ TagManager:
   - LevelManager
   - Boss Fireball
   - Boss Portal
+  - Boss
   layers:
   - Default
   - TransparentFX

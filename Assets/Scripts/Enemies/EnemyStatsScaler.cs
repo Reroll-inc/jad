@@ -12,7 +12,7 @@ public class EnemyStatsScaler : MonoBehaviour
     private AIPath aiPath;
     private EnemyHpManager hpManager;
 
-    // TODO: This file could be part of the LevelManager file since its the level responsability
+    // EVERYTHING: This file could be part of the LevelManager file since its the level responsability
     // to know its number, difficulty and configure it all accordingly.
     void Start()
     {

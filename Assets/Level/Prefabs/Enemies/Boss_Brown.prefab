@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 7594296825772761288}
   m_Layer: 11
   m_Name: Boss_Brown
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

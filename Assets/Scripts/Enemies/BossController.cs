@@ -5,6 +5,9 @@ using UnityEngine;
 [RequireComponent(typeof(BossStats))]
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(EnemyHpManager))]
+[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Collider2D))]
 public class BossController : MonoBehaviour
 {
     private static WaitForSeconds _waitForSeconds1 = new(1f);
@@ -56,10 +59,18 @@ public class BossController : MonoBehaviour
 
     void Start()
     {
+        portalIndex = CalculateShorterTP();
+    }
 
+    void OnEnable()
+    {
         throwFireballCoroutine = StartCoroutine(ThrowFireball());
         teletransportCoroutine = StartCoroutine(Teletransport());
-        portalIndex = CalculateShorterTP();
+    }
+    void OnDisable()
+    {
+        StopCoroutine(throwFireballCoroutine);
+        StopCoroutine(teletransportCoroutine);
     }
 
     void OnDestroy()
@@ -158,8 +169,7 @@ public class BossController : MonoBehaviour
     public void DestroyEnemy()
     {
         LevelManager.Instance.OnEnemyDefeated.Invoke();
-        float delay = 0f;
-        delay = deathClip.length;
+        float delay = deathClip.length;
         Destroy(gameObject, delay);
     }
 }

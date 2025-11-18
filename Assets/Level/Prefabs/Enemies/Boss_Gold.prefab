@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4474350738637986279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8708156095678736001}
+  m_Layer: 7
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8708156095678736001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4474350738637986279}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.042000085, y: 0.12999982, z: 0}
+  m_LocalScale: {x: 0.30343336, y: 0.3229645, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1162086299915802304}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5839418327468215869
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,9 +45,12 @@ GameObject:
   - component: {fileID: 2168439291256181794}
   - component: {fileID: 8752027396403688576}
   - component: {fileID: -9193229348620403510}
+  - component: {fileID: 8177243305658568263}
+  - component: {fileID: 7729217025821737863}
+  - component: {fileID: 2502329789331546176}
   m_Layer: 0
   m_Name: Boss_Gold
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33,7 +67,8 @@ Transform:
   m_LocalPosition: {x: -4, y: 8.6, z: 0}
   m_LocalScale: {x: 1.8000001, y: 1.6911458, z: 0.5461828}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 8708156095678736001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3423555048936496390
@@ -283,3 +318,60 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8177243305658568263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839418327468215869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b99bd094fd0d3d48a233b77a934db88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 150
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &7729217025821737863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839418327468215869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e311d6a2beccdd64facbed3bc7ce8eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballSpeed: 10
+  fireballCD: 3
+  teletransportCD: 5
+  velocityPenalization: 0.015
+  cdPenalization: 0.005
+--- !u!114 &2502329789331546176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839418327468215869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 630fb90b52dda6444a8571776bf35a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouthNode: Mouth
+  playerTag: Player
+  bossPortalTag: Boss Portal
+  fireballPrefab: {fileID: 168772508720003752, guid: e92061051f0efc8408874991d6beef3a, type: 3}
+  fireballClip: {fileID: 8300000, guid: d7745c861f73d994ab2695b4ae1a655f, type: 3}
+  fireBreathClip: {fileID: 8300000, guid: 66926f35a2f46534f83a066498d400d4, type: 3}
+  earthquakeClip: {fileID: 8300000, guid: 10e5626435b1f1543913b44d6ec6641b, type: 3}
+  teleportClip: {fileID: 8300000, guid: ae6a1cd969e390e46a2678acd7ffd5f4, type: 3}
+  hitClip: {fileID: 8300000, guid: 20e0628604362bc4aab9289c725c1d12, type: 3}
+  deathClip: {fileID: 8300000, guid: 6f7d414c31b693947baf9b3b128b99d7, type: 3}
+  minPitch: 0.7
+  maxPitch: 1.3

@@ -288,10 +288,11 @@ MonoBehaviour:
   movePenalization: 0.5
   shootSpeed: 10
   shootCooldown: 0.8
+  bulletSize: {x: 1, y: 1}
+  attackPenalization: 1
   dashCooldown: 2.5
   dashDuration: 0.3
   dashVelocity: 20
-  bulletSize: {x: 1, y: 1}
 --- !u!82 &1978866078
 AudioSource:
   m_ObjectHideFlags: 0

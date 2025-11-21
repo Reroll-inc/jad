@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float shootCooldown = 0.8f;
     [SerializeField] private Vector2 bulletSize = new(1f, 1f);
     [Tooltip("In seconds")]
-    [SerializeField] private int attackPenalization = 1;
+    [SerializeField] private float attackPenalization = 0.5f;
 
     [Header("Dash Stats")]
     [SerializeField] private float dashCooldown = 2.5f;
@@ -30,7 +30,7 @@ public class PlayerStats : MonoBehaviour
     public float ShootSpeed { get; private set; }
     public float ShootCooldown { get; private set; }
     public Vector2 BulletSize { get; private set; }
-    public int AttackPenalization { get; private set; }
+    public float AttackPenalization { get; private set; }
 
     public float DashCooldown { get; private set; }
     public float DashDuration { get; private set; }

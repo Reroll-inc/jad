@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     private bool attacking = false;
 
     private Coroutine cancelAttackCoroutineId;
+    private Vector2 latestLinearVelocity;
 
     void Awake()
     {
@@ -162,7 +163,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(running, true);
         animator.SetFloat(facing, playerInput.x);
 
-        body.linearVelocity = GameManager.Instance.playerStats.MoveSpeed * playerInput;
+        latestLinearVelocity = body.linearVelocity = GameManager.Instance.playerStats.MoveSpeed * playerInput;
     }
 
     void OnDash(InputAction.CallbackContext context)
@@ -207,6 +208,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(GameManager.Instance.playerStats.AttackPenalization);
 
         attacking = false;
+        body.linearVelocity = latestLinearVelocity;
     }
 
     IEnumerator DashCoroutine()

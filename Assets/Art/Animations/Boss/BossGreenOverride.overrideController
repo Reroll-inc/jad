@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BossGreenOverride
+  m_Controller: {fileID: 9100000, guid: b2543f97deee5da48bf85372d364afe4, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 04c2e039570bed7489d2be03fc8c428e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e2712198b5374744ab353f385e658e48, type: 2}

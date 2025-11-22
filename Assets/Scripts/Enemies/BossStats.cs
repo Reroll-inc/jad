@@ -14,10 +14,14 @@ public class BossStats : MonoBehaviour
     public float FireballCD { get; private set; }
     public float TeletransportCD { get; private set; }
 
+    void Awake()
+    {
+        FireballCD = fireballCD;
+    }
+
     void Start()
     {
         FireballSpeed = fireballSpeed;
-        FireballCD = fireballCD;
         TeletransportCD = teletransportCD;
     }
 

@@ -236,7 +236,7 @@ MonoBehaviour:
   creditsIndex: 3
   firstLevelIndex: 4
   lastLevelIndex: 23
-  devInitialLevel: -1
+  devInitialLevel: 10
   uiActionMap: UI
   gameplayActionMap: Gameplay
   splashActionMap: Splash

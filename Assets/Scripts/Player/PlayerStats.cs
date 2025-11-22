@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 {
     [Header("Movement Stats")]
-    [SerializeField] private float moveSpeed = 5.0f;
+    [SerializeField] private float moveSpeed = 6.0f;
     [SerializeField] private float movePenalization = 0.5f;
 
     [Header("Attack Stats")]
@@ -18,10 +18,10 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private float dashDuration = 0.3f;
     [SerializeField] private float dashVelocity = 20f;
 
-    private float moveSpeedBonus = 0f;
-    private float shootCooldownBonus = 0f;
-    private float dashCooldownBonus = 0f;
-    private float bulletSizeBonus = 0f;
+    public float MoveSpeedBonus { get; private set; } = 0f;
+    public float ShootCooldownBonus { get; private set; } = 0f;
+    public float DashCooldownBonus { get; private set; } = 0f;
+    public float BulletSizeBonus { get; private set; } = 0f;
 
     // Public stats
     public float MoveSpeed { get; private set; }
@@ -38,21 +38,31 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        RecalculateStats();
-
         MovePenalization = movePenalization;
         ShootSpeed = shootSpeed;
         DashDuration = dashDuration;
         DashVelocity = dashVelocity;
         AttackPenalization = attackPenalization;
+        
+        GetActualStats(GameManager.Instance.playerStats);
     }
 
     void RecalculateStats()
     {
-        MoveSpeed = moveSpeed * (1f + moveSpeedBonus);
-        ShootCooldown = shootCooldown / (1f + shootCooldownBonus);
-        DashCooldown = dashCooldown / (1f + dashCooldownBonus);
-        BulletSize = bulletSize * (1f + bulletSizeBonus);
+        MoveSpeed = moveSpeed * (1f + MoveSpeedBonus);
+        ShootCooldown = shootCooldown / (1f + ShootCooldownBonus);
+        DashCooldown = dashCooldown / (1f + DashCooldownBonus);
+        BulletSize = bulletSize * (1f + BulletSizeBonus);
+    }
+
+    public void GetActualStats(PlayerStats sourceStats)
+    {
+        MoveSpeedBonus = sourceStats.MoveSpeedBonus;
+        ShootCooldownBonus = sourceStats.ShootCooldownBonus;
+        DashCooldownBonus = sourceStats.DashCooldownBonus;
+        BulletSizeBonus = sourceStats.BulletSizeBonus;
+
+        RecalculateStats();
     }
 
     public void ApplyPowerUp(CardType selectedPowerUp)
@@ -60,20 +70,20 @@ public class PlayerStats : MonoBehaviour
         switch (selectedPowerUp)
         {
             case CardType.Mage:
-                shootCooldownBonus += 0.10f;
-                Debug.Log($"New ASPD Bonus: {shootCooldownBonus}");
+                ShootCooldownBonus += 0.10f;
+                Debug.Log($"New ASPD Bonus: {ShootCooldownBonus}");                
                 break;
             case CardType.Chariot:
-                moveSpeedBonus += 0.10f;
-                Debug.Log($"New MSPD Bonus {moveSpeedBonus}");
+                MoveSpeedBonus += 0.10f;
+                Debug.Log($"New MSPD Bonus {MoveSpeedBonus}");
                 break;
             case CardType.Wheel:
-                dashCooldownBonus += 0.10f;
-                Debug.Log($"New DashCD Bonus: {dashCooldownBonus}");
+                DashCooldownBonus += 0.10f;
+                Debug.Log($"New DashCD Bonus: {DashCooldownBonus}" );
                 break;
             case CardType.Star:
-                bulletSizeBonus += 0.05f;
-                Debug.Log($"New bullet size bonus: {bulletSizeBonus}");
+                BulletSizeBonus += 0.05f;
+                Debug.Log($"New bullet size bonus: {BulletSizeBonus}");
                 break;
         }
         RecalculateStats();
@@ -82,5 +92,15 @@ public class PlayerStats : MonoBehaviour
         Debug.Log($"MSPD: {MoveSpeed}");
         Debug.Log($"DashCD: {DashCooldown}");
         Debug.Log($"BulletSize: {BulletSize}");
+    }
+
+    public void ResetStats()
+    {
+        MoveSpeedBonus = 0f;
+        ShootCooldownBonus = 0f;
+        DashCooldownBonus = 0f;
+        BulletSizeBonus = 0f;
+
+        RecalculateStats();
     }
 }

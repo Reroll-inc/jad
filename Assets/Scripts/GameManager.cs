@@ -123,6 +123,7 @@ public class GameManager : MonoBehaviour
     }
     public void LoadMainMenu()
     {
+        playerStats.ResetStats();
         ToggleSplashKeymap(false);
         SceneManager.UnloadSceneAsync(currentSceneIndex);
         SceneManager.LoadSceneAsync(mainMenuIndex, LoadSceneMode.Additive);
